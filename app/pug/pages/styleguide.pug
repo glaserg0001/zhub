@@ -1,0 +1,51 @@
+extends ../base/main
+
+block variables
+  - var pageTitle = 'Styleguide'
+  //- - var baseUrlLvl = 1
+
+block styles
+  link(rel='stylesheet' href= URL_file('pages/styleguide', baseUrlLvl))
+
+block content
+  h1 Styleguide
+  h2 Forms
+  h3 Input
+  //- INPUT START
+  -
+    var inputFields = {
+      input1: {
+        label: 'Name',
+        value: 'Mike',
+        disabled: false
+      },
+      input2: {
+        label: 'Surname',
+        value: '',
+        disabled: true
+      },
+    }
+
+  each val, key in inputFields
+    div(class='form-input ' + (val.label ? 'm-label' : ''))
+      input(type='text' value=val.value class=val.label ? 'js-form-input' : '')
+      label=val.label
+  //- INPUT END
+ 
+  //- ICONS START
+
+  h2 Icons
+  -
+    var iconsSVG = [
+      'icon-test',
+    ]
+  if iconsSVG
+    ul.sg-icons__list
+      each val in iconsSVG
+        li.sg-icons__item(data-name=val)
+          +iconSvg(val)
+  //- ICONS END
+
+
+block scripts
+  //- script(src= URL_file('pages/styleguide', baseUrlLvl, 'js'))

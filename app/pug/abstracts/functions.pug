@@ -1,0 +1,27 @@
+-
+  var URL_Pug_MainNav = function(file, index = false) {
+    return '/app/' + file + (index ? '/' : '.html')
+  }
+
+//- function grates the URL for files
+-
+  var URL_file = function(file, lvl = 0, type = 'css') {
+    var lvlDir = ''
+    while (lvl > 0) {
+      lvlDir = lvlDir + '../'
+      lvl--
+    }
+
+    switch (type) {
+      case 'ico':
+        return lvlDir + 'favicon.ico'
+        break;
+      case 'svg':
+      case 'jpg':
+      case 'jpeg':
+      case 'png':
+        return lvlDir + `img/${file}.${type}`
+      default:
+        return lvlDir + `${type}/${file}.${type}`
+    }
+  }

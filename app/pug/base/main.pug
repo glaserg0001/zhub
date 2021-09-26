@@ -1,0 +1,17 @@
+block variables
+include ../abstracts/functions
+include ../abstracts/mixins
+include ../abstracts/settings
+
+doctype html
+html(lang="en")
+  head
+    include meta
+  body
+    .wrapper
+      include ../layout/header
+      div(class=`container main-container ${pageContainerClass ? pageContainerClass : ''}`)
+        block content
+    include ../layout/footer
+    include scripts
+    block scripts

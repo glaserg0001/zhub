@@ -1,0 +1,65 @@
+// hide default arrows for the input type number 
+@mixin inputNumberAppiarancePrevent {
+    @if & {
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &[type='number'] {
+            -moz-appearance: textfield;
+        }
+    }
+
+    @else {
+        ::-webkit-outer-spin-button,
+        ::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        [type='number'] {
+            -moz-appearance: textfield;
+        }
+    }
+}
+
+@mixin n($n) {
+    &:nth-child(#{$n}) {
+        @content;
+    }
+}
+
+@mixin on-event($events: null) {
+    // Example: @include on-event([hover, focus])
+
+    @if $events == null {
+        @include media-breakpoint-up(lg) {
+            &:hover {
+                @content;
+            }
+        }
+    }
+
+    @else {
+        @each $event in $events {
+            @if $event == hover {
+                @include media-breakpoint-up(lg) {
+                    &:#{$event} {
+                        @content;
+                    }
+                }
+            }
+
+            @else {
+                &:#{$event} {
+                    @if $event == focus {
+                        outline: none;
+                    }
+
+                    @content;
+                }
+            }
+        }
+    }
+}
