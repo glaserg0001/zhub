@@ -1,26 +1,31 @@
 html {
+    height: 100%;
+    min-width: $min-width;
     font-size: 100%;
     box-sizing: border-box;
-    height: 100%;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100%;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     line-height: 1.2;
-    font-size: 1rem;
     color: color(text);
-    font-family: $font;
-    background-color: #fff;
+    font-family: $font_primary;
+    background-color: $white;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent;
 }
+
+.main {
+    flex: 1;
+}
+
 ::selection {
     background-color: color(dark);
     color: color(light);
@@ -29,20 +34,6 @@ body {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-.wrapper {
-    position: relative;
-    overflow-x: hidden;
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.main-container {
-    flex: 1 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 .icon-svg {

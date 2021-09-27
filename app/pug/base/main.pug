@@ -8,10 +8,10 @@ html(lang="en")
   head
     include meta
   body
-    .wrapper
-      include ../layout/header
-      div(class=`container main-container ${pageContainerClass ? pageContainerClass : ''}`)
-        block content
+    //- .wrapper
+    include ../layout/header
+    div(class=`main ${pageMainClass ? pageMainClass : ''}`)
+      block content
     include ../layout/footer
     include scripts
     block scripts

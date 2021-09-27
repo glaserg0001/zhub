@@ -1,11 +1,9 @@
-// SCSS more comfortable for maps and lists
 
 // $font: 'Comic Sans MS', Verdana, Geneva, sans-serif;
-$font: 'Tahoma', Verdana, Geneva, sans-serif;
+$font_primary: 'Tahoma', Verdana, Geneva, sans-serif;
 $font_secondary: 'Comic Sans MS', Verdana, Geneva, sans-serif;
 
-$wrap_padding: 20px;
-$wrapper: 1200px + $wrap_padding * 2;
+$min-width: 320px;
 
 // https://material-ui.com/ru/customization/color/
 
@@ -51,7 +49,7 @@ $colors: (
     text: $dark,
     border: $grey-400,
     border-active: $blue-300
-);
+) !default;
 
 $grid-breakpoints: (
     xs: 0,
@@ -89,6 +87,18 @@ $sizes: map-merge((
   75: 75%,
   100: 100%
 ), $sizes);
+
+$displays:
+    none,
+    inline,
+    inline-block,
+    block,
+    table,
+    table-row,
+    table-cell,
+    flex,
+    inline-flex
+    !default;
 
 // Grid columns
 $grid-columns: 12 !default;
