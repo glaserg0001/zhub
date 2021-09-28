@@ -4,8 +4,8 @@
     padding: .4em .8em .6em;
     font-size: 20px;
     line-height: 1;
-    color: $dark;
-    background-color: $grey-200;
+    color: black;
+    background-color: gray;
     border: 1px solid transparent;
     white-space: nowrap;
     text-align: center;
@@ -15,6 +15,6 @@
     z-index: 1;
     
     @include on-event {
-        background-color: $grey-400;
+        background-color: white;
     }
 }
