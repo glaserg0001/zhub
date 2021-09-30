@@ -1,7 +1,9 @@
 header.header
-  .container
-    .header__content
+  .container.header__content
       .header__logo
-        a(href='/' data-value='Logo').header-logo-link Logo
+        a(href='/')
+          img(src=URL_file('logo', baseUrlLvl, 'svg'), alt="Zap Hub logotype")
 
       include ../components/navigation
+
+      a.button__primary(href=URL_Pug_MainNav('index')) Додати оголошення

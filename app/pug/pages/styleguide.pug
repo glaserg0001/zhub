@@ -2,49 +2,83 @@ extends ../base/main
 
 block variables
   - var pageTitle = 'Styleguide'
+  //- - var pageMainClass = 'test'
   //- - var baseUrlLvl = 1
 
 block styles
   link(rel='stylesheet' href= URL_file('pages/styleguide', baseUrlLvl))
 
 block content
-  h1 Styleguide
-  h2 Forms
-  h3 Input
-  //- INPUT START
-  -
-    var inputFields = {
-      input1: {
-        label: 'Name',
-        value: 'Mike',
-        disabled: false
-      },
-      input2: {
-        label: 'Surname',
-        value: '',
-        disabled: true
-      },
-    }
+  .container
+    h1.text-center Styleguide
 
-  each val, key in inputFields
-    div(class='form-input ' + (val.label ? 'm-label' : ''))
-      input(type='text' value=val.value class=val.label ? 'js-form-input' : '')
-      label=val.label
-  //- INPUT END
- 
-  //- ICONS START
+    h2 Colors
+    -
+      var grayColors = [
+        {
+        'blue-500': '#2f4858',
+        'blue-400': '#406a85',
+        'blue-300': '#537992',
+        'blue-200': '#75aed6',
+        'blue-100': '#dceaf3'
+        },
+        {
+          'green-400': '#486c0c',
+          'green-300': '#6fa21a',
+          'green-200': '#8dc334',
+          'green-100': '#cee8a3',
+        },
+        {
+          'gray-500': '#949597',
+          'gray-400': '#d4d5d6',
+          'gray-300': '#dadada',
+          'gray-200': '#ededed',
+          'gray-100': '#f5f5f5',
+        }
+      ]
 
-  h2 Icons
-  -
-    var iconsSVG = [
-      'icon-test',
-    ]
-  if iconsSVG
-    ul.sg-icons__list
-      each val in iconsSVG
-        li.sg-icons__item(data-name=val)
-          +iconSvg(val)
-  //- ICONS END
+    each item in grayColors
+      ul.sg-palette
+        each val, key in item
+          li(style=`background: ${val};` data-name=key data-value=val)
+
+
+    h2 Forms
+    h3 Input
+    //- INPUT START
+    -
+      var inputFields = {
+        input1: {
+          label: 'Name',
+          value: 'Mike',
+          disabled: false
+        },
+        input2: {
+          label: 'Surname',
+          value: '',
+          disabled: true
+        },
+      }
+
+    each val, key in inputFields
+      div(class='form-input ' + (val.label ? 'm-label' : ''))
+        input(type='text' value=val.value class=val.label ? 'js-form-input' : '')
+        label=val.label
+    //- INPUT END
+  
+    //- ICONS START
+
+    h2 Icons
+    -
+      var iconsSVG = [
+        'icon-test',
+      ]
+    if iconsSVG
+      ul.sg-icons__list
+        each val in iconsSVG
+          li.sg-icons__item(data-name=val)
+            +iconSvg(val)
+    //- ICONS END
 
 
 block scripts

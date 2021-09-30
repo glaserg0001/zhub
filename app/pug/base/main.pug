@@ -10,7 +10,7 @@ html(lang="en")
   body
     //- .wrapper
     include ../layout/header
-    div(class=`main ${pageMainClass ? pageMainClass : ''}`)
+    div.main(class=`${pageMainClass ? pageMainClass : ''}`)
       block content
     include ../layout/footer
     include scripts

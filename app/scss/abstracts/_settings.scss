@@ -32,28 +32,49 @@ $min-width: 320px;
 // $grey-900: #424242;
 // $dark: #212121;
 
-$primary: #2f4858 !default;
-$secondary: #8dc334 !default;
+$blue-500: #2f4858 !default; // primary
+$blue-400: #406a85 !default; // hover
+$blue-300: #537992 !default; // light
+$blue-200: #75aed6 !default; // tag border
+$blue-100: #dceaf3 !default; // white hover
+
+$green-400: #486c0c !default; // focused
+$green-300: #6fa21a !default; // hover
+$green-200: #8dc334 !default; // secondary
+$green-100: #cee8a3 !default; // unable
+
+$gray-500: #949597 !default;
+$gray-400: #d4d5d6 !default; // border +
+$gray-300: #dadada !default;
+$gray-200: #ededed !default;
+$gray-100: #f5f5f5 !default;
+
 $dark: #132c3d !default;
+
 $black: #000 !default;
 $white: #fff !default;
 
-$gray-100: #949597 !default;
-$gray-200: #dadada !default;
+
 
 
 $colors: (
     // == common
-    primary: $primary,
-    primary-active: null,
-    secondary: $secondary,
-    tertiary: null,
-    // dark: $dark,
-    // light: $white,
+    primary: $blue-500,
+    primary-active: $blue-400,
+    primary-light: $blue-300,
+    secondary: $green-200,
+    secondary-active: $green-300,
+    secondary-focused: $green-400,
+    secondary-unable: $green-100,
+    // tertiary: null,
+    dark: $dark,
+    light: $blue-100,
+    white: $white,
+    black: $black,
     // == component
     text: $dark,
-    // border: $grey-400,
-    // border-active: $blue-300
+    border: $gray-400,
+    border-tag: $blue-200,
 ) !default;
 
 $grid-breakpoints: (

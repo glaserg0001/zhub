@@ -17,41 +17,64 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="header__content">
-          <div class="header__logo"><a class="header-logo-link" href="/" data-value="Logo">Logo</a></div>
-          <nav class="navigation">
-            <ul class="navigation__list">
-              <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Styleguide</a></li>
-            </ul>
-          </nav>
-        </div>
+      <div class="container header__content">
+        <div class="header__logo"><a href="/"><img src="img/logo.svg" alt="Zap Hub logotype"></a></div>
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Блог</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
+          </ul>
+        </nav><a class="button__primary" href="/app/index.html">Додати оголошення</a>
       </div>
     </header>
-    <div class="main ">
-      <h1>Styleguide</h1>
-      <h2>Forms</h2>
-      <h3>Input</h3>
-      <div class="form-input m-label">
-        <input class="js-form-input" type="text" value="Mike">
-        <label>Name</label>
+    <div class="main">
+      <div class="container">
+        <h1 class="text-center">Styleguide</h1>
+        <h2>Colors</h2>
+        <ul class="sg-palette">
+          <li style="background: #2f4858;" data-name="blue-500" data-value="#2f4858"></li>
+          <li style="background: #406a85;" data-name="blue-400" data-value="#406a85"></li>
+          <li style="background: #537992;" data-name="blue-300" data-value="#537992"></li>
+          <li style="background: #75aed6;" data-name="blue-200" data-value="#75aed6"></li>
+          <li style="background: #dceaf3;" data-name="blue-100" data-value="#dceaf3"></li>
+        </ul>
+        <ul class="sg-palette">
+          <li style="background: #486c0c;" data-name="green-400" data-value="#486c0c"></li>
+          <li style="background: #6fa21a;" data-name="green-300" data-value="#6fa21a"></li>
+          <li style="background: #8dc334;" data-name="green-200" data-value="#8dc334"></li>
+          <li style="background: #cee8a3;" data-name="green-100" data-value="#cee8a3"></li>
+        </ul>
+        <ul class="sg-palette">
+          <li style="background: #949597;" data-name="gray-500" data-value="#949597"></li>
+          <li style="background: #d4d5d6;" data-name="gray-400" data-value="#d4d5d6"></li>
+          <li style="background: #dadada;" data-name="gray-300" data-value="#dadada"></li>
+          <li style="background: #ededed;" data-name="gray-200" data-value="#ededed"></li>
+          <li style="background: #f5f5f5;" data-name="gray-100" data-value="#f5f5f5"></li>
+        </ul>
+        <h2>Forms</h2>
+        <h3>Input</h3>
+        <div class="form-input m-label">
+          <input class="js-form-input" type="text" value="Mike">
+          <label>Name</label>
+        </div>
+        <div class="form-input m-label">
+          <input class="js-form-input" type="text" value="">
+          <label>Surname</label>
+        </div>
+        <h2>Icons</h2>
+        <ul class="sg-icons__list">
+          <li class="sg-icons__item" data-name="icon-test">
+            <svg class="icon-svg">
+              <use xlink:href="img/icons.svg#icon-test"></use>
+            </svg>
+          </li>
+        </ul>
       </div>
-      <div class="form-input m-label">
-        <input class="js-form-input" type="text" value="">
-        <label>Surname</label>
-      </div>
-      <h2>Icons</h2>
-      <ul class="sg-icons__list">
-        <li class="sg-icons__item" data-name="icon-test">
-          <svg class="icon-svg">
-            <use xlink:href="img/icons.svg#icon-test"></use>
-          </svg>
-        </li>
-      </ul>
     </div>
     <footer class="footer">
       <div class="footer-copy">2021</div>
-    </footer>
+    </footer><a class="styleguide" href="/app/styleguide.html" target="_blank">styleguide </a>
     <script src="js/main.js"></script>
   </body>
 </html>
