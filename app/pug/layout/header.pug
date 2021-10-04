@@ -5,11 +5,12 @@ header.header
           img(src=URL_file('logo', baseUrlLvl, 'svg'), alt="Zap Hub logotype")
 
       //- .header__nav
-      include ../components/navigation
+      nav.navigation
+        include ../components/navigation
 
-      a.button.button__primary(href=URL_Pug_MainNav('index')) Додати оголошення
       
       .header__utility
+        a.button.button__primary(href=URL_Pug_MainNav('index')) Додати оголошення
         .header-widhlist
           a(href="#") #[+iconSvg('icon-heart-solid')]Збережені оголошення
 
@@ -21,6 +22,7 @@ header.header
             li.dropdown__item Налаштування
             li.dropdown__item.mutted #[+iconSvg('icon-exit')]Вийти
         
-        .header-lang
-          a.header-lang__item.current Укр
-          a.header-lang__item Рус
+        ul.header-lang
+          li.header-lang__item
+            a(href="#").header-lang__item.current Укр
+            a(href="#").header-lang__item Рус

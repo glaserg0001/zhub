@@ -9,18 +9,18 @@ block styles
   link(rel='stylesheet' href= URL_file('pages/styleguide', baseUrlLvl))
 
 block content
-  .container
-    h1.text-center Styleguide
-
-    h2 Colors
+  .container.sg-container
+    h1.sg-heading Styleguide
+    //- COLOR START
+    h2.sg-heading Colors
     -
       var grayColors = [
         {
-        'blue-500': '#2f4858',
-        'blue-400': '#406a85',
-        'blue-300': '#537992',
-        'blue-200': '#75aed6',
-        'blue-100': '#dceaf3'
+          'blue-500': '#2f4858',
+          'blue-400': '#406a85',
+          'blue-300': '#537992',
+          'blue-200': '#75aed6',
+          'blue-100': '#dceaf3'
         },
         {
           'green-400': '#486c0c',
@@ -41,11 +41,20 @@ block content
       ul.sg-palette
         each val, key in item
           li(style=`background: ${val};` data-name=key data-value=val)
+    //- COLOR START
 
+    //- HEADING START
+    h2.sg-heading Heading
+    .sg-block
+      h1 Heading 1
+      h2 Heading 2
+      h3 Heading 3
+      h4 Heading 4
+    //- HEADING END
 
-    h2 Forms
-    h3 Input
-    //- INPUT START
+    h2.sg-heading Forms
+    h3.sg-heading Input
+    //- FORM START
     -
       var inputFields = {
         input1: {
@@ -64,14 +73,37 @@ block content
       div(class='form-input ' + (val.label ? 'm-label' : ''))
         input(type='text' value=val.value class=val.label ? 'js-form-input' : '')
         label=val.label
-    //- INPUT END
-  
+    //- FORM END
+
+    //- BUTTON START
+    h2.sg-heading Buttons
+    h3.sg-heading Primary
+
+    .row
+      .col-md-4
+        .sg-block
+          .sg-block__list
+            a.button.button__primary(href='#') Додати оголошення
+          .sg-block__list
+            button.button.button__primary(href='#') Додати оголошення
+
+    h4.sg-heading Default
+    h4.sg-heading Hover
+    h4.sg-heading Loading
+    h4.sg-heading Focused
+    h4.sg-heading Unable
+    h3.sg-heading Secondary
+    //- BUTTON END
+
     //- ICONS START
 
-    h2 Icons
+    h2.sg-heading Icons
     -
       var iconsSVG = [
         'icon-heart-solid',
+        'icon-user',
+        'icon-exit',
+        'icon-menu',
       ]
     if iconsSVG
       ul.sg-icons__list

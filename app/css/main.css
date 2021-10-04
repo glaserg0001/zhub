@@ -216,7 +216,7 @@ body {
   line-height: 1.2;
   color: #132c3d;
   font-family: "Roboto", sans-serif;
-  background-color: #fff;
+  background-color: #f5f5f5;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -233,8 +233,13 @@ body {
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  color: #8dc334;
+}
+
+@media (min-width: 1024px) {
+  a:hover {
+    color: #6fa21a;
+  }
 }
 
 .icon-svg {
@@ -3746,6 +3751,62 @@ a {
   }
 }
 
+h1,
+.h1 {
+  font-size: 20px;
+  margin-bottom: 1em;
+  font-weight: 400;
+}
+
+@media (min-width: 1024px) {
+  h1,
+  .h1 {
+    font-size: 30px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 17px;
+  margin-bottom: 0.8em;
+  font-weight: 400;
+}
+
+@media (min-width: 1024px) {
+  h2,
+  .h2 {
+    font-size: 24px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 12px;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+}
+
+@media (min-width: 1024px) {
+  h3,
+  .h3 {
+    font-size: 20px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 12px;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+}
+
+@media (min-width: 1024px) {
+  h4,
+  .h4 {
+    font-size: 18px;
+  }
+}
+
 ::placeholder {
   color: inherit;
   transition: all 0.3s;
@@ -3844,6 +3905,41 @@ select.input {
   .navigation__item {
     margin: 0 20px 0 0;
   }
+}
+
+.navigation__link {
+  color: #2f4858;
+  text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  .navigation__link:hover {
+    color: #406a85;
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  background-color: #fff;
+  box-shadow: 0px -8px 31px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 20px 0;
+  }
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+}
+
+.header__utility {
+  display: flex;
 }
 
 .header-logo {

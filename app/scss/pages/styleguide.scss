@@ -1,5 +1,27 @@
 @import "../abstracts/index";
 
+.sg-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.sg-heading {
+    padding-bottom: 5px;
+    background:
+        linear-gradient(90deg, color(primary3), color(primary3)) left bottom / 2.5em 2px no-repeat;
+}
+
+.sg-block {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='5' ry='5' stroke='%232F4858FF' stroke-width='1' stroke-dasharray='9%2c 5' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 5px;
+
+    &__list {
+        margin-bottom: 25px;
+    }
+}
+
 .sg-palette {
     display: flex;
     flex-wrap: wrap;
@@ -12,6 +34,7 @@
         height: 100px;
         margin-bottom: 40px;
         border-radius: 50%;
+        border: 1px solid color(gray4);
 
         &::before {
             content: attr(data-name) ' ' attr(data-value);

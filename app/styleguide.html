@@ -25,8 +25,8 @@
             <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Блог</a></li>
             <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
           </ul>
-        </nav><a class="button button__primary" href="/app/index.html">Додати оголошення</a>
-        <div class="header__utility">
+        </nav>
+        <div class="header__utility"><a class="button button__primary" href="/app/index.html">Додати оголошення</a>
           <div class="header-widhlist"><a href="#">
               <svg class="icon-svg">
                 <use xlink:href="img/icons.svg#icon-heart-solid"></use>
@@ -46,14 +46,16 @@
               </li>
             </ul>
           </div>
-          <div class="header-lang"><a class="header-lang__item current">Укр</a><a class="header-lang__item">Рус</a></div>
+          <ul class="header-lang">
+            <li class="header-lang__item"><a class="header-lang__item current" href="#">Укр</a><a class="header-lang__item" href="#">Рус</a></li>
+          </ul>
         </div>
       </div>
     </header>
     <div class="main">
-      <div class="container">
-        <h1 class="text-center">Styleguide</h1>
-        <h2>Colors</h2>
+      <div class="container sg-container">
+        <h1 class="sg-heading">Styleguide</h1>
+        <h2 class="sg-heading">Colors</h2>
         <ul class="sg-palette">
           <li style="background: #2f4858;" data-name="blue-500" data-value="#2f4858"></li>
           <li style="background: #406a85;" data-name="blue-400" data-value="#406a85"></li>
@@ -74,8 +76,15 @@
           <li style="background: #ededed;" data-name="gray-200" data-value="#ededed"></li>
           <li style="background: #f5f5f5;" data-name="gray-100" data-value="#f5f5f5"></li>
         </ul>
-        <h2>Forms</h2>
-        <h3>Input</h3>
+        <h2 class="sg-heading">Heading</h2>
+        <div class="sg-block">
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+        </div>
+        <h2 class="sg-heading">Forms</h2>
+        <h3 class="sg-heading">Input</h3>
         <div class="form-input m-label">
           <input class="js-form-input" type="text" value="Mike">
           <label>Name</label>
@@ -84,18 +93,57 @@
           <input class="js-form-input" type="text" value="">
           <label>Surname</label>
         </div>
-        <h2>Icons</h2>
+        <h2 class="sg-heading">Buttons</h2>
+        <h3 class="sg-heading">Primary</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="sg-block">
+              <div class="sg-block__list"><a class="button button__primary" href="#">Додати оголошення</a></div>
+              <div class="sg-block__list">
+                <button class="button button__primary" href="#">Додати оголошення</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4 class="sg-heading">Default</h4>
+        <h4 class="sg-heading">Hover</h4>
+        <h4 class="sg-heading">Loading</h4>
+        <h4 class="sg-heading">Focused</h4>
+        <h4 class="sg-heading">Unable</h4>
+        <h3 class="sg-heading">Secondary</h3>
+        <h2 class="sg-heading">Icons</h2>
         <ul class="sg-icons__list">
           <li class="sg-icons__item" data-name="icon-heart-solid">
             <svg class="icon-svg">
               <use xlink:href="img/icons.svg#icon-heart-solid"></use>
             </svg>
           </li>
+          <li class="sg-icons__item" data-name="icon-user">
+            <svg class="icon-svg">
+              <use xlink:href="img/icons.svg#icon-user"></use>
+            </svg>
+          </li>
+          <li class="sg-icons__item" data-name="icon-exit">
+            <svg class="icon-svg">
+              <use xlink:href="img/icons.svg#icon-exit"></use>
+            </svg>
+          </li>
+          <li class="sg-icons__item" data-name="icon-menu">
+            <svg class="icon-svg">
+              <use xlink:href="img/icons.svg#icon-menu"></use>
+            </svg>
+          </li>
         </ul>
       </div>
     </div>
     <footer class="footer">
-      <div class="footer-copy">2021</div>
+      <div class="navigation navigation--footer">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Блог</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
+        </ul>
+      </div>
     </footer><a class="styleguide" href="/app/styleguide.html" target="_blank">styleguide </a>
     <script src="js/main.js"></script>
   </body>
