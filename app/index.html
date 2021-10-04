@@ -17,14 +17,36 @@
   <body>
     <header class="header">
       <div class="container header__content">
-        <div class="header__logo"><a href="/"><img src="img/logo.svg" alt="Zap Hub logotype"></a></div>
+        <div class="header-logo"><a href="/"><img src="img/logo.svg" alt="Zap Hub logotype"></a></div>
         <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
             <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Блог</a></li>
             <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
           </ul>
-        </nav><a class="button__primary" href="/app/index.html">Додати оголошення</a>
+        </nav><a class="button button__primary" href="/app/index.html">Додати оголошення</a>
+        <div class="header__utility">
+          <div class="header-widhlist"><a href="#">
+              <svg class="icon-svg">
+                <use xlink:href="img/icons.svg#icon-heart-solid"></use>
+              </svg>Збережені оголошення</a></div>
+          <div class="header-account dropdown">
+            <svg class="icon-svg">
+              <use xlink:href="img/icons.svg#icon-user"></use>
+            </svg>
+            <ul class="dropdown__list d-none">
+              <li class="dropdown__item">Акаунт</li>
+              <li class="dropdown__item">Панель керування</li>
+              <li class="dropdown__item">Налаштування</li>
+              <li class="dropdown__item mutted">
+                <svg class="icon-svg">
+                  <use xlink:href="img/icons.svg#icon-exit"></use>
+                </svg>Вийти
+              </li>
+            </ul>
+          </div>
+          <div class="header-lang"><a class="header-lang__item current">Укр</a><a class="header-lang__item">Рус</a></div>
+        </div>
       </div>
     </header>
     <div class="main">

@@ -7,31 +7,6 @@ $min-width: 320px;
 
 // html example for SVG <svg class='icon'><use xlink:href='app/img/icons.svg#icon-id'></use></svg>
 
-// $red-500: #ee6e73;
-// $red-600: #b71c1c;
-// $teal: #009688;
-// // blue
-// $blue-100: #bbdefb;
-// $blue-200: #90caf9;
-// $blue-300: #64b5f6;
-// $blue-400: #42a5f5;
-// $blue-500: #2196f3;
-// $blue-600: #1e88e5;
-// $blue-700: #1976d2;
-// $blue-800: #1565c0;
-// $blue-900: #0d47a1;
-
-// $grey-100: #fafafa;
-// $grey-200: #f5f5f5;
-// $grey-300: #eeeeee;
-// $grey-400: #e0e0e0;
-// $grey-500: #bdbdbd;
-// $grey-600: #9e9e9e;
-// $grey-700: #757575;
-// $grey-800: #616161;
-// $grey-900: #424242;
-// $dark: #212121;
-
 $blue-500: #2f4858 !default; // primary
 $blue-400: #406a85 !default; // hover
 $blue-300: #537992 !default; // light
@@ -59,14 +34,13 @@ $white: #fff !default;
 
 $colors: (
     // == common
-    primary: $blue-500,
-    primary-active: $blue-400,
-    primary-light: $blue-300,
-    secondary: $green-200,
-    secondary-active: $green-300,
-    secondary-focused: $green-400,
-    secondary-unable: $green-100,
-    // tertiary: null,
+    primary1: $blue-500,
+    primary2: $blue-400,
+    primary3: $blue-300,
+    secondary1: $green-200,
+    secondary2: $green-300,
+    secondary3: $green-400,
+    secondary4: $green-100,
     dark: $dark,
     light: $blue-100,
     white: $white,
