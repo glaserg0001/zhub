@@ -1,20 +1,87 @@
-.btn {
-    position: relative;
-    display: inline-block;
-    padding: .4em .8em .6em;
-    font-size: 20px;
-    line-height: 1;
-    color: black;
-    background-color: gray;
-    border: 1px solid transparent;
-    white-space: nowrap;
+.button {
+    $this: 'button';
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-height: 40px;
+    padding: 5px 10px;
+    font-size: rem(16);
+    color: color(text);
+    background-color: color(white);
+    border: 1px solid color(primary);
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     user-select: none;
-    z-index: 1;
-    
+
     @include on-event {
-        background-color: white;
+        background-color: color(gray1);
+        color: color(text);
+    }
+
+    @include on-event(focus) {
+        // outline: 1px solid color(primary);
+    }
+
+    &__icon {
+        font-size: rem(20);
+        flex-shrink: 0;
+    }
+
+    &--loading {
+        position: relative;
+        // color: transparent;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 1em;
+            height: 1em;
+            margin: auto;
+            border-radius: 50%;
+            font-size: rem(20);
+            border: 2px solid currentColor;
+            border-top-color: transparent;
+            z-index: z(above);
+
+            animation: spinner-border 0.75s linear infinite;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: color(white);
+        }
+
+        &.#{$this}--icon {
+            &::before {
+                position: static;
+                margin: 0;
+            }
+
+            &::after {
+                display: none;
+            }
+
+            .#{$this}__icon {
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes spinner-border {
+    to {
+        transform: rotate(1turn);
     }
 }

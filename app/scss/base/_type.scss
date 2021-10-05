@@ -1,57 +1,57 @@
 h1,
 .h1 {
-    font-size: 20px;
+    font-size: rem(20);
     margin-bottom: 1em;
-    font-weight: 400;
+    font-weight: $font-weight-normal;
 
     @include media-breakpoint-up(lg) {
-        font-size: 30px;
+        font-size: rem(30);
     }
 }
 
 h2,
 .h2 {
-    font-size: 17px;
+    font-size: rem(17);
     margin-bottom: 0.8em;
-    font-weight: 400;
+    font-weight: $font-weight-normal;
 
     @include media-breakpoint-up(lg) {
-        font-size: 24px;
+        font-size: rem(24);
     }
 }
 
 h3,
 .h3 {
-    font-size: 12px;
-    margin-bottom: 0.5em;
-    font-weight: 400;
+    font-size: rem(12);
+    margin-bottom: 1em;
+    font-weight: $font-weight-normal;
 
     @include media-breakpoint-up(lg) {
-        font-size: 20px;
+        font-size: rem(20);
     }
 }
 
 h4,
 .h4 {
-    font-size: 12px;
-    margin-bottom: 0.5em;
-    font-weight: 400;
+    font-size: rem(12);
+    margin-bottom: 1em;
+    font-weight: $font-weight-normal;
 
     @include media-breakpoint-up(lg) {
-        font-size: 18px;
+        font-size: rem(18);
     }
 }
 
 // h5,
 // .h5 {
-//     font-size: 16px;
+//     font-size: rem(16);
 
 //     @include media-breakpoint-up(lg) {}
 // }
 
 // h6,
 // .h6 {
-//     font-size: 16px;
+//     font-size: rem(16);
 
 //     @include media-breakpoint-up(lg) {}
 // }

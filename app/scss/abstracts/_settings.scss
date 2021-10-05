@@ -56,7 +56,6 @@ $colors: (
     gray3: $gray-300,
     gray2: $gray-200,
     gray1: $gray-100,
-
 ) !default;
 
 $grid-breakpoints: (
@@ -65,6 +64,16 @@ $grid-breakpoints: (
     md: 768px,
     lg: 1024px,
     xl: 1200px
+) !default;
+
+$z-layers: (
+    // common
+    below: -1,
+    zero: 0,
+    auto: auto,
+    above: 1,
+    // components
+    header: 1
 ) !default;
 
 $container-max-widths: (
@@ -113,3 +122,8 @@ $grid-columns: 12 !default;
 $grid-gutter-width: 20px !default;
 $grid-row-columns: 6 !default;
 $enable-grid-classes: true !default;
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 700 !default;

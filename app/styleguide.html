@@ -56,26 +56,28 @@
       <div class="container sg-container">
         <h1 class="sg-heading">Styleguide</h1>
         <h2 class="sg-heading">Colors</h2>
-        <ul class="sg-palette">
-          <li style="background: #2f4858;" data-name="blue-500" data-value="#2f4858"></li>
-          <li style="background: #406a85;" data-name="blue-400" data-value="#406a85"></li>
-          <li style="background: #537992;" data-name="blue-300" data-value="#537992"></li>
-          <li style="background: #75aed6;" data-name="blue-200" data-value="#75aed6"></li>
-          <li style="background: #dceaf3;" data-name="blue-100" data-value="#dceaf3"></li>
-        </ul>
-        <ul class="sg-palette">
-          <li style="background: #486c0c;" data-name="green-400" data-value="#486c0c"></li>
-          <li style="background: #6fa21a;" data-name="green-300" data-value="#6fa21a"></li>
-          <li style="background: #8dc334;" data-name="green-200" data-value="#8dc334"></li>
-          <li style="background: #cee8a3;" data-name="green-100" data-value="#cee8a3"></li>
-        </ul>
-        <ul class="sg-palette">
-          <li style="background: #949597;" data-name="gray-500" data-value="#949597"></li>
-          <li style="background: #d4d5d6;" data-name="gray-400" data-value="#d4d5d6"></li>
-          <li style="background: #dadada;" data-name="gray-300" data-value="#dadada"></li>
-          <li style="background: #ededed;" data-name="gray-200" data-value="#ededed"></li>
-          <li style="background: #f5f5f5;" data-name="gray-100" data-value="#f5f5f5"></li>
-        </ul>
+        <div class="sg-block">
+          <ul class="sg-palette">
+            <li style="background: #2f4858;" data-name="blue-500" data-value="#2f4858"></li>
+            <li style="background: #406a85;" data-name="blue-400" data-value="#406a85"></li>
+            <li style="background: #537992;" data-name="blue-300" data-value="#537992"></li>
+            <li style="background: #75aed6;" data-name="blue-200" data-value="#75aed6"></li>
+            <li style="background: #dceaf3;" data-name="blue-100" data-value="#dceaf3"></li>
+          </ul>
+          <ul class="sg-palette">
+            <li style="background: #486c0c;" data-name="green-400" data-value="#486c0c"></li>
+            <li style="background: #6fa21a;" data-name="green-300" data-value="#6fa21a"></li>
+            <li style="background: #8dc334;" data-name="green-200" data-value="#8dc334"></li>
+            <li style="background: #cee8a3;" data-name="green-100" data-value="#cee8a3"></li>
+          </ul>
+          <ul class="sg-palette">
+            <li style="background: #949597;" data-name="gray-500" data-value="#949597"></li>
+            <li style="background: #d4d5d6;" data-name="gray-400" data-value="#d4d5d6"></li>
+            <li style="background: #dadada;" data-name="gray-300" data-value="#dadada"></li>
+            <li style="background: #ededed;" data-name="gray-200" data-value="#ededed"></li>
+            <li style="background: #f5f5f5;" data-name="gray-100" data-value="#f5f5f5"></li>
+          </ul>
+        </div>
         <h2 class="sg-heading">Heading</h2>
         <div class="sg-block">
           <h1>Heading 1</h1>
@@ -85,32 +87,65 @@
         </div>
         <h2 class="sg-heading">Forms</h2>
         <h3 class="sg-heading">Input</h3>
-        <div class="form-input m-label">
-          <input class="js-form-input" type="text" value="Mike">
-          <label>Name</label>
-        </div>
-        <div class="form-input m-label">
-          <input class="js-form-input" type="text" value="">
-          <label>Surname</label>
+        <div class="sg-block">
+          <div class="form-input m-label">
+            <input class="js-form-input" type="text" value="Mike">
+            <label>Name</label>
+          </div>
+          <div class="form-input m-label">
+            <input class="js-form-input" type="text" value="">
+            <label>Surname</label>
+          </div>
         </div>
         <h2 class="sg-heading">Buttons</h2>
-        <h3 class="sg-heading">Primary</h3>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-3">
+            <h3 class="sg-heading">Base</h3>
             <div class="sg-block">
-              <div class="sg-block__list"><a class="button button__primary" href="#">Додати оголошення</a></div>
+              <h4 class="sg-heading">Default</h4>
+              <div class="sg-block__list"><a class="button" href="#">Додати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button__primary" href="#">Додати оголошення</button>
+                <button class="button">Додати оголошення</button>
               </div>
+              <h4 class="sg-heading">Loading</h4>
+              <div class="sg-block__list"><a class="button button--loading" href="#">Додати оголошення</a></div>
+              <div class="sg-block__list">
+                <button class="button button--loading">Додати оголошення</button>
+              </div>
+              <h4 class="sg-heading">Unable</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h3 class="sg-heading">button with icon</h3>
+            <div class="sg-block">
+              <h4 class="sg-heading">Default</h4>
+              <div class="sg-block__list"><a class="button" href="#">
+                  <svg class="icon-svg button__icon">
+                    <use xlink:href="img/icons.svg#icon-add"></use>
+                  </svg> Додати оголошення</a></div>
+              <div class="sg-block__list">
+                <button class="button">
+                  <svg class="icon-svg button__icon">
+                    <use xlink:href="img/icons.svg#icon-add"></use>
+                  </svg> Додати оголошення
+                </button>
+              </div>
+              <h4 class="sg-heading">Loading</h4>
+              <div class="sg-block__list"><a class="button button--icon button--loading" href="#">
+                  <svg class="icon-svg button__icon">
+                    <use xlink:href="img/icons.svg#icon-add"></use>
+                  </svg> Додати оголошення</a></div>
+              <div class="sg-block__list">
+                <button class="button button--icon button--loading">
+                  <svg class="icon-svg button__icon">
+                    <use xlink:href="img/icons.svg#icon-add"></use>
+                  </svg> Додати оголошення
+                </button>
+              </div>
+              <h4 class="sg-heading">Unable</h4>
             </div>
           </div>
         </div>
-        <h4 class="sg-heading">Default</h4>
-        <h4 class="sg-heading">Hover</h4>
-        <h4 class="sg-heading">Loading</h4>
-        <h4 class="sg-heading">Focused</h4>
-        <h4 class="sg-heading">Unable</h4>
-        <h3 class="sg-heading">Secondary</h3>
         <h2 class="sg-heading">Icons</h2>
         <ul class="sg-icons__list">
           <li class="sg-icons__item" data-name="icon-heart-solid">
@@ -131,6 +166,11 @@
           <li class="sg-icons__item" data-name="icon-menu">
             <svg class="icon-svg">
               <use xlink:href="img/icons.svg#icon-menu"></use>
+            </svg>
+          </li>
+          <li class="sg-icons__item" data-name="icon-add">
+            <svg class="icon-svg">
+              <use xlink:href="img/icons.svg#icon-add"></use>
             </svg>
           </li>
         </ul>

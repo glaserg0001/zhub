@@ -1,4 +1,14 @@
-@function color($key: "blue") {
+@function color($key: black) {
+    // Example: color(black)
     @return map-get($colors, $key);
 }
 
+@function rem($val, $root: 16) {
+    // Example: rem(16)
+    @return $val / $root * 1rem;
+}
+
+@function z($key: auto) {
+    // Example: color(black)
+    @return map-get($z-layers, $key);
+}

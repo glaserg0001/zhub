@@ -36,11 +36,11 @@ block content
           'gray-100': '#f5f5f5',
         }
       ]
-
-    each item in grayColors
-      ul.sg-palette
-        each val, key in item
-          li(style=`background: ${val};` data-name=key data-value=val)
+    .sg-block
+      each item in grayColors
+        ul.sg-palette
+          each val, key in item
+            li(style=`background: ${val};` data-name=key data-value=val)
     //- COLOR START
 
     //- HEADING START
@@ -69,30 +69,48 @@ block content
         },
       }
 
-    each val, key in inputFields
-      div(class='form-input ' + (val.label ? 'm-label' : ''))
-        input(type='text' value=val.value class=val.label ? 'js-form-input' : '')
-        label=val.label
+    .sg-block
+      each val, key in inputFields
+        div(class='form-input ' + (val.label ? 'm-label' : ''))
+          input(type='text' value=val.value class=val.label ? 'js-form-input' : '')
+          label=val.label
     //- FORM END
 
     //- BUTTON START
     h2.sg-heading Buttons
-    h3.sg-heading Primary
 
     .row
-      .col-md-4
+      //- Primary
+      .col-md-3
+        h3.sg-heading Base
         .sg-block
+          h4.sg-heading Default
           .sg-block__list
-            a.button.button__primary(href='#') Додати оголошення
+            a.button(href='#') Додати оголошення
           .sg-block__list
-            button.button.button__primary(href='#') Додати оголошення
+            button.button Додати оголошення
+          h4.sg-heading Loading
+          .sg-block__list
+            a.button.button--loading(href='#') Додати оголошення
+          .sg-block__list
+            button.button.button--loading Додати оголошення
+          h4.sg-heading Unable
+      //- Secondary button__secondary
+      .col-md-3
+        h3.sg-heading button with icon
+        .sg-block
+          h4.sg-heading Default
+          .sg-block__list
+            a.button(href='#') #[+iconSvg('icon-add', 'button__icon')] Додати оголошення
+          .sg-block__list
+            button.button #[+iconSvg('icon-add', 'button__icon')] Додати оголошення
+          h4.sg-heading Loading
+          .sg-block__list
+            a.button.button--icon.button--loading(href='#') #[+iconSvg('icon-add', 'button__icon')] Додати оголошення
+          .sg-block__list
+            button.button.button--icon.button--loading #[+iconSvg('icon-add', 'button__icon')] Додати оголошення
+          h4.sg-heading Unable
 
-    h4.sg-heading Default
-    h4.sg-heading Hover
-    h4.sg-heading Loading
-    h4.sg-heading Focused
-    h4.sg-heading Unable
-    h3.sg-heading Secondary
     //- BUTTON END
 
     //- ICONS START
@@ -104,6 +122,7 @@ block content
         'icon-user',
         'icon-exit',
         'icon-menu',
+        'icon-add',
       ]
     if iconsSVG
       ul.sg-icons__list
