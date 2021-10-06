@@ -13,31 +13,9 @@ block content
     h1.sg-heading Styleguide
     //- COLOR START
     h2.sg-heading Colors
-    -
-      var grayColors = [
-        {
-          'blue-500': '#2f4858',
-          'blue-400': '#406a85',
-          'blue-300': '#537992',
-          'blue-200': '#75aed6',
-          'blue-100': '#dceaf3'
-        },
-        {
-          'green-400': '#486c0c',
-          'green-300': '#6fa21a',
-          'green-200': '#8dc334',
-          'green-100': '#cee8a3',
-        },
-        {
-          'gray-500': '#949597',
-          'gray-400': '#d4d5d6',
-          'gray-300': '#dadada',
-          'gray-200': '#ededed',
-          'gray-100': '#f5f5f5',
-        }
-      ]
+
     .sg-block
-      each item in grayColors
+      each item in sgColors
         ul.sg-palette
           each val, key in item
             li(style=`background: ${val};` data-name=key data-value=val)
@@ -55,22 +33,8 @@ block content
     h2.sg-heading Forms
     h3.sg-heading Input
     //- FORM START
-    -
-      var inputFields = {
-        input1: {
-          label: 'Name',
-          value: 'Mike',
-          disabled: false
-        },
-        input2: {
-          label: 'Surname',
-          value: '',
-          disabled: true
-        },
-      }
-
     .sg-block
-      each val, key in inputFields
+      each val, key in sgInputFields
         div(class='form-input ' + (val.label ? 'm-label' : ''))
           input(type='text' value=val.value class=val.label ? 'js-form-input' : '')
           label=val.label
@@ -80,36 +44,29 @@ block content
     h2.sg-heading Buttons
 
     .row
-      //- Primary
-      .col-md-3
-        h3.sg-heading Base
-        .sg-block
-          h4.sg-heading Default
-          .sg-block__list
-            a.button(href='#') Додати оголошення
-          .sg-block__list
-            button.button Додати оголошення
-          h4.sg-heading Loading
-          .sg-block__list
-            a.button.button--loading(href='#') Додати оголошення
-          .sg-block__list
-            button.button.button--loading Додати оголошення
-          h4.sg-heading Unable
-      //- Secondary button__secondary
-      .col-md-3
-        h3.sg-heading button with icon
-        .sg-block
-          h4.sg-heading Default
-          .sg-block__list
-            a.button(href='#') #[+iconSvg('icon-add', 'button__icon')] Додати оголошення
-          .sg-block__list
-            button.button #[+iconSvg('icon-add', 'button__icon')] Додати оголошення
-          h4.sg-heading Loading
-          .sg-block__list
-            a.button.button--icon.button--loading(href='#') #[+iconSvg('icon-add', 'button__icon')] Додати оголошення
-          .sg-block__list
-            button.button.button--icon.button--loading #[+iconSvg('icon-add', 'button__icon')] Додати оголошення
-          h4.sg-heading Unable
+      each item in sgButtons
+        .col-sm-6.col-md-3.d-flex.flex-column
+          h3.sg-heading.align-self-start=item.title
+          .sg-block.flex-fill
+            each helperItem in sgButtonsHelper
+              - var attributes = {};
+              - attributes.class = 'button';
+              - attributes.class += item.icon ? ' button--icon' : '';
+              - attributes.class += helperItem == 'Loading' ? ' button--loading' : '';
+              - attributes.class += helperItem == 'Unable' ? ' button--disabled' : '';
+              - attributes.class += item.addClass ? ` ${item.addClass}` : '';
+              
+              h4.sg-heading=helperItem
+              .sg-block__list
+                a(href='#')&attributes(attributes)
+                  if item.icon
+                    +iconSvg('icon-add', 'button__icon')
+                  | #{item.text}
+              .sg-block__list
+                button&attributes(attributes)
+                  if item.icon
+                    +iconSvg('icon-add', 'button__icon')
+                  | #{item.text}
 
     //- BUTTON END
 

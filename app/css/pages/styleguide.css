@@ -4,8 +4,9 @@
 }
 
 .sg-heading {
+  display: table;
   padding-bottom: 5px;
-  background: linear-gradient(90deg, #537992, #537992) left bottom/2.5em 2px no-repeat;
+  background: linear-gradient(90deg, #537992, #537992) left bottom/calc(100% - 10px) 2px no-repeat;
 }
 
 .sg-block {
