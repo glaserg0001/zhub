@@ -2149,6 +2149,8 @@ select.input {
 }
 
 .button {
+  --color: #132c3d;
+  --color-hover: #132c3d;
   --bg-color: #fff;
   --bg-color-hover: #f5f5f5;
   display: inline-flex;
@@ -2158,7 +2160,7 @@ select.input {
   min-height: 40px;
   padding: 5px 10px;
   font-size: 1rem;
-  color: #132c3d;
+  color: var(--color);
   background-color: var(--bg-color);
   border: 1px solid #2f4858;
   text-align: center;
@@ -2170,25 +2172,8 @@ select.input {
 @media (min-width: 1024px) {
   .button:hover {
     background-color: var(--bg-color-hover);
-    color: #132c3d;
+    color: var(--color-hover);
   }
-}
-
-.button__primary {
-  --bg-color: #2f4858;
-  --bg-color-hover: #406a85;
-  color: #fff;
-}
-
-@media (min-width: 1024px) {
-  .button__primary:hover {
-    color: #fff;
-  }
-}
-
-.button__icon {
-  font-size: 1.25rem;
-  flex-shrink: 0;
 }
 
 .button--loading {
@@ -2207,7 +2192,7 @@ select.input {
   margin: auto;
   border-radius: 50%;
   font-size: 1.25rem;
-  border: 2px solid currentColor;
+  border: 2px solid var(--color);
   border-top-color: transparent;
   z-index: 1;
   animation: spinner-border 0.75s linear infinite;
@@ -2245,6 +2230,29 @@ select.input {
 
 .button--small {
   min-height: 35px;
+}
+
+.button--large {
+  min-height: 45px;
+}
+
+.button__icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.button__primary {
+  --color: #fff;
+  --color-hover: #fff;
+  --bg-color: #2f4858;
+  --bg-color-hover: #406a85;
+}
+
+.button__secondary {
+  --color: #fff;
+  --color-hover: #fff;
+  --bg-color: #8dc334;
+  --bg-color-hover: #6fa21a;
 }
 
 @keyframes spinner-border {

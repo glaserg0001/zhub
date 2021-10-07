@@ -60,12 +60,12 @@ block content
               .sg-block__list
                 a(href='#')&attributes(attributes)
                   if item.icon
-                    +iconSvg('icon-add', 'button__icon')
+                    +iconSvg(`icon-${item.icon}`, 'button__icon')
                   | #{item.text}
               .sg-block__list
                 button&attributes(attributes)
                   if item.icon
-                    +iconSvg('icon-add', 'button__icon')
+                    +iconSvg(`icon-${item.icon}`, 'button__icon')
                   | #{item.text}
 
     //- BUTTON END
@@ -73,17 +73,9 @@ block content
     //- ICONS START
 
     h2.sg-heading Icons
-    -
-      var iconsSVG = [
-        'icon-heart-solid',
-        'icon-user',
-        'icon-exit',
-        'icon-menu',
-        'icon-add',
-      ]
-    if iconsSVG
+    if sgIconsSVG
       ul.sg-icons__list
-        each val in iconsSVG
+        each val in sgIconsSVG
           li.sg-icons__item(data-name=val)
             +iconSvg(val)
     //- ICONS END

@@ -1,5 +1,8 @@
 .button {
     $this: 'button';
+
+    --color: #{color(text)};
+    --color-hover: #{color(text)};
     --bg-color: #{color(white)};
     --bg-color-hover: #{color(gray1)};
 
@@ -10,8 +13,7 @@
     min-height: 40px;
     padding: 5px 10px;
     font-size: rem(16);
-    color: color(text);
-    // background-color: color(white);
+    color: var(--color);
     background-color: var(--bg-color);
     border: 1px solid color(primary);
     text-align: center;
@@ -21,33 +23,11 @@
 
     @include on-event {
         background-color: var(--bg-color-hover);
-        color: color(text);
-    }
-
-    // @include on-event(focus) {
-    //     // outline: 1px solid color(primary);
-    // }
-
-    &__primary {
-        --bg-color: #{color(primary)};
-        --bg-color-hover: #{color(primary2)};
-        // background-color: var(--bg-color);
-        color: color(white);
-
-        @include on-event {
-            // background-color: color(primary2);
-            color: color(white);
-        }
-    }
-
-    &__icon {
-        font-size: rem(20);
-        flex-shrink: 0;
+        color: var(--color-hover);
     }
 
     &--loading {
         position: relative;
-        // color: transparent;
 
         &::before {
             content: '';
@@ -61,7 +41,7 @@
             margin: auto;
             border-radius: 50%;
             font-size: rem(20);
-            border: 2px solid currentColor;
+            border: 2px solid var(--color);
             border-top-color: transparent;
             z-index: z(above);
 
@@ -75,7 +55,6 @@
             right: 0;
             left: 0;
             bottom: 0;
-            // background-color: color(white);
             background-color: var(--bg-color);
         }
 
@@ -104,6 +83,29 @@
 
     &--small {
         min-height: 35px;
+    }
+
+    &--large {
+        min-height: 45px;
+    }
+
+    &__icon {
+        font-size: rem(20);
+        flex-shrink: 0;
+    }
+
+    &__primary {
+        --color: #{color(white)};
+        --color-hover: #{color(white)};
+        --bg-color: #{color(primary)};
+        --bg-color-hover: #{color(primary2)};
+    }
+
+    &__secondary {
+        --color: #{color(white)};
+        --color-hover: #{color(white)};
+        --bg-color: #{color(secondary)};
+        --bg-color-hover: #{color(secondary2)};
     }
 }
 

@@ -39,6 +39,15 @@
     }
   ]
 
+  var sgIconsSVG = [
+        'icon-heart-solid',
+        'icon-user',
+        'icon-exit',
+        'icon-menu',
+        'icon-search',
+        'icon-add',
+  ]
+
   var sgInputFields = {
     input1: {
       label: 'Name',
@@ -65,21 +74,27 @@
       icon: false,
       addClass: null
     },
-    {
-      title: 'Base with Icon',
-      text: 'Додати оголошення',
-      icon: true
-    },
+    //- {
+    //-   title: 'Base with Icon',
+    //-   text: 'Додати оголошення',
+    //-   icon: 'add'
+    //- },
     {
       title: 'Base small & icon',
       text: 'Додати оголошення',
-      icon: true,
+      icon: 'add',
       addClass: 'button--small'
+    },
+    {
+      title: 'Base large & icon',
+      text: 'Додати оголошення',
+      icon: 'add',
+      addClass: 'button--large'
     },
     {
       title: 'Base only icon',
       text: null,
-      icon: true,
+      icon: 'search',
       addClass: ''
     },
     {
@@ -91,8 +106,20 @@
     {
       title: 'Primary icon',
       text: 'Опублiкувати оголошення',
-      icon: true,
+      icon: 'add',
       addClass: 'button__primary'
+    },
+    {
+      title: 'Secondary',
+      text: 'Опублiкувати оголошення',
+      icon: false,
+      addClass: 'button__secondary'
+    },
+    {
+      title: 'Secondary icon',
+      text: 'Опублiкувати оголошення',
+      icon: 'add',
+      addClass: 'button__secondary'
     },
   ]
   //- Styleguide END
