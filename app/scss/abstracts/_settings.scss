@@ -51,11 +51,11 @@ $colors: (
     border: $gray-400,
     border-tag: $blue-200, // #75aed6
     // == gray
-    gray5: $gray-500,
-    gray4: $gray-400,
-    gray3: $gray-300,
-    gray2: $gray-200,
-    gray1: $gray-100,
+    gray5: $gray-500, // #949597
+    gray4: $gray-400, // #d4d5d6
+    gray3: $gray-300, // #dadada
+    gray2: $gray-200, // #ededed
+    gray1: $gray-100, // #f5f5f5
 ) !default;
 
 $grid-breakpoints: (
@@ -66,6 +66,17 @@ $grid-breakpoints: (
     xl: 1200px
 ) !default;
 
+$grid-gutter-widths: (
+    xs: 10px,
+    // md: 20px,
+    lg: 20px
+) !default;
+
+$grid-gutter-width-xs: map-get($grid-gutter-widths, xs) !default;
+$grid-gutter-width-sm: $grid-gutter-width-xs !default;
+$grid-gutter-width-md: map-get($grid-gutter-widths, md) !default;
+$grid-gutter-width-lg: map-get($grid-gutter-widths, lg) !default;
+
 $z-layers: (
     // common
     below: -1,
@@ -73,7 +84,7 @@ $z-layers: (
     auto: auto,
     above: 1,
     // components
-    header: 1
+    header: 10
 ) !default;
 
 $container-max-widths: (

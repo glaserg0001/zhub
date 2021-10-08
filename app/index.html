@@ -25,7 +25,10 @@
             <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
           </ul>
         </nav>
-        <div class="header__utility"><a class="button button__primary" href="/app/index.html">Додати оголошення</a>
+        <div class="header__utility"><a class="button button__secondary button--small" href="/app/index.html">
+            <svg class="icon-svg">
+              <use xlink:href="img/icons.svg#icon-add"></use>
+            </svg>Додати оголошення</a>
           <div class="header-widhlist"><a href="#">
               <svg class="icon-svg">
                 <use xlink:href="img/icons.svg#icon-heart-solid"></use>
@@ -45,8 +48,9 @@
               </li>
             </ul>
           </div>
-          <ul class="header-lang">
-            <li class="header-lang__item"><a class="header-lang__item current" href="#">Укр</a><a class="header-lang__item" href="#">Рус</a></li>
+          <ul class="language">
+            <li class="language__item"><a class="language__link current" href="#">Укр</a></li>
+            <li class="language__item"><a class="language__link" href="#">Рус</a></li>
           </ul>
         </div>
       </div>
@@ -57,12 +61,14 @@
       </div>
     </div>
     <footer class="footer">
-      <div class="navigation navigation--footer">
-        <ul class="navigation__list">
-          <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Блог</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
-        </ul>
+      <div class="container header__content">
+        <div class="navigation navigation--invert">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Блог</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
+          </ul>
+        </div>
       </div>
     </footer><a class="styleguide" href="/app/styleguide.html" target="_blank">styleguide </a>
     <script src="js/main.js"></script>

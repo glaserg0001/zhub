@@ -11,22 +11,20 @@
     }
 
     &__content {
-        display: flex;
-        align-items: center;
+        @include media-breakpoint-up(md) {
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__utility {
-        display: flex;
+        @include media-breakpoint-up(md) {
+            display: flex;
+            margin-left: auto;
+        }
     }
 }
 
 .header-logo {
     max-width: 105px;
-}
-
-.header-lang {
-    &__item {}
-    &__link {
-        // display: block;
-    }
 }

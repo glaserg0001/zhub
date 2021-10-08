@@ -10,7 +10,7 @@ header.header
 
       
       .header__utility
-        a.button.button__primary(href=URL_Pug_MainNav('index')) Додати оголошення
+        a.button.button__secondary.button--small(href=URL_Pug_MainNav('index')) #[+iconSvg('icon-add')]Додати оголошення
         .header-widhlist
           a(href="#") #[+iconSvg('icon-heart-solid')]Збережені оголошення
 
@@ -22,7 +22,8 @@ header.header
             li.dropdown__item Налаштування
             li.dropdown__item.mutted #[+iconSvg('icon-exit')]Вийти
         
-        ul.header-lang
-          li.header-lang__item
-            a(href="#").header-lang__item.current Укр
-            a(href="#").header-lang__item Рус
+        ul.language
+          li.language__item
+            a(href="#").language__link.current Укр
+          li.language__item
+            a(href="#").language__link Рус

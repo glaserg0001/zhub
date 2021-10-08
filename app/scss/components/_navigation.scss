@@ -1,7 +1,15 @@
 // navigation
 
 .navigation {
+    --link-color: #{color(primary)};
+    --link-color-hover: #{color(primary2)};
+
     font-size: rem(16);
+
+    &--invert {
+        --link-color: #{color(white)};
+        --link-color-hover: #{color(gray5)};
+    }
 
     &__list {
     
@@ -19,11 +27,11 @@
     }
 
     &__link {
-        color: color(primary);
+        color: var(--link-color);
         text-decoration: none;
 
         @include on-event(hover) {
-            color: color(primary2);
+            color: var(--link-color-hover);
         }
     }
 }
