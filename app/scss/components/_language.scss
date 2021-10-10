@@ -1,7 +1,50 @@
 .language {
     display: flex;
-    &__item {}
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+        margin: 0 (-$grid-gutter-width-xs / 2);
+    }
+
+    &__item {
+        flex-basis: 100%;
+
+        @include media-breakpoint-down(md) {
+            padding: 0 ($grid-gutter-width-xs / 2);
+        }
+
+        & + & {
+            @include media-breakpoint-up(lg) {
+                padding-left: 5px;
+                margin-left: 5px;
+                border-left: 1px solid;
+            }
+        }
+
+    }
     &__link {
         display: block;
+        font-size: rem(16);
+        color: color(text);
+        text-align: center;
+        text-decoration: none;
+
+        @include media-breakpoint-down(md) {
+            padding: 5px 0;
+            background-color: color(gray1);
+        }
+
+        @include on-event {
+            color: color(primary2);
+        }
+
+        &.current {
+            font-weight: $font-weight-bold;
+
+            @include media-breakpoint-down(md) {
+                background-color: color(primary);
+                color: color(white);
+            }
+        }
     }
 }

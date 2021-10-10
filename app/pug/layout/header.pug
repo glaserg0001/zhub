@@ -4,26 +4,36 @@ header.header
         a(href='/')
           img(src=URL_file('logo', baseUrlLvl, 'svg'), alt="Zap Hub logotype")
 
-      //- .header__nav
-      nav.navigation
-        include ../components/navigation
+      .header-navbar
+        //- .header__nav
+        nav.navigation.mr-lg-auto
+          include ../components/navigation
 
-      
-      .header__utility
+        //- .header-utility
+        //-   .header-utility__item
         a.button.button__secondary.button--small(href=URL_Pug_MainNav('index')) #[+iconSvg('icon-add')]Додати оголошення
-        .header-widhlist
-          a(href="#") #[+iconSvg('icon-heart-solid')]Збережені оголошення
 
-        .header-account.dropdown
-          +iconSvg('icon-user')
-          ul.dropdown__list.d-none
-            li.dropdown__item Акаунт
-            li.dropdown__item Панель керування
-            li.dropdown__item Налаштування
-            li.dropdown__item.mutted #[+iconSvg('icon-exit')]Вийти
+          //- .header-utility__item
+        a(href="#").header-widhlist.ml-lg-medium #[+iconSvg('icon-heart-solid')]
+          //- | Збережені оголошення
         
-        ul.language
-          li.language__item
-            a(href="#").language__link.current Укр
-          li.language__item
-            a(href="#").language__link Рус
+        ul.language.d-lg-none
+          include ../components/language
+
+          //- .header-utility__item
+      .header-account.dropdown.ml-lg-medium
+        a.header-account__link.dropdown__head(href="#")
+          +iconSvg('icon-user')
+        ul.dropdown__list
+          li.dropdown__item
+            a(href="#").dropdown__link Акаунт
+          li.dropdown__item
+            a(href="#").dropdown__link Панель керування
+          li.dropdown__item
+            a(href="#").dropdown__link Налаштування
+          li.dropdown__item
+            a(href="#").dropdown__link.mutted #[+iconSvg('icon-exit', 'dropdown__icon')]Вийти
+
+        //- .header-utility__item
+      ul.language.ml-medium.d-none.d-lg-flex
+        include ../components/language

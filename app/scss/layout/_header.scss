@@ -3,28 +3,80 @@
     top: 0;
     padding: 10px 0;
     background-color: color(white);
-    box-shadow: 0px -8px 31px rgba(color(black), 0.2);
+    box-shadow: 0 -8px 31px color(black, 0.2);
     z-index: z(header);
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         padding: 20px 0;
     }
 
     &__content {
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(lg) {
             display: flex;
             align-items: center;
         }
     }
-
-    &__utility {
-        @include media-breakpoint-up(md) {
-            display: flex;
-            margin-left: auto;
-        }
-    }
 }
+
 
 .header-logo {
     max-width: 105px;
+    margin-right: 50px;
+}
+
+// .header-utility {
+//     @include media-breakpoint-up(lg) {
+//         display: flex;
+//         align-items: center;
+//         margin-left: auto;
+//     }
+
+//     &__item {
+//         margin-left: 15px;
+//     }
+// }
+
+.header-navbar {
+    @include media-breakpoint-down(md) {
+        position: fixed;
+        top: 0;
+        right: 100%;
+        bottom: 0;
+        width: 100%;
+        max-width: 250px;
+        transform: translate3d(100%, 0, 0);
+        background-color: color(white);
+        background-color: #eee;
+        z-index: z(above);
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+}
+
+.header-widhlist {
+    font-size: rem(30);
+    color: color(primary);
+    text-decoration: none;
+
+    @include on-event {
+        color: color(primary2)
+    }
+}
+
+.header-account {
+    &__link {
+        display: inline-block;
+        font-size: rem(30);
+        color: color(primary);
+        line-height: 1;
+        text-decoration: none;
+
+        @include on-event {
+            color: color(primary2)
+        }
+    }
 }

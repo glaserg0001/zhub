@@ -1,14 +1,18 @@
-@function color($key: black) {
-    // Example: color(black)
-    @return map-get($colors, $key);
+@function color($key: black, $alpha: false) {
+    // Example: color(black, 0.5);
+    @if $alpha {
+        @return rgba(map-get($colors, $key), $alpha);
+    } @else {
+        @return map-get($colors, $key);
+    }
 }
 
 @function rem($val, $root: 16) {
-    // Example: rem(16)
+    // Example: rem(16);
     @return $val / $root * 1rem;
 }
 
 @function z($key: auto) {
-    // Example: color(black)
+    // Example: z(above);
     @return map-get($z-layers, $key);
 }

@@ -18,41 +18,43 @@
     <header class="header">
       <div class="container header__content">
         <div class="header-logo"><a href="/"><img src="img/logo.svg" alt="Zap Hub logotype"></a></div>
-        <nav class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Блог</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
-          </ul>
-        </nav>
-        <div class="header__utility"><a class="button button__secondary button--small" href="/app/index.html">
+        <div class="header-navbar">
+          <nav class="navigation mr-lg-auto">
+            <ul class="navigation__list">
+              <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Блог</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
+            </ul>
+          </nav><a class="button button__secondary button--small" href="/app/index.html">
             <svg class="icon-svg">
               <use xlink:href="img/icons.svg#icon-add"></use>
-            </svg>Додати оголошення</a>
-          <div class="header-widhlist"><a href="#">
-              <svg class="icon-svg">
-                <use xlink:href="img/icons.svg#icon-heart-solid"></use>
-              </svg>Збережені оголошення</a></div>
-          <div class="header-account dropdown">
+            </svg>Додати оголошення</a><a class="header-widhlist ml-lg-medium" href="#">
             <svg class="icon-svg">
-              <use xlink:href="img/icons.svg#icon-user"></use>
-            </svg>
-            <ul class="dropdown__list d-none">
-              <li class="dropdown__item">Акаунт</li>
-              <li class="dropdown__item">Панель керування</li>
-              <li class="dropdown__item">Налаштування</li>
-              <li class="dropdown__item mutted">
-                <svg class="icon-svg">
-                  <use xlink:href="img/icons.svg#icon-exit"></use>
-                </svg>Вийти
-              </li>
-            </ul>
-          </div>
-          <ul class="language">
+              <use xlink:href="img/icons.svg#icon-heart-solid"></use>
+            </svg></a>
+          <ul class="language d-lg-none">
             <li class="language__item"><a class="language__link current" href="#">Укр</a></li>
             <li class="language__item"><a class="language__link" href="#">Рус</a></li>
           </ul>
         </div>
+        <div class="header-account dropdown ml-lg-medium"><a class="header-account__link dropdown__head" href="#">
+            <svg class="icon-svg">
+              <use xlink:href="img/icons.svg#icon-user"></use>
+            </svg></a>
+          <ul class="dropdown__list">
+            <li class="dropdown__item"><a class="dropdown__link" href="#">Акаунт</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">Панель керування</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">Налаштування</a></li>
+            <li class="dropdown__item"><a class="dropdown__link mutted" href="#">
+                <svg class="icon-svg dropdown__icon">
+                  <use xlink:href="img/icons.svg#icon-exit"></use>
+                </svg>Вийти</a></li>
+          </ul>
+        </div>
+        <ul class="language ml-medium d-none d-lg-flex">
+          <li class="language__item"><a class="language__link current" href="#">Укр</a></li>
+          <li class="language__item"><a class="language__link" href="#">Рус</a></li>
+        </ul>
       </div>
     </header>
     <div class="main">
