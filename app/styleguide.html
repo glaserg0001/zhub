@@ -18,13 +18,21 @@
   <body>
     <header class="header">
       <div class="container header__content">
-        <button class="header-navbar__toggle">
+        <button class="header-navbar__toggle header-navbar__toggle--primary js-nav-btn js-primary">
           <svg class="icon-svg">
             <use xlink:href="img/icons.svg#icon-menu"></use>
           </svg>
         </button>
         <div class="header-logo"><a href="/"><img src="img/logo.svg" alt="Zap Hub logotype"></a></div>
-        <div class="header-navbar">
+        <div class="header-navbar js-nav">
+          <div class="header-navbar__header">
+            <button class="header-navbar__toggle js-nav-btn">
+              <svg class="icon-svg">
+                <use xlink:href="img/icons.svg#icon-menu"></use>
+              </svg>
+            </button>
+            <div class="header-logo"><a href="/"><img src="img/logo.svg" alt="Zap Hub logotype"></a></div>
+          </div>
           <nav class="navigation mr-lg-auto">
             <ul class="navigation__list">
               <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
@@ -39,7 +47,7 @@
               <use xlink:href="img/icons.svg#icon-heart-solid"></use>
             </svg></a>
           <ul class="language h-hidden-lg-up">
-            <li class="language__item"><a class="language__link current" href="#">Укр</a></li>
+            <li class="language__item"><a class="language__link m-current" href="#">Укр</a></li>
             <li class="language__item"><a class="language__link" href="#">Рус</a></li>
           </ul>
         </div>
@@ -51,14 +59,14 @@
             <li class="dropdown__item"><a class="dropdown__link" href="#">Акаунт</a></li>
             <li class="dropdown__item"><a class="dropdown__link" href="#">Панель керування</a></li>
             <li class="dropdown__item"><a class="dropdown__link" href="#">Налаштування</a></li>
-            <li class="dropdown__item"><a class="dropdown__link mutted" href="#">
+            <li class="dropdown__item"><a class="dropdown__link m-mutted" href="#">
                 <svg class="icon-svg dropdown__icon">
                   <use xlink:href="img/icons.svg#icon-exit"></use>
                 </svg>Вийти</a></li>
           </ul>
         </div>
         <ul class="language ml-medium h-hidden-md-down">
-          <li class="language__item"><a class="language__link current" href="#">Укр</a></li>
+          <li class="language__item"><a class="language__link m-current" href="#">Укр</a></li>
           <li class="language__item"><a class="language__link" href="#">Рус</a></li>
         </ul>
       </div>

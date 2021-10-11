@@ -48,14 +48,14 @@
         bottom: 0;
         width: 100%;
         max-width: 250px;
-        transform: translate3d(0, 0, 0);
+        padding: 0 20px;
         background-color: color(white);
-        background-color: #eee;
+        // background-color: #eee;
         z-index: z(above);
+        transform: translate3d(0, 0, 0);
         transition: transform 0.2s ease-in-out;
-        display: none;
-        
-        &.opened {
+
+        &.m-opened {
             transform: translate3d(100%, 0, 0);
         }
     }
@@ -72,6 +72,35 @@
         font-size: rem(18);
         background-color: color(white);
         border: none;
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+
+        &--primary {
+
+            &.m-active {
+                &::before {
+                    content: '';
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: color(primary, 0.5);
+                    z-index: z(above);
+                }
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        padding: 10px 0;
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
     }
 }
 
