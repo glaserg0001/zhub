@@ -50,7 +50,12 @@ $colors: (
     link: $green-200,
     link-hover: $green-300,
     border: $gray-400,
+    border-light: $gray-200,
     border-tag: $blue-200, // #75aed6
+    success: $green-400,
+    success-bg: $green-100,
+    disabled: $gray-400,
+    disabled-bg: $gray-100,
     // == gray
     gray5: $gray-500, // #949597
     gray4: $gray-400, // #d4d5d6
@@ -91,7 +96,8 @@ $container-max-widths: (
     // sm: 540px,
     // md: 720px,
     // lg: 960px,
-    xl: 1140px
+    // xl: 1140px
+    xl: 1440px
 ) !default;
 
 $spacer: 20px !default;
@@ -108,12 +114,12 @@ $spacers: map-merge(
     $spacers
 );
 
-$spacer-breakpoints: (
-    xs: map-get($grid-breakpoints, xs),
-    // sm: map-get($grid-breakpoints, sm),
-    md: map-get($grid-breakpoints, md),
-    lg: map-get($grid-breakpoints, lg),
-    // xl: map-get($grid-breakpoints, xl)
+$special-breakpoints: (
+    xs: map-get($grid-breakpoints, xs),     // xs: 0,
+    // sm: map-get($grid-breakpoints, sm),  // sm: 576px,
+    md: map-get($grid-breakpoints, md),     // md: 768px,
+    lg: map-get($grid-breakpoints, lg),     // lg: 1024px,
+    // xl: map-get($grid-breakpoints, xl)   // xl: 1440px
 ) !default;
 
 $sizes: () !default;

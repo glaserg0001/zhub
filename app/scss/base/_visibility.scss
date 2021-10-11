@@ -1,0 +1,26 @@
+@each $breakpoint in map-keys($special-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $special-breakpoints);
+    $infix-revert: breakpoint-infix-revert($breakpoint, $special-breakpoints);
+   
+    .h-hidden#{$infix-revert}-down {
+        $max: breakpoint-max($breakpoint, $special-breakpoints);
+        @if $max {
+            @include media-breakpoint-down($breakpoint, $special-breakpoints) {
+                display: none !important;
+            }
+        }
+    }
+
+    .h-hidden#{$infix}-up {
+        $min: breakpoint-min($breakpoint, $special-breakpoints);
+        @if $min {
+            @include media-breakpoint-up($breakpoint, $special-breakpoints) {
+                display: none !important;
+            }
+        }
+    }
+}
+
+.h-hidden {
+    display: none !important;
+}

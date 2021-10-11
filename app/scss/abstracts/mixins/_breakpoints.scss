@@ -53,6 +53,10 @@
     @return if(breakpoint-min($name, $breakpoints)==null, "", "-#{$name}");
 }
 
+@function breakpoint-infix-revert($name, $breakpoints: $grid-breakpoints) {
+    @return if(breakpoint-max($name, $breakpoints)==null, "", "-#{$name}");
+}
+
 // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
 // Makes the @content apply to the given breakpoint and wider.
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {

@@ -22,7 +22,7 @@ block content
     //- COLOR START
 
     //- SPACING START
-    h2 Spacing
+    h2.sg-heading Spacing
     .sg-block
       code m-0 = 0
       br
@@ -69,21 +69,21 @@ block content
             each helperItem in sgButtonsHelper
               - var attributes = {};
               - attributes.class = 'button';
+              - attributes.class += item.addClass ? ` ${item.addClass}` : '';
               - attributes.class += item.icon ? ' button--icon' : '';
               - attributes.class += helperItem == 'Loading' ? ' button--loading' : '';
               - attributes.class += helperItem == 'Unable' ? ' button--disabled' : '';
-              - attributes.class += item.addClass ? ` ${item.addClass}` : '';
               
               h4.sg-heading=helperItem
               .sg-block__list
                 a(href='#')&attributes(attributes)
                   if item.icon
-                    +iconSvg(`icon-${item.icon}`, 'button__icon')
+                    +icon(`icon-${item.icon}`, 'button__icon')
                   | #{item.text}
               .sg-block__list
                 button&attributes(attributes)
                   if item.icon
-                    +iconSvg(`icon-${item.icon}`, 'button__icon')
+                    +icon(`icon-${item.icon}`, 'button__icon')
                   | #{item.text}
 
     //- BUTTON END
@@ -91,12 +91,33 @@ block content
     //- ICONS START
 
     h2.sg-heading Icons
-    if sgIconsSVG
-      ul.sg-icons__list
-        each val in sgIconsSVG
-          li.sg-icons__item(data-name=val)
-            +iconSvg(val)
+    .sg-block
+      if sgIconsSVG
+        ul.sg-icons__list
+          each val in sgIconsSVG
+            li.sg-icons__item(data-name=val)
+              +icon(val)
     //- ICONS END
+    //- VISAVILITY START
+    h2.sg-heading Visibility
+    //- h3.sg-heading Hidden multiply
+    .sg-block
+      table.sg-table
+        thead.text-left
+          tr
+            th
+            th Small devices #[small.d-block (0 - <768px)]
+            th Medium devices #[small.d-block (≥768px - <1024px)]
+            th Large devices #[small.d-block (≥1024px)]
+        tbody
+          each item in sgVisibility
+            tr
+              th.text-left.font-weight-normal
+                code=item.class
+              td(class=(item.small ? 'sg-enabled' : 'sg-disabled'))=item.small ? 'Visible': 'Hidden'
+              td(class=(item.medium ? 'sg-enabled' : 'sg-disabled'))=item.medium ? 'Visible': 'Hidden'
+              td(class=(item.large ? 'sg-enabled' : 'sg-disabled'))=item.large ? 'Visible': 'Hidden'
+    //- VISAVILITY END
 
 
 block scripts

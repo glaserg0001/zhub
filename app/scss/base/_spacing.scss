@@ -2,9 +2,9 @@
 
 // Margin and Padding
 
-@each $breakpoint in map-keys($spacer-breakpoints) {
+@each $breakpoint in map-keys($special-breakpoints) {
     @include media-breakpoint-up($breakpoint) {
-        $infix: breakpoint-infix($breakpoint, $spacer-breakpoints);
+        $infix: breakpoint-infix($breakpoint, $special-breakpoints);
 
         @each $prop, $abbrev in (margin: m, /*padding: p*/) {
 

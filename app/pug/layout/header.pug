@@ -1,5 +1,8 @@
 header.header
   .container.header__content
+      button.header-navbar__toggle
+        +icon('icon-menu')
+
       .header-logo
         a(href='/')
           img(src=URL_file('logo', baseUrlLvl, 'svg'), alt="Zap Hub logotype")
@@ -11,20 +14,20 @@ header.header
 
         //- .header-utility
         //-   .header-utility__item
-        a.button.button__secondary.button--small(href=URL_Pug_MainNav('index')) #[+iconSvg('icon-add')]Додати оголошення
+        a.button.button__secondary.button--icon.button--small(href=URL_Pug_MainNav('index')) #[+icon('icon-add', 'button__icon')]Додати оголошення
 
           //- .header-utility__item
-        a(href="#").header-widhlist.ml-lg-medium #[+iconSvg('icon-heart-solid')]
+        a(href="#").header-widhlist.ml-lg-medium #[+icon('icon-heart-solid')]
           //- | Збережені оголошення
         
-        ul.language.d-lg-none
+        ul.language.h-hidden-lg-up
           include ../components/language
 
           //- .header-utility__item
       .header-account.dropdown.ml-lg-medium
         a.header-account__link.dropdown__head(href="#")
-          +iconSvg('icon-user')
-        ul.dropdown__list
+          +icon('icon-user')
+        ul.dropdown__list.h-hidden-md-down
           li.dropdown__item
             a(href="#").dropdown__link Акаунт
           li.dropdown__item
@@ -32,8 +35,8 @@ header.header
           li.dropdown__item
             a(href="#").dropdown__link Налаштування
           li.dropdown__item
-            a(href="#").dropdown__link.mutted #[+iconSvg('icon-exit', 'dropdown__icon')]Вийти
+            a(href="#").dropdown__link.mutted #[+icon('icon-exit', 'dropdown__icon')]Вийти
 
         //- .header-utility__item
-      ul.language.ml-medium.d-none.d-lg-flex
+      ul.language.ml-medium.h-hidden-md-down
         include ../components/language

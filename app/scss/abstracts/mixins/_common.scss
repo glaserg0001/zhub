@@ -33,6 +33,10 @@
 @mixin on-event($events: null) {
     // Example: @include on-event([hover, focus])
 
+    // https://www.google.com/search?q=prevent+css+hover+on+touch+devices&rlz=1C1GCEU_ukUA820UA820&oq=css+prevent+hover+touch&aqs=chrome.2.69i57j0i22i30l3.17895j1j7&sourceid=chrome&ie=UTF-8
+    // https://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
+    // https://djpjgj.medium.com/css-magic-pt-1-prevent-css-hover-on-touch-devices-56b3f8a44240
+
     @if $events == null {
         @include media-breakpoint-up(lg) {
             &:hover {

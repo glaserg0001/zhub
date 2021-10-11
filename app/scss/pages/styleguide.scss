@@ -23,6 +23,10 @@
 
     &__list {
         margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -76,5 +80,30 @@
             margin-top: 10px;
             font-size: rem(16);
         }
+    }
+}
+
+.sg-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    th,
+    td {
+        padding: 10px 20px;
+        border: 1px solid color(border-light);
+    }
+
+    .sg-enabled {
+        color: color(success);
+        background-color: color(success-bg);
+    }
+
+    .sg-disabled {
+        color: color(disabled);
+        background-color: color(disabled-bg);
     }
 }

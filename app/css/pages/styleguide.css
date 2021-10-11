@@ -23,6 +23,10 @@
   margin-bottom: 25px;
 }
 
+.sg-block__list:last-child {
+  margin-bottom: 0;
+}
+
 .sg-palette {
   display: flex;
   flex-wrap: wrap;
@@ -72,4 +76,29 @@
   display: block;
   margin-top: 10px;
   font-size: 1rem;
+}
+
+.sg-table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.sg-table th,
+.sg-table td {
+  padding: 10px 20px;
+  border: 1px solid #ededed;
+}
+
+.sg-table .sg-enabled {
+  color: #486c0c;
+  background-color: #cee8a3;
+}
+
+.sg-table .sg-disabled {
+  color: #d4d5d6;
+  background-color: #f5f5f5;
 }

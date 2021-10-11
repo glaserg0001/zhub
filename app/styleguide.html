@@ -18,6 +18,11 @@
   <body>
     <header class="header">
       <div class="container header__content">
+        <button class="header-navbar__toggle">
+          <svg class="icon-svg">
+            <use xlink:href="img/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
         <div class="header-logo"><a href="/"><img src="img/logo.svg" alt="Zap Hub logotype"></a></div>
         <div class="header-navbar">
           <nav class="navigation mr-lg-auto">
@@ -26,14 +31,14 @@
               <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Блог</a></li>
               <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
             </ul>
-          </nav><a class="button button__secondary button--small" href="/app/index.html">
-            <svg class="icon-svg">
+          </nav><a class="button button__secondary button--icon button--small" href="/app/index.html">
+            <svg class="icon-svg button__icon">
               <use xlink:href="img/icons.svg#icon-add"></use>
             </svg>Додати оголошення</a><a class="header-widhlist ml-lg-medium" href="#">
             <svg class="icon-svg">
               <use xlink:href="img/icons.svg#icon-heart-solid"></use>
             </svg></a>
-          <ul class="language d-lg-none">
+          <ul class="language h-hidden-lg-up">
             <li class="language__item"><a class="language__link current" href="#">Укр</a></li>
             <li class="language__item"><a class="language__link" href="#">Рус</a></li>
           </ul>
@@ -42,7 +47,7 @@
             <svg class="icon-svg">
               <use xlink:href="img/icons.svg#icon-user"></use>
             </svg></a>
-          <ul class="dropdown__list">
+          <ul class="dropdown__list h-hidden-md-down">
             <li class="dropdown__item"><a class="dropdown__link" href="#">Акаунт</a></li>
             <li class="dropdown__item"><a class="dropdown__link" href="#">Панель керування</a></li>
             <li class="dropdown__item"><a class="dropdown__link" href="#">Налаштування</a></li>
@@ -52,7 +57,7 @@
                 </svg>Вийти</a></li>
           </ul>
         </div>
-        <ul class="language ml-medium d-none d-lg-flex">
+        <ul class="language ml-medium h-hidden-md-down">
           <li class="language__item"><a class="language__link current" href="#">Укр</a></li>
           <li class="language__item"><a class="language__link" href="#">Рус</a></li>
         </ul>
@@ -84,7 +89,7 @@
             <li style="background: #f5f5f5;" data-name="gray-100" data-value="#f5f5f5"></li>
           </ul>
         </div>
-        <h2>Spacing</h2>
+        <h2 class="sg-heading">Spacing</h2>
         <div class="sg-block"><code>m-0 = 0</code><br><code>m-small = 10px</code><br><code>m-medium = 20px</code><br><code>m-large = 30px</code><br><code>m-auto = auto</code>
           <hr class="my-small"><code>m-md-auto</code><br><code>m-lg-auto</code>
         </div>
@@ -136,36 +141,36 @@
             <h3 class="sg-heading align-self-start">Base small &amp; icon</h3>
             <div class="sg-block flex-fill">
               <h4 class="sg-heading">Default</h4>
-              <div class="sg-block__list"><a class="button button--icon button--small" href="#">
+              <div class="sg-block__list"><a class="button button--small button--icon" href="#">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Додати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--icon button--small">
+                <button class="button button--small button--icon">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Додати оголошення
                 </button>
               </div>
               <h4 class="sg-heading">Loading</h4>
-              <div class="sg-block__list"><a class="button button--icon button--loading button--small" href="#">
+              <div class="sg-block__list"><a class="button button--small button--icon button--loading" href="#">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Додати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--icon button--loading button--small">
+                <button class="button button--small button--icon button--loading">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Додати оголошення
                 </button>
               </div>
               <h4 class="sg-heading">Unable</h4>
-              <div class="sg-block__list"><a class="button button--icon button--disabled button--small" href="#">
+              <div class="sg-block__list"><a class="button button--small button--icon button--disabled" href="#">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Додати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--icon button--disabled button--small">
+                <button class="button button--small button--icon button--disabled">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Додати оголошення
@@ -177,36 +182,36 @@
             <h3 class="sg-heading align-self-start">Base large &amp; icon</h3>
             <div class="sg-block flex-fill">
               <h4 class="sg-heading">Default</h4>
-              <div class="sg-block__list"><a class="button button--icon button--large" href="#">
+              <div class="sg-block__list"><a class="button button--large button--icon" href="#">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Додати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--icon button--large">
+                <button class="button button--large button--icon">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Додати оголошення
                 </button>
               </div>
               <h4 class="sg-heading">Loading</h4>
-              <div class="sg-block__list"><a class="button button--icon button--loading button--large" href="#">
+              <div class="sg-block__list"><a class="button button--large button--icon button--loading" href="#">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Додати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--icon button--loading button--large">
+                <button class="button button--large button--icon button--loading">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Додати оголошення
                 </button>
               </div>
               <h4 class="sg-heading">Unable</h4>
-              <div class="sg-block__list"><a class="button button--icon button--disabled button--large" href="#">
+              <div class="sg-block__list"><a class="button button--large button--icon button--disabled" href="#">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Додати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--icon button--disabled button--large">
+                <button class="button button--large button--icon button--disabled">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Додати оголошення
@@ -265,15 +270,15 @@
                 </button>
               </div>
               <h4 class="sg-heading">Loading</h4>
-              <div class="sg-block__list"><a class="button button--loading button__primary" href="#">Опублiкувати оголошення</a></div>
+              <div class="sg-block__list"><a class="button button__primary button--loading" href="#">Опублiкувати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--loading button__primary">Опублiкувати оголошення
+                <button class="button button__primary button--loading">Опублiкувати оголошення
                 </button>
               </div>
               <h4 class="sg-heading">Unable</h4>
-              <div class="sg-block__list"><a class="button button--disabled button__primary" href="#">Опублiкувати оголошення</a></div>
+              <div class="sg-block__list"><a class="button button__primary button--disabled" href="#">Опублiкувати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--disabled button__primary">Опублiкувати оголошення
+                <button class="button button__primary button--disabled">Опублiкувати оголошення
                 </button>
               </div>
             </div>
@@ -282,36 +287,36 @@
             <h3 class="sg-heading align-self-start">Primary icon</h3>
             <div class="sg-block flex-fill">
               <h4 class="sg-heading">Default</h4>
-              <div class="sg-block__list"><a class="button button--icon button__primary" href="#">
+              <div class="sg-block__list"><a class="button button__primary button--icon" href="#">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Опублiкувати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--icon button__primary">
+                <button class="button button__primary button--icon">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Опублiкувати оголошення
                 </button>
               </div>
               <h4 class="sg-heading">Loading</h4>
-              <div class="sg-block__list"><a class="button button--icon button--loading button__primary" href="#">
+              <div class="sg-block__list"><a class="button button__primary button--icon button--loading" href="#">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Опублiкувати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--icon button--loading button__primary">
+                <button class="button button__primary button--icon button--loading">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Опублiкувати оголошення
                 </button>
               </div>
               <h4 class="sg-heading">Unable</h4>
-              <div class="sg-block__list"><a class="button button--icon button--disabled button__primary" href="#">
+              <div class="sg-block__list"><a class="button button__primary button--icon button--disabled" href="#">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Опублiкувати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--icon button--disabled button__primary">
+                <button class="button button__primary button--icon button--disabled">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Опублiкувати оголошення
@@ -329,15 +334,15 @@
                 </button>
               </div>
               <h4 class="sg-heading">Loading</h4>
-              <div class="sg-block__list"><a class="button button--loading button__secondary" href="#">Опублiкувати оголошення</a></div>
+              <div class="sg-block__list"><a class="button button__secondary button--loading" href="#">Опублiкувати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--loading button__secondary">Опублiкувати оголошення
+                <button class="button button__secondary button--loading">Опублiкувати оголошення
                 </button>
               </div>
               <h4 class="sg-heading">Unable</h4>
-              <div class="sg-block__list"><a class="button button--disabled button__secondary" href="#">Опублiкувати оголошення</a></div>
+              <div class="sg-block__list"><a class="button button__secondary button--disabled" href="#">Опублiкувати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--disabled button__secondary">Опублiкувати оголошення
+                <button class="button button__secondary button--disabled">Опублiкувати оголошення
                 </button>
               </div>
             </div>
@@ -346,36 +351,36 @@
             <h3 class="sg-heading align-self-start">Secondary icon</h3>
             <div class="sg-block flex-fill">
               <h4 class="sg-heading">Default</h4>
-              <div class="sg-block__list"><a class="button button--icon button__secondary" href="#">
+              <div class="sg-block__list"><a class="button button__secondary button--icon" href="#">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Опублiкувати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--icon button__secondary">
+                <button class="button button__secondary button--icon">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Опублiкувати оголошення
                 </button>
               </div>
               <h4 class="sg-heading">Loading</h4>
-              <div class="sg-block__list"><a class="button button--icon button--loading button__secondary" href="#">
+              <div class="sg-block__list"><a class="button button__secondary button--icon button--loading" href="#">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Опублiкувати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--icon button--loading button__secondary">
+                <button class="button button__secondary button--icon button--loading">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Опублiкувати оголошення
                 </button>
               </div>
               <h4 class="sg-heading">Unable</h4>
-              <div class="sg-block__list"><a class="button button--icon button--disabled button__secondary" href="#">
+              <div class="sg-block__list"><a class="button button__secondary button--icon button--disabled" href="#">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Опублiкувати оголошення</a></div>
               <div class="sg-block__list">
-                <button class="button button--icon button--disabled button__secondary">
+                <button class="button button__secondary button--icon button--disabled">
                   <svg class="icon-svg button__icon">
                     <use xlink:href="img/icons.svg#icon-add"></use>
                   </svg>Опублiкувати оголошення
@@ -385,38 +390,85 @@
           </div>
         </div>
         <h2 class="sg-heading">Icons</h2>
-        <ul class="sg-icons__list">
-          <li class="sg-icons__item" data-name="icon-heart-solid">
-            <svg class="icon-svg">
-              <use xlink:href="img/icons.svg#icon-heart-solid"></use>
-            </svg>
-          </li>
-          <li class="sg-icons__item" data-name="icon-user">
-            <svg class="icon-svg">
-              <use xlink:href="img/icons.svg#icon-user"></use>
-            </svg>
-          </li>
-          <li class="sg-icons__item" data-name="icon-exit">
-            <svg class="icon-svg">
-              <use xlink:href="img/icons.svg#icon-exit"></use>
-            </svg>
-          </li>
-          <li class="sg-icons__item" data-name="icon-menu">
-            <svg class="icon-svg">
-              <use xlink:href="img/icons.svg#icon-menu"></use>
-            </svg>
-          </li>
-          <li class="sg-icons__item" data-name="icon-search">
-            <svg class="icon-svg">
-              <use xlink:href="img/icons.svg#icon-search"></use>
-            </svg>
-          </li>
-          <li class="sg-icons__item" data-name="icon-add">
-            <svg class="icon-svg">
-              <use xlink:href="img/icons.svg#icon-add"></use>
-            </svg>
-          </li>
-        </ul>
+        <div class="sg-block">
+          <ul class="sg-icons__list">
+            <li class="sg-icons__item" data-name="icon-heart-solid">
+              <svg class="icon-svg">
+                <use xlink:href="img/icons.svg#icon-heart-solid"></use>
+              </svg>
+            </li>
+            <li class="sg-icons__item" data-name="icon-user">
+              <svg class="icon-svg">
+                <use xlink:href="img/icons.svg#icon-user"></use>
+              </svg>
+            </li>
+            <li class="sg-icons__item" data-name="icon-exit">
+              <svg class="icon-svg">
+                <use xlink:href="img/icons.svg#icon-exit"></use>
+              </svg>
+            </li>
+            <li class="sg-icons__item" data-name="icon-menu">
+              <svg class="icon-svg">
+                <use xlink:href="img/icons.svg#icon-menu"></use>
+              </svg>
+            </li>
+            <li class="sg-icons__item" data-name="icon-search">
+              <svg class="icon-svg">
+                <use xlink:href="img/icons.svg#icon-search"></use>
+              </svg>
+            </li>
+            <li class="sg-icons__item" data-name="icon-add">
+              <svg class="icon-svg">
+                <use xlink:href="img/icons.svg#icon-add"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <h2 class="sg-heading">Visibility</h2>
+        <div class="sg-block">
+          <table class="sg-table">
+            <thead class="text-left">
+              <tr>
+                <th></th>
+                <th>Small devices <small class="d-block">(0 - <768px)</small></th>
+                <th>Medium devices <small class="d-block">(≥768px - <1024px)</small></th>
+                <th>Large devices <small class="d-block">(≥1024px)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="text-left font-weight-normal"><code>.h-hidden</code></th>
+                <td class="sg-disabled">Hidden</td>
+                <td class="sg-disabled">Hidden</td>
+                <td class="sg-disabled">Hidden</td>
+              </tr>
+              <tr>
+                <th class="text-left font-weight-normal"><code>.h-hidden-xs-down</code></th>
+                <td class="sg-disabled">Hidden</td>
+                <td class="sg-enabled">Visible</td>
+                <td class="sg-enabled">Visible</td>
+              </tr>
+              <tr>
+                <th class="text-left font-weight-normal"><code>.h-hidden-md-down</code></th>
+                <td class="sg-disabled">Hidden</td>
+                <td class="sg-disabled">Hidden</td>
+                <td class="sg-enabled">Visible</td>
+              </tr>
+              <tr>
+                <th class="text-left font-weight-normal"><code>.h-hidden-md-up</code></th>
+                <td class="sg-enabled">Visible</td>
+                <td class="sg-disabled">Hidden</td>
+                <td class="sg-disabled">Hidden</td>
+              </tr>
+              <tr>
+                <th class="text-left font-weight-normal"><code>.h-hidden-lg-up</code></th>
+                <td class="sg-enabled">Visible</td>
+                <td class="sg-enabled">Visible</td>
+                <td class="sg-disabled">Hidden</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
     <footer class="footer">

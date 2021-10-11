@@ -11,17 +11,21 @@
     }
 
     &__content {
-        @include media-breakpoint-up(lg) {
-            display: flex;
-            align-items: center;
-        }
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-up(lg) {}
     }
 }
 
 
 .header-logo {
     max-width: 105px;
-    margin-right: 50px;
+    margin-right: auto;
+
+    @include media-breakpoint-up(lg) {
+        margin-right: 50px;
+    }
 }
 
 // .header-utility {
@@ -44,16 +48,30 @@
         bottom: 0;
         width: 100%;
         max-width: 250px;
-        transform: translate3d(100%, 0, 0);
+        transform: translate3d(0, 0, 0);
         background-color: color(white);
         background-color: #eee;
         z-index: z(above);
+        transition: transform 0.2s ease-in-out;
+        display: none;
+        
+        &.opened {
+            transform: translate3d(100%, 0, 0);
+        }
     }
 
     @include media-breakpoint-up(lg) {
         display: flex;
         align-items: center;
         flex-grow: 1;
+    }
+
+    &__toggle {
+        padding: 0 5px;
+        margin-right: 5px;
+        font-size: rem(18);
+        background-color: color(white);
+        border: none;
     }
 }
 
