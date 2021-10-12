@@ -4,10 +4,10 @@
     position: relative;
     font-size: rem(16);
 
-    &__head {
-        // background-color: blue;
-    }
+    // &__head {}
+
     &__list {
+        display: none;
         position: absolute;
         top: 100%;
         left: 50%;
@@ -20,6 +20,10 @@
         transition: all 0.2s;
         visibility: hidden;
         opacity: 0;
+
+        @include is-hover {
+            display: block;
+        }
 
         &::before {
             content: '';
@@ -70,7 +74,6 @@
     }
 
     @include on-event {
-
         .#{$this}__list {
             visibility: visible;
             opacity: 1;

@@ -1,44 +1,23 @@
 header.header
   .container.header__content
-      button.header-navbar__toggle.header-navbar__toggle--primary.js-nav-btn.js-primary
-        +icon('icon-menu')
+    button.header-navbar__toggle.header-navbar__toggle--primary.js-nav-btn.js-primary
+      +icon('icon-menu')
 
-      .header-logo
-        a(href='/')
-          img(src=URL_file('logo', baseUrlLvl, 'svg'), alt="Zap Hub logotype")
+    .header-logo
+      a(href='/')
+        img(src=URL_file('logo', baseUrlLvl, 'svg'), alt="Zap Hub logotype")
 
-      .header-navbar.js-nav
-        .header-navbar__header
-          button.header-navbar__toggle.js-nav-btn
-            +icon('icon-menu')
-          .header-logo
-            a(href='/')
-              img(src=URL_file('logo', baseUrlLvl, 'svg'), alt="Zap Hub logotype")
+    nav.navigation.mr-lg-auto
+      include ../components/navigation
 
+    a.button.button__secondary.button--icon.button--small(href=URL_Pug_MainNav('index')) #[+icon('icon-add', 'button__icon')]Додати оголошення
 
-        nav.navigation.mr-lg-auto
-          include ../components/navigation
+    a(href="#").header-widhlist.ml-lg-medium #[+icon('icon-heart-solid')]
+      //- | Збережені оголошення
+    
+    
+    include ../components/language
 
-        a.button.button__secondary.button--icon.button--small(href=URL_Pug_MainNav('index')) #[+icon('icon-add', 'button__icon')]Додати оголошення
+    include ../components/header/header-account
 
-        a(href="#").header-widhlist.ml-lg-medium #[+icon('icon-heart-solid')]
-          //- | Збережені оголошення
-        
-        ul.language.h-hidden-lg-up
-          include ../components/language
-
-      .header-account.dropdown.ml-lg-medium
-        a.header-account__link.dropdown__head(href="#")
-          +icon('icon-user')
-        ul.dropdown__list.h-hidden-md-down
-          li.dropdown__item
-            a(href="#").dropdown__link Акаунт
-          li.dropdown__item
-            a(href="#").dropdown__link Панель керування
-          li.dropdown__item
-            a(href="#").dropdown__link Налаштування
-          li.dropdown__item
-            a(href="#").dropdown__link.m-mutted #[+icon('icon-exit', 'dropdown__icon')]Вийти
-
-      ul.language.ml-medium.h-hidden-md-down
-        include ../components/language
+    include ../components/header/header-navbar
