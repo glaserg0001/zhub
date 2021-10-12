@@ -1,26 +1,27 @@
 .header-navbar {
-    @include media-breakpoint-down(md) {
-        position: fixed;
-        top: 0;
-        right: 100%;
-        bottom: 0;
-        width: 100%;
-        max-width: 250px;
-        padding: 0 20px;
-        background-color: color(white);
-        z-index: z(above);
-        transform: translate3d(0, 0, 0);
-        transition: transform 0.2s ease-in-out;
+    $this: 'header-navbar';
+    $opened: '.#{$this}--opened';
 
-        &.m-opened {
-            transform: translate3d(100%, 0, 0);
-        }
+    position: fixed;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    width: 100%;
+    max-width: 250px;
+    padding: 0 20px;
+    background-color: color(white);
+    z-index: z(header-navbar);
+    // overflow-x: visible;
+    // overflow-y: auto;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.2s ease-in-out;
+
+    @include when-inside($opened) {
+        transform: translate3d(100%, 0, 0);
     }
 
     @include media-breakpoint-up(lg) {
-        display: flex;
-        align-items: center;
-        flex-grow: 1;
+        display: none;
     }
 
     &__toggle {
@@ -29,34 +30,51 @@
         font-size: rem(18);
         background-color: color(white);
         border: none;
+        z-index: z(header-navbar--above);
 
         @include media-breakpoint-up(lg) {
             display: none;
         }
 
-        &--primary {
+        // &--primary {
+        //     &.m-active {
+        //         &::before {
+        //             // content: '';
+        //             position: fixed;
+        //             top: 0;
+        //             left: 0;
+        //             right: 0;
+        //             bottom: 0;
+        //             background-color: color(primary, 0.5);
+        //             z-index: z(above);
+        //         }
+        //     }
+        // }
+    }
 
-            &.m-active {
-                &::before {
-                    content: '';
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-color: color(primary, 0.5);
-                    z-index: z(above);
-                }
+    &__backdrop {
+        display: none;
+
+        @include media-breakpoint-down(md) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: color(primary, 0.5);
+            border: none;
+            // z-index: z(above);
+            // display: none;
+
+            @include when-inside($opened) {
+                display: block;
             }
         }
     }
 
     &__header {
         display: flex;
+        align-items: center;
         padding: 10px 0;
-
-        @include media-breakpoint-up(lg) {
-            display: none;
-        }
     }
 }

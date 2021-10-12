@@ -1,23 +1,20 @@
 header.header
   .container.header__content
-    button.header-navbar__toggle.header-navbar__toggle--primary.js-nav-btn.js-primary
-      +icon('icon-menu')
+    include ../components/header/header-navbar
 
     .header-logo
       a(href='/')
         img(src=URL_file('logo', baseUrlLvl, 'svg'), alt="Zap Hub logotype")
 
-    nav.navigation.mr-lg-auto
+    nav.navigation.mr-lg-auto.h-hidden-md-down
       include ../components/navigation
 
-    a.button.button__secondary.button--icon.button--small(href=URL_Pug_MainNav('index')) #[+icon('icon-add', 'button__icon')]Додати оголошення
+    a.button.button__secondary.button--icon.button--small.h-hidden-md-down(href=URL_Pug_MainNav('index')) #[+icon('icon-add', 'button__icon')]Додати оголошення
 
-    a(href="#").header-widhlist.ml-lg-medium #[+icon('icon-heart-solid')]
+    a(href="#").header-widhlist.ml-lg-medium.h-hidden-md-down #[+icon('icon-heart-solid')]
       //- | Збережені оголошення
     
     
-    include ../components/language
-
     include ../components/header/header-account
-
-    include ../components/header/header-navbar
+    .ml-lg-medium.h-hidden-md-down
+      include ../components/language

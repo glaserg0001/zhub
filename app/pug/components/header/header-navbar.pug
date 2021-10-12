@@ -1,7 +1,16 @@
+button.header-navbar__toggle.header-navbar__toggle--primary.js-nav-btn.js-primary
+  +icon('icon-menu')
+
+.header-navbar__backdrop.js-nav-btn
+
 .header-navbar.js-nav
   .header-navbar__header
-    button.header-navbar__toggle.js-nav-btn
+    //- button.header-navbar__toggle.js-nav-btn
       +icon('icon-menu')
-    .header-logo
+    //- .header-logo
       a(href='/')
         img(src=URL_file('logo', baseUrlLvl, 'svg'), alt="Zap Hub logotype")
+
+    a(href="#").header-widhlist.ml-lg-medium.h-hidden-md-down
+      +icon('icon-heart-solid')
+      | Збережені оголошення

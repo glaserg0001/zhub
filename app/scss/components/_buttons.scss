@@ -17,7 +17,6 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
-    width: 100%;
     min-height: 40px;
     padding: 5px 10px;
     font-size: rem(16);
@@ -28,10 +27,6 @@
     text-decoration: none;
     cursor: pointer;
     user-select: none;
-
-    @include media-breakpoint-up(md) {
-        width: auto;
-    }
 
     @include on-event {
         background-color: var(--bg-color-hover);

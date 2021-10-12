@@ -2397,30 +2397,27 @@ select.input {
   line-height: 1.7;
 }
 
-@media (max-width: 1023.98px) {
-  .header-navbar {
-    position: fixed;
-    top: 0;
-    right: 100%;
-    bottom: 0;
-    width: 100%;
-    max-width: 250px;
-    padding: 0 20px;
-    background-color: #fff;
-    z-index: 1;
-    transform: translate3d(0, 0, 0);
-    transition: transform 0.2s ease-in-out;
-  }
-  .header-navbar.m-opened {
-    transform: translate3d(100%, 0, 0);
-  }
+.header-navbar {
+  position: fixed;
+  top: 0;
+  right: 100%;
+  bottom: 0;
+  width: 100%;
+  max-width: 250px;
+  padding: 0 20px;
+  background-color: #fff;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.header-navbar--opened .header-navbar {
+  transform: translate3d(100%, 0, 0);
 }
 
 @media (min-width: 1024px) {
   .header-navbar {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
+    display: none;
   }
 }
 
@@ -2430,6 +2427,7 @@ select.input {
   font-size: 1.125rem;
   background-color: #fff;
   border: none;
+  z-index: 2;
 }
 
 @media (min-width: 1024px) {
@@ -2438,26 +2436,29 @@ select.input {
   }
 }
 
-.header-navbar__toggle--primary.m-active::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(47, 72, 88, 0.5);
-  z-index: 1;
+.header-navbar__backdrop {
+  display: none;
+}
+
+@media (max-width: 1023.98px) {
+  .header-navbar__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(47, 72, 88, 0.5);
+    border: none;
+  }
+  .header-navbar--opened .header-navbar__backdrop {
+    display: block;
+  }
 }
 
 .header-navbar__header {
   display: flex;
+  align-items: center;
   padding: 10px 0;
-}
-
-@media (min-width: 1024px) {
-  .header-navbar__header {
-    display: none;
-  }
 }
 
 .button {
@@ -2474,7 +2475,6 @@ select.input {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  width: 100%;
   min-height: 40px;
   padding: 5px 10px;
   font-size: 1rem;
@@ -2485,12 +2485,6 @@ select.input {
   text-decoration: none;
   cursor: pointer;
   user-select: none;
-}
-
-@media (min-width: 768px) {
-  .button {
-    width: auto;
-  }
 }
 
 @media (hover: hover) {
@@ -2811,8 +2805,10 @@ select.input {
 }
 
 .header-logo {
+  position: relative;
   max-width: 105px;
   margin-right: auto;
+  z-index: 2;
 }
 
 @media (min-width: 1024px) {

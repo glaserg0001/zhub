@@ -20,8 +20,10 @@
 
 
 .header-logo {
+    position: relative;
     max-width: 105px;
     margin-right: auto;
+    z-index: z(header-navbar--above);
 
     @include media-breakpoint-up(lg) {
         margin-right: 50px;

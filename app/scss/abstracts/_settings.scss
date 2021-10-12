@@ -71,7 +71,9 @@ $z-layers: (
     auto: auto,
     above: 1,
     // components
-    header: 10
+    header: 10,
+    header-navbar: 1,
+    header-navbar--above: 2
 ) !default;
 
 $grid-breakpoints: (
