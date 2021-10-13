@@ -1,25 +1,30 @@
 class toggleNavigation {
     constructor(name, btn) {
-        this.root = 'html'
+        this.root = 'body'
         this.openedClass = `${name}--opened`;
         this.btn = btn;
-        // this.container = container;
-        // this.containerOpened = 'm-opened';
-        // this.btnActive = 'm-active';
-        // this.btnPrimary = '.js-primary';
     }
 
     init() {
         const btn = document.querySelectorAll(this.btn);
-        // const container = document.querySelector(this.container);
-        // const btnPrimary = document.querySelector(this.btnPrimary);
         const root = document.querySelector(this.root);
 
         btn.forEach(i => {
             i.addEventListener('click', () => {
-                // container.classList.toggle(this.containerOpened);
-                // btnPrimary.classList.toggle(this.btnActive);
-                root.classList.toggle(this.openedClass)
+                let position = window.pageYOffset;
+                
+                if (position) {
+                    root.style.top = `-${position}px`;
+                    this.scrollposition = position;
+                }
+                
+                root.classList.toggle(this.openedClass);
+
+                if (!root.classList.contains(this.openedClass)) {
+                    parseInt(root.style.top) && (root.style.top = null);
+                    window.scrollTo(0, this.scrollposition);
+                    this.scrollposition = 0;
+                }
             })
         })
     }

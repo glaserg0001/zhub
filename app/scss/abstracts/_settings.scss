@@ -19,6 +19,8 @@ $green-300: #6fa21a !default; // hover
 $green-200: #8dc334 !default; // secondary
 $green-100: #cee8a3 !default; // unable
 
+$red: #ce5d4e !default;
+
 $gray-500: #949597 !default;
 $gray-400: #d4d5d6 !default; // border
 $gray-300: #dadada !default;
@@ -54,6 +56,7 @@ $colors: (
     border-tag: $blue-200, // #75aed6
     success: $green-400,
     success-bg: $green-100,
+    danger: $red, // #ce5d4e
     disabled: $gray-400,
     disabled-bg: $gray-100,
     // == gray

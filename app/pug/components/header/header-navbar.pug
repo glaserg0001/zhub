@@ -4,13 +4,13 @@ button.header-navbar__toggle.header-navbar__toggle--primary.js-nav-btn.js-primar
 .header-navbar__backdrop.js-nav-btn
 
 .header-navbar.js-nav
-  .header-navbar__header
+  //- .header-navbar__header
     //- button.header-navbar__toggle.js-nav-btn
       +icon('icon-menu')
     //- .header-logo
       a(href='/')
         img(src=URL_file('logo', baseUrlLvl, 'svg'), alt="Zap Hub logotype")
 
-    a(href="#").header-widhlist.ml-lg-medium.h-hidden-md-down
-      +icon('icon-heart-solid')
-      | Збережені оголошення
+  a(href="#").button.button--icon
+    +icon('icon-heart-solid')
+    | Збережені оголошення
