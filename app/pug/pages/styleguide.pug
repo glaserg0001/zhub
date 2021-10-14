@@ -26,14 +26,18 @@ block content
     .sg-block
       code m-0 = 0
       br
-      code m-small = 10px
+      code m-1 = 5px
       br
-      code m-medium = 20px
+      code m-2 = 10px
       br
-      code m-large = 30px
+      code m-3 = 20px
+      br
+      code m-4 = 30px
+      br
+      code m-5 = 60px
       br
       code m-auto = auto
-      hr.my-small
+      hr.my-2
       code m-md-auto
       br
       code m-lg-auto
@@ -106,9 +110,9 @@ block content
         thead.text-left
           tr
             th
-            th Small devices #[small.d-block (0 - <768px)]
-            th Medium devices #[small.d-block (≥768px - <1024px)]
-            th Large devices #[small.d-block (≥1024px)]
+            each item in sgSpecialBreakpoints
+              th=item.name
+                small.d-block=item.description
         tbody
           each item in sgVisibility
             tr
@@ -118,6 +122,26 @@ block content
               td(class=(item.medium ? 'sg-enabled' : 'sg-disabled'))=item.medium ? 'Visible': 'Hidden'
               td(class=(item.large ? 'sg-enabled' : 'sg-disabled'))=item.large ? 'Visible': 'Hidden'
     //- VISAVILITY END
+    //- SIZING START
+    h2.sg-heading Sizing
+    //- h3.sg-heading Hidden multiply
+    .sg-block
+      table.sg-table
+        thead.text-left
+          tr
+            th
+            each item in sgSpecialBreakpoints
+              th=item.name
+                small.d-block=item.description
+        tbody
+          each item in sgSizing
+            tr
+              th.text-left.font-weight-normal
+                code=item.class
+              td(class=(item.small ? 'sg-enabled' : 'sg-disabled'))=item.small ? 'Active': 'Inactive'
+              td(class=(item.medium ? 'sg-enabled' : 'sg-disabled'))=item.medium ? 'Active': 'Inactive'
+              td(class=(item.large ? 'sg-enabled' : 'sg-disabled'))=item.large ? 'Active': 'Inactive'
+    //- SIZING END
 
 
 block scripts

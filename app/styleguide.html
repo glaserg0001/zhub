@@ -24,10 +24,27 @@
           </svg>
         </button>
         <div class="header-navbar__backdrop js-nav-btn"></div>
-        <div class="header-navbar js-nav"><a class="button button--icon" href="#">
-            <svg class="icon-svg">
-              <use xlink:href="img/icons.svg#icon-heart-solid"></use>
-            </svg>Збережені оголошення</a></div>
+        <div class="header-navbar js-nav">
+          <div class="header-navbar__content"><a class="button button__secondary button--icon w-100 button--left" href="/app/index.html">
+              <svg class="icon-svg button__icon">
+                <use xlink:href="img/icons.svg#icon-add"></use>
+              </svg>Додати оголошення</a><a class="button button--icon button--left w-100 mt-2" href="#">
+              <svg class="icon-svg button__icon">
+                <use xlink:href="img/icons.svg#icon-heart-solid"></use>
+              </svg>Збережені оголошення</a>
+            <div class="navigation my-4">
+              <ul class="navigation__list">
+                <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Блог</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
+              </ul>
+            </div>
+            <ul class="language">
+              <li class="language__item"><a class="language__link m-current" href="#">Укр</a></li>
+              <li class="language__item"><a class="language__link" href="#">Рус</a></li>
+            </ul>
+          </div>
+        </div>
         <div class="header-logo"><a href="/"><img src="img/logo.svg" alt="Zap Hub logotype"></a></div>
         <nav class="navigation mr-lg-auto h-hidden-md-down">
           <ul class="navigation__list">
@@ -38,11 +55,11 @@
         </nav><a class="button button__secondary button--icon button--small h-hidden-md-down" href="/app/index.html">
           <svg class="icon-svg button__icon">
             <use xlink:href="img/icons.svg#icon-add"></use>
-          </svg>Додати оголошення</a><a class="header-widhlist ml-lg-medium h-hidden-md-down" href="#">
+          </svg>Додати оголошення</a><a class="header-widhlist ml-lg-3 h-hidden-md-down" href="#">
           <svg class="icon-svg">
             <use xlink:href="img/icons.svg#icon-heart-solid"></use>
           </svg></a>
-        <div class="header-account dropdown ml-lg-medium"><a class="header-account__link dropdown__head" href="#">
+        <div class="header-account dropdown ml-lg-3"><a class="header-account__link dropdown__head" href="#">
             <svg class="icon-svg">
               <use xlink:href="img/icons.svg#icon-user"></use>
             </svg></a>
@@ -56,7 +73,7 @@
                 </svg>Вийти</a></li>
           </ul>
         </div>
-        <div class="ml-lg-medium h-hidden-md-down">
+        <div class="ml-lg-3 h-hidden-md-down">
           <ul class="language">
             <li class="language__item"><a class="language__link m-current" href="#">Укр</a></li>
             <li class="language__item"><a class="language__link" href="#">Рус</a></li>
@@ -91,8 +108,8 @@
           </ul>
         </div>
         <h2 class="sg-heading">Spacing</h2>
-        <div class="sg-block"><code>m-0 = 0</code><br><code>m-small = 10px</code><br><code>m-medium = 20px</code><br><code>m-large = 30px</code><br><code>m-auto = auto</code>
-          <hr class="my-small"><code>m-md-auto</code><br><code>m-lg-auto</code>
+        <div class="sg-block"><code>m-0 = 0</code><br><code>m-1 = 5px</code><br><code>m-2 = 10px</code><br><code>m-3 = 20px</code><br><code>m-4 = 30px</code><br><code>m-5 = 60px</code><br><code>m-auto = auto</code>
+          <hr class="my-2"><code>m-md-auto</code><br><code>m-lg-auto</code>
         </div>
         <h2 class="sg-heading">Heading</h2>
         <div class="sg-block">
@@ -431,9 +448,9 @@
             <thead class="text-left">
               <tr>
                 <th></th>
-                <th>Small devices <small class="d-block">(0 - <768px)</small></th>
-                <th>Medium devices <small class="d-block">(≥768px - <1024px)</small></th>
-                <th>Large devices <small class="d-block">(≥1024px)</small></th>
+                <th>Small devices<small class="d-block">(0 - &lt;768px)</small></th>
+                <th>Medium devices<small class="d-block">(≥768px - &lt;1024px)</small></th>
+                <th>Large devices<small class="d-block">(≥1024px)</small></th>
               </tr>
             </thead>
             <tbody>
@@ -470,10 +487,57 @@
             </tbody>
           </table>
         </div>
+        <h2 class="sg-heading">Sizing</h2>
+        <div class="sg-block">
+          <table class="sg-table">
+            <thead class="text-left">
+              <tr>
+                <th></th>
+                <th>Small devices<small class="d-block">(0 - &lt;768px)</small></th>
+                <th>Medium devices<small class="d-block">(≥768px - &lt;1024px)</small></th>
+                <th>Large devices<small class="d-block">(≥1024px)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="text-left font-weight-normal"><code>.w-100</code></th>
+                <td class="sg-enabled">Active</td>
+                <td class="sg-enabled">Active</td>
+                <td class="sg-enabled">Active</td>
+              </tr>
+              <tr>
+                <th class="text-left font-weight-normal"><code>.w-100-xs-down</code></th>
+                <td class="sg-enabled">Active</td>
+                <td class="sg-disabled">Inactive</td>
+                <td class="sg-disabled">Inactive</td>
+              </tr>
+              <tr>
+                <th class="text-left font-weight-normal"><code>.w-100-md-down</code></th>
+                <td class="sg-enabled">Active</td>
+                <td class="sg-enabled">Active</td>
+                <td class="sg-disabled">Inactive</td>
+              </tr>
+              <tr>
+                <th class="text-left font-weight-normal"><code>.w-100-md-up</code></th>
+                <td class="sg-disabled">Inactive</td>
+                <td class="sg-enabled">Active</td>
+                <td class="sg-enabled">Active</td>
+              </tr>
+              <tr>
+                <th class="text-left font-weight-normal"><code>.w-100-lg-up</code></th>
+                <td class="sg-disabled">Inactive</td>
+                <td class="sg-disabled">Inactive</td>
+                <td class="sg-enabled">Active</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
+    <div><a class="button button__secondary w-25 mb-2" href="/app/styleguide.html">styleguide</a></div>
     <footer class="footer">
-      <div class="container header__content">
+      <div class="container footer__content">
+        <div class="footer-logo"><a href="/"><img src="img/logo.svg" alt="Zap Hub logotype"></a></div>
         <div class="navigation navigation--invert">
           <ul class="navigation__list">
             <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
@@ -481,8 +545,19 @@
             <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
           </ul>
         </div>
+        <div class="navigation navigation--invert font-weight-medium">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Усі категорії</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Усі регіони</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Усі автомобілі</a></li>
+          </ul>
+        </div>
+        <div>all right</div>
+        <ul>
+          <li><a>O</a></li>
+        </ul>
       </div>
-    </footer><a class="styleguide" href="/app/styleguide.html">styleguide </a>
+    </footer>
     <script src="js/main.js"></script>
   </body>
 </html>

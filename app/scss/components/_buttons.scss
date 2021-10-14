@@ -38,6 +38,20 @@
         border-color: var(--border-color-hover)
     }
 
+    @each $breakpoint in map-keys($special-breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $special-breakpoints);
+
+        @each $key, $val in (left: flex-start, center: center) {
+            @include media-breakpoint-up($breakpoint, $special-breakpoints) {
+                &--#{$key}#{$infix} {
+                    text-align: $key;
+                    justify-content: $val;
+                }
+            }
+        }
+
+    }
+
     &--loading {
         position: relative;
 

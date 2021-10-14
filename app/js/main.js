@@ -1,7 +1,7 @@
 class toggleNavigation {
     constructor(name, btn) {
         this.root = 'body'
-        this.openedClass = `${name}--opened`;
+        this.openedClass = `${name}__opened`;
         this.btn = btn;
     }
 

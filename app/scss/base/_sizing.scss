@@ -1,9 +1,27 @@
 // Width and height
 
-@each $prop, $abbrev in (width: w, height: h) {
-    @each $size, $length in $sizes {
-        .#{$abbrev}-#{$size} {
-            #{$prop}: $length !important;
+@each $breakpoint in map-keys($special-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $special-breakpoints);
+    $infix-revert: breakpoint-infix-revert($breakpoint, $special-breakpoints);
+
+    @each $prop, $abbrev in (width: w, /*height: h*/) {
+        @include media-breakpoint-down($breakpoint, $special-breakpoints) {
+            $max: breakpoint-max($breakpoint, $special-breakpoints);
+            @if $max {
+                @each $size, $length in $sizes {
+                    .#{$abbrev}#{$infix-revert}-#{$size}-down {
+                        #{$prop}: $length !important;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-up($breakpoint, $special-breakpoints) {
+            @each $size, $length in $sizes {
+                .#{$abbrev}#{$infix}-#{$size} {
+                    #{$prop}: $length !important;
+                }
+            }
         }
     }
 }

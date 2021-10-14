@@ -15,7 +15,37 @@
     }
   ]
 
+  var secondaryNav = [
+    {
+      link: URL_Pug_MainNav('index'),
+      name: 'Усі категорії'
+    },
+    {
+      link: URL_Pug_MainNav('index'),
+      name: 'Усі регіони'
+    },
+    {
+      link: URL_Pug_MainNav('index'),
+      name: 'Усі автомобілі'
+    }
+  ]
+
   //- Styleguide START
+  var sgSpecialBreakpoints = [
+    {
+      name: 'Small devices',
+      description: '(0 - <768px)'
+    },
+    {
+      name: 'Medium devices',
+      description: '(≥768px - <1024px)'
+    },
+    {
+      name: 'Large devices',
+      description: '(≥1024px)'
+    }
+  ]
+
   var sgColors = [
     {
       'blue-500': '#2f4858',
@@ -153,6 +183,39 @@
       small: true,
       medium: true,
       large: false
+    }
+  ]
+
+  var sgSizing = [
+    {
+      class: '.w-100',
+      small: true,
+      medium: true,
+      large: true
+    },
+    {
+      class: '.w-100-xs-down',
+      small: true,
+      medium: false,
+      large: false
+    },
+    {
+      class: '.w-100-md-down',
+      small: true,
+      medium: true,
+      large: false
+    },
+    {
+      class: '.w-100-md-up',
+      small: false,
+      medium: true,
+      large: true
+    },
+    {
+      class: '.w-100-lg-up',
+      small: false,
+      medium: false,
+      large: true
     }
   ]
   //- Styleguide END

@@ -1,6 +1,23 @@
+div
+  a(href=URL_Pug_MainNav('styleguide')).button.button__secondary.w-25.mb-2 styleguide
+
 footer.footer
-  .container.header__content
+  .container.footer__content
+    .footer-logo
+      a(href='/')
+        img(src=URL_file('logo', baseUrlLvl, 'svg'), alt="Zap Hub logotype")
+
     .navigation.navigation--invert
       include ../components/navigation
 
-a(href=URL_Pug_MainNav('styleguide')).styleguide styleguide 
+    .navigation.navigation--invert.font-weight-medium
+      ul.navigation__list
+        each item in secondaryNav
+          li.navigation__item
+            a(href=item.link).navigation__link=item.name
+
+    div all right
+
+    ul
+      li
+        a O

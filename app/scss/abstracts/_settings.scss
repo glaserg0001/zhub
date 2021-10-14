@@ -92,6 +92,13 @@ $grid-gutter-widths: (
     lg: 20px
 ) !default;
 
+$special-breakpoints: (xs: map-get($grid-breakpoints, xs), // xs: 0,
+    // sm: map-get($grid-breakpoints, sm),  // sm: 576px,
+    md: map-get($grid-breakpoints, md), // md: 768px,
+    lg: map-get($grid-breakpoints, lg), // lg: 1024px,
+    // xl: map-get($grid-breakpoints, xl)   // xl: 1440px
+) !default;
+
 $grid-gutter-width-xs: map-get($grid-gutter-widths, xs) !default;
 // $grid-gutter-width-sm: $grid-gutter-width-xs !default;
 // $grid-gutter-width-md: map-get($grid-gutter-widths, md) !default;
@@ -110,22 +117,14 @@ $spacers: () !default;
 $spacers: map-merge(
     (
         0: 0,
-        // 1: ($spacer * .25), // 5
-        small: ($spacer * .5),  // 10
-        medium: $spacer,         // 20
-        large: ($spacer * 1.5), // 30
-        // 5: ($spacer * 3)    // 60
+        1: ($spacer * .25), // 5
+        2: ($spacer * .5),  // 10
+        3: $spacer,         // 20
+        4: ($spacer * 1.5), // 30
+        5: ($spacer * 3)    // 60
     ),
     $spacers
 );
-
-$special-breakpoints: (
-    xs: map-get($grid-breakpoints, xs),     // xs: 0,
-    // sm: map-get($grid-breakpoints, sm),  // sm: 576px,
-    md: map-get($grid-breakpoints, md),     // md: 768px,
-    lg: map-get($grid-breakpoints, lg),     // lg: 1024px,
-    // xl: map-get($grid-breakpoints, xl)   // xl: 1440px
-) !default;
 
 $sizes: () !default;
 $sizes: map-merge((
