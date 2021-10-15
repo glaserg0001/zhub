@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
   </head>
@@ -34,7 +34,7 @@
             <div class="navigation my-4">
               <ul class="navigation__list">
                 <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Блог</a></li>
+                <li class="navigation__item"><a class="active navigation__link" href="/app/index.html">Блог</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
               </ul>
             </div>
@@ -48,7 +48,7 @@
         <nav class="navigation mr-lg-auto h-hidden-md-down">
           <ul class="navigation__list">
             <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Блог</a></li>
+            <li class="navigation__item"><a class="active navigation__link" href="/app/index.html">Блог</a></li>
             <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
           </ul>
         </nav><a class="button button__secondary button--icon button--small h-hidden-md-down" href="/app/index.html">
@@ -87,26 +87,48 @@
     </div>
     <div><a class="button button__secondary w-25 mb-2" href="/app/styleguide.html">styleguide</a></div>
     <footer class="footer">
-      <div class="container footer__content">
-        <div class="footer-logo"><a href="/"><img src="img/logo.svg" alt="Zap Hub logotype"></a></div>
-        <div class="navigation navigation--invert">
-          <ul class="navigation__list">
-            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Блог</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
-          </ul>
+      <div class="container footer__content_">
+        <div class="row justify-content-lg-between align-items-lg-center">
+          <div class="col-6 col-md-4 col-lg-auto my-1">
+            <div class="footer-logo"><a href="/"><img src="img/logo-secondary.svg" alt="Zap Hub logotype"></a></div>
+          </div>
+          <div class="col-6 col-md-2 col-lg-auto my-1 order-md-last text-md-right">
+            <ul class="footer-social">
+              <li class="footer-social__item"><a class="footer-social__link" href="https://www.instagram.com/zaphub.com.ua/" target="_blank">
+                  <svg class="icon-svg">
+                    <use xlink:href="img/icons.svg#icon-instagram"></use>
+                  </svg></a></li>
+              <li class="footer-social__item"><a class="footer-social__link" href="https://t.me/joinchat/8-fx0NfMSu1mMjRi" target="_blank">
+                  <svg class="icon-svg">
+                    <use xlink:href="img/icons.svg#icon-telegram"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 col-lg-auto my-4 my-md-0">
+            <div class="navigation navigation--secondary">
+              <ul class="navigation__list">
+                <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
+                <li class="navigation__item"><a class="active navigation__link" href="/app/index.html">Блог</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 col-lg-auto my-4 my-md-0">
+            <div class="navigation navigation--secondary font-weight-normal">
+              <ul class="navigation__list">
+                <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Усі категорії</a></li>
+                <li class="navigation__item"><a class="active navigation__link" href="/app/index.html">Усі регіони</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Усі автомобілі</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-auto mt-md-4 mt-lg-0 order-md-last order-lg-0">
+            <ul class="footer-copy">
+              <li class="footer-copy__item">&copy; All rights reserved</li>
+              <li class="footer-copy__item">ZapHub 2021</li>
+            </ul>
+          </div>
         </div>
-        <div class="navigation navigation--invert font-weight-medium">
-          <ul class="navigation__list">
-            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Усі категорії</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Усі регіони</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Усі автомобілі</a></li>
-          </ul>
-        </div>
-        <div>all right</div>
-        <ul>
-          <li><a>O</a></li>
-        </ul>
       </div>
     </footer>
     <script src="js/main.js"></script>

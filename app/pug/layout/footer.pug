@@ -2,22 +2,28 @@ div
   a(href=URL_Pug_MainNav('styleguide')).button.button__secondary.w-25.mb-2 styleguide
 
 footer.footer
-  .container.footer__content
-    .footer-logo
-      a(href='/')
-        img(src=URL_file('logo', baseUrlLvl, 'svg'), alt="Zap Hub logotype")
+  .container.footer__content_
+    .row.justify-content-lg-between.align-items-lg-center
+      .col-6.col-md-4.col-lg-auto.my-1
+        .footer-logo
+          a(href='/')
+            img(src=URL_file('logo-secondary', baseUrlLvl, 'svg'), alt="Zap Hub logotype")
 
-    .navigation.navigation--invert
-      include ../components/navigation
+      .col-6.col-md-2.col-lg-auto.my-1.order-md-last.text-md-right
+        include ../components/footer/footer-social
 
-    .navigation.navigation--invert.font-weight-medium
-      ul.navigation__list
-        each item in secondaryNav
-          li.navigation__item
-            a(href=item.link).navigation__link=item.name
+      .col-6.col-md-3.col-lg-auto.my-4.my-md-0
+        .navigation.navigation--secondary
+          include ../components/navigation
 
-    div all right
+      .col-6.col-md-3.col-lg-auto.my-4.my-md-0
+        .navigation.navigation--secondary.font-weight-normal
+          ul.navigation__list
+            each item, index in secondaryNav
+              li.navigation__item
+                a(href=item.link class=(index == 1 ? 'active' : '')).navigation__link=item.name
 
-    ul
-      li
-        a O
+      .col-lg-auto.mt-md-4.mt-lg-0.order-md-last.order-lg-0
+        ul.footer-copy
+          li.footer-copy__item &copy; All rights reserved
+          li.footer-copy__item ZapHub 2021

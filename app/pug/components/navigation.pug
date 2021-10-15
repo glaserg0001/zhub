@@ -1,4 +1,4 @@
 ul.navigation__list
-  each item in mainNav
+  each item, index in mainNav
     li.navigation__item
-      a(href=item.link).navigation__link=item.name
+      a(href=item.link class=(index == 1 ? 'active' : '')).navigation__link=item.name

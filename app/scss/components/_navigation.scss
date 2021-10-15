@@ -3,16 +3,15 @@
     --link-color-hover: #{color(primary2)};
 
     font-size: rem(16);
+    font-weight: $font-weight-light;
 
-    &--invert {
+    &--secondary {
         --link-color: #{color(white)};
         --link-color-hover: #{color(gray5)};
-
-        // font-weight: $font-weight-medium;
+        font-size: inherit;
     }
 
     &__list {
-    
         @include media-breakpoint-up(lg) {
             display: flex;
         }
@@ -22,7 +21,7 @@
         margin-bottom: 20px;
 
         @include media-breakpoint-up(lg) {
-            margin: 0 20px 0 0;
+            margin: 0 15px 0 0;
         }
 
         &:last-child {
@@ -36,6 +35,10 @@
 
         @include on-event {
             color: var(--link-color-hover);
+        }
+
+        &.active {
+            font-weight: $font-weight-bold;
         }
     }
 }

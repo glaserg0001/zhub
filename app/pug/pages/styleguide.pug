@@ -55,11 +55,14 @@ block content
     h2.sg-heading Forms
     h3.sg-heading Input
     //- FORM START
-    .sg-block
-      each val, key in sgInputFields
-        div(class='form-input ' + (val.label ? 'm-label' : ''))
-          input(type='text' value=val.value class=val.label ? 'js-form-input' : '')
-          label=val.label
+    .row
+      each item, id in sgInputFields
+        .col-sm-6.col-md-3
+          .sg-block
+            .form__item
+              if item.label
+                label.label(for=id)=item.label
+              input.input(id=id type='text' placeholder=item.placeholder value=item.value)
     //- FORM END
 
     //- BUTTON START
