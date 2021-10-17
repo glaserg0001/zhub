@@ -21,6 +21,10 @@
     background-color: color(white);
     border-radius: 5px;
 
+    &--bg-transparent {
+        background-color: transparent;
+    }
+
     &__list {
         margin-bottom: 25px;
 

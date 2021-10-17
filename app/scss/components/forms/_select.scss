@@ -1,0 +1,17 @@
+select.input__ {
+    line-height: 1em;
+    text-indent: 0.01px;
+    text-overflow: '';
+    // appearance: none!important;
+    // background: #efefef url(/img/arrow_down.png) 95% 50% no-repeat;
+    // &::-ms-expand {
+    //     display: none
+    // }
+}
+
+.select-custom {
+    width: 100%;
+    height: 45px;
+    max-width: 100%;
+    padding: 0 20px;
+}

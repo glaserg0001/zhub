@@ -19,6 +19,10 @@
   border-radius: 5px;
 }
 
+.sg-block--bg-transparent {
+  background-color: transparent;
+}
+
 .sg-block__list {
   margin-bottom: 25px;
 }

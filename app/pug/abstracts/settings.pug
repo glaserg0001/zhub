@@ -2,15 +2,15 @@
 -
   var mainNav = [
     {
-      link: URL_Pug_MainNav('index'),
+      link: URL_Pug_MainNav('styleguide'),
       name: 'Про сервіс'
     },
     {
-      link: URL_Pug_MainNav('index'),
+      link: URL_Pug_MainNav('styleguide'),
       name: 'Блог'
     },
     {
-      link: URL_Pug_MainNav('index'),
+      link: URL_Pug_MainNav('styleguide'),
       name: 'Доставка та оплата'
     }
   ]
@@ -80,17 +80,80 @@
 
   var sgInputFields = {
     input1: {
-      label: 'Місто',
+      group: false,
+      label: 'Label',
+      class: false,
       value: '',
-      placeholder: 'Пошук',
-      disabled: false
+      placeholder: 'Placeholder',
+      disabled: false,
+      copyInput: false
     },
     input2: {
-      label: 'Ціна',
-      value: '100',
-      disabled: true
+      group: false,
+      label: 'Label',
+      class: false,
+      value: 'Value',
+      placeholder: false,
+      disabled: true,
+      copyInput: false
+    },
+    input3: {
+      group: true,
+      label: 'Label Text',
+      class: false,
+      value: '',
+      placeholder: false,
+      disabled: false,
+      copyInput: true
+    },
+    input4: {
+      group: true,
+      label: 'Small Input',
+      class: 'input--small',
+      value: '',
+      placeholder: 'Placeholder',
+      disabled: false,
+      copyInput: true
+    },
+    input5: {
+      group: false,
+      label: 'Input Secondary',
+      class: 'input--secondary',
+      value: '',
+      placeholder: 'Placeholder',
+      disabled: false,
+      copyInput: false
+    },
+    input6: {
+      group: true,
+      label: 'Input Secondary',
+      class: 'input--secondary',
+      value: 'Disabled',
+      placeholder: 'Placeholder',
+      disabled: true,
+      copyInput: false
     },
   }
+
+  var sgSelectFields = {
+    select1: {
+      group: false,
+      label: 'Select Default',
+      class: false,
+      theme: 'secondary',
+      //- value: '',
+      placeholder: 'Placeholder',
+      disabled: false,
+      copyInput: false
+    }
+  }
+
+  var sgSelectOptions = [
+    'Шини та диски',
+    'Гальмівна система',
+    'Кузов',
+    'Двигун і вихлопна система'
+  ]
 
   var sgButtonsHelper = [
     'Default',

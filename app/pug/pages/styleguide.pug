@@ -6,10 +6,12 @@ block variables
   //- - var baseUrlLvl = 1
 
 block styles
+  //- link(rel='stylesheet' href= URL_file('vendors/select2base/core', baseUrlLvl))
   link(rel='stylesheet' href= URL_file('pages/styleguide', baseUrlLvl))
 
 block content
   .container.sg-container
+    //- include ../components/filter
     h1.sg-heading Styleguide
     //- COLOR START
     h2.sg-heading Colors
@@ -55,14 +57,57 @@ block content
     h2.sg-heading Forms
     h3.sg-heading Input
     //- FORM START
-    .row
-      each item, id in sgInputFields
-        .col-sm-6.col-md-3
-          .sg-block
-            .form__item
+    
+    .sg-block.sg-block--bg-transparent
+      .row.align-items-end
+        each item, id in sgInputFields
+          - var attributes = {};
+          - attributes.class = 'form-field';
+          - attributes.class += item.group ? ' form-group' : '';
+          - attributes.class += item.group ? ' form-group' : '';
+
+          - var attrInput = {};
+          - attrInput.placeholder = item.placeholder ? item.placeholder : false;
+          - attrInput.value = item.value ? item.value : false;
+          - attrInput.class = item.class ? item.class : false;
+          - attrInput.disabled = item.disabled ? true : false;
+
+          .col-md-6
+            div&attributes(attributes)
               if item.label
                 label.label(for=id)=item.label
-              input.input(id=id type='text' placeholder=item.placeholder value=item.value)
+              input.input(id=id type='text')&attributes(attrInput)
+              if item.copyInput
+                input.input(id=id+'copy' type='text')&attributes(attrInput)
+
+    h3.sg-heading Select
+    .sg-block.sg-block--bg-transparent
+      .row.align-items-end
+        each item, id in sgSelectFields
+          - var attributes = {};
+          - attributes.class = 'form-field';
+          - attributes.class += item.group ? ' form-group' : '';
+          - attributes.class += item.group ? ' form-group' : '';
+
+          - var attrSelect = {};
+          - attrSelect.class = item.class ? item.class : '';
+          - attrSelect['data-placeholder'] = item.placeholder ? item.placeholder : false;
+          - attrSelect['data-allow-clear'] = item.placeholder ? 'true' : false;
+          - attrSelect.disabled = item.disabled ? true : false;
+          - attrSelect['data-theme'] = item.theme;
+          - attrSelect.class += item.theme ? ` select-custom--${item.theme}` : '';
+
+          .col-md-6
+            div&attributes(attributes)
+              if item.label
+                label.label(for=id)=item.label
+              select(id=id)&attributes(attrSelect).select-custom.js-select
+                each value, index in sgSelectOptions
+                  option=value
+                optgroup(label='Group Title')
+                  each value, index in sgSelectOptions
+                    option( disabled=(index == 1 ? true : false) )=value
+
     //- FORM END
 
     //- BUTTON START
@@ -148,4 +193,4 @@ block content
 
 
 block scripts
-  //- script(src= URL_file('pages/styleguide', baseUrlLvl, 'js'))
+  script(src= URL_file('styleguide', baseUrlLvl, 'js'))

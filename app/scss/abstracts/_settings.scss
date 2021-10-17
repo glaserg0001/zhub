@@ -76,7 +76,9 @@ $z-layers: (
     // components
     header: 10,
     header-navbar: 1,
-    header-navbar--above: 2
+    header-navbar--above: 2,
+    // select2-dropdown: 1051,
+    select2-dropdown: 9,
 ) !default;
 
 $grid-breakpoints: (
@@ -87,17 +89,19 @@ $grid-breakpoints: (
     xl: 1440px
 ) !default;
 
-$grid-gutter-widths: (
-    xs: 10px,
-    lg: 20px
-) !default;
-
-$special-breakpoints: (xs: map-get($grid-breakpoints, xs), // xs: 0,
+$special-breakpoints: (
+    xs: map-get($grid-breakpoints, xs), // xs: 0,
     // sm: map-get($grid-breakpoints, sm),  // sm: 576px,
     md: map-get($grid-breakpoints, md), // md: 768px,
     lg: map-get($grid-breakpoints, lg), // lg: 1024px,
     // xl: map-get($grid-breakpoints, xl)   // xl: 1440px
 ) !default;
+
+$grid-gutter-widths: (
+    xs: 10px,
+    lg: 20px
+) !default;
+
 
 $grid-gutter-width-xs: map-get($grid-gutter-widths, xs) !default;
 // $grid-gutter-width-sm: $grid-gutter-width-xs !default;

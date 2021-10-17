@@ -34,9 +34,9 @@
               </svg>Збережені оголошення</a>
             <div class="navigation my-4">
               <ul class="navigation__list">
-                <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
-                <li class="navigation__item"><a class="active navigation__link" href="/app/index.html">Блог</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Про сервіс</a></li>
+                <li class="navigation__item"><a class="active navigation__link" href="/app/styleguide.html">Блог</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Доставка та оплата</a></li>
               </ul>
             </div>
             <ul class="language">
@@ -48,9 +48,9 @@
         <div class="header-logo"><a href="/"><img src="img/logo.svg" alt="Zap Hub logotype"></a></div>
         <nav class="navigation mr-lg-auto h-hidden-md-down">
           <ul class="navigation__list">
-            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
-            <li class="navigation__item"><a class="active navigation__link" href="/app/index.html">Блог</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Про сервіс</a></li>
+            <li class="navigation__item"><a class="active navigation__link" href="/app/styleguide.html">Блог</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Доставка та оплата</a></li>
           </ul>
         </nav><a class="button button__secondary button--icon button--small h-hidden-md-down" href="/app/index.html">
           <svg class="icon-svg button__icon">
@@ -63,7 +63,7 @@
             <svg class="icon-svg">
               <use xlink:href="img/icons.svg#icon-user"></use>
             </svg></a>
-          <ul class="dropdown__list">
+          <ul class="dropdown__list dropdown--left-xs dropdown--left-md">
             <li class="dropdown__item"><a class="dropdown__link" href="#">Акаунт</a></li>
             <li class="dropdown__item"><a class="dropdown__link" href="#">Панель керування</a></li>
             <li class="dropdown__item"><a class="dropdown__link" href="#">Налаштування</a></li>
@@ -120,20 +120,66 @@
         </div>
         <h2 class="sg-heading">Forms</h2>
         <h3 class="sg-heading">Input</h3>
-        <div class="row">
-          <div class="col-sm-6 col-md-3">
-            <div class="sg-block">
-              <div class="form__item">
-                <label class="label" for="input1">Місто</label>
-                <input class="input" id="input1" type="text" placeholder="Пошук" value="">
+        <div class="sg-block sg-block--bg-transparent">
+          <div class="row align-items-end">
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label" for="input1">Label</label>
+                <input class="input" id="input1" type="text" placeholder="Placeholder">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label" for="input2">Label</label>
+                <input class="input" id="input2" type="text" value="Value" disabled>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field form-group form-group">
+                <label class="label" for="input3">Label Text</label>
+                <input class="input" id="input3" type="text">
+                <input class="input" id="input3copy" type="text">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field form-group form-group">
+                <label class="label" for="input4">Small Input</label>
+                <input class="input input--small" id="input4" type="text" placeholder="Placeholder">
+                <input class="input input--small" id="input4copy" type="text" placeholder="Placeholder">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label" for="input5">Input Secondary</label>
+                <input class="input input--secondary" id="input5" type="text" placeholder="Placeholder">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field form-group form-group">
+                <label class="label" for="input6">Input Secondary</label>
+                <input class="input input--secondary" id="input6" type="text" placeholder="Placeholder" value="Disabled" disabled>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="sg-block">
-              <div class="form__item">
-                <label class="label" for="input2">Ціна</label>
-                <input class="input" id="input2" type="text" value="100">
+        </div>
+        <h3 class="sg-heading">Select</h3>
+        <div class="sg-block sg-block--bg-transparent">
+          <div class="row align-items-end">
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label" for="select1">Select Default</label>
+                <select class="select-custom js-select  select-custom--secondary" id="select1" data-placeholder="Placeholder" data-allow-clear="true" data-theme="secondary">
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                  <optgroup label="Group Title">
+                    <option>Шини та диски</option>
+                    <option disabled>Гальмівна система</option>
+                    <option>Кузов</option>
+                    <option>Двигун і вихлопна система</option>
+                  </optgroup>
+                </select>
               </div>
             </div>
           </div>
@@ -542,7 +588,6 @@
         </div>
       </div>
     </div>
-    <div><a class="button button__secondary w-25 mb-2" href="/app/styleguide.html">styleguide</a></div>
     <footer class="footer">
       <div class="container footer__content_">
         <div class="row justify-content-lg-between align-items-lg-center">
@@ -564,9 +609,9 @@
           <div class="col-6 col-md-3 col-lg-auto my-4 my-md-0">
             <div class="navigation navigation--secondary">
               <ul class="navigation__list">
-                <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Про сервіс</a></li>
-                <li class="navigation__item"><a class="active navigation__link" href="/app/index.html">Блог</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Доставка та оплата</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Про сервіс</a></li>
+                <li class="navigation__item"><a class="active navigation__link" href="/app/styleguide.html">Блог</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Доставка та оплата</a></li>
               </ul>
             </div>
           </div>
@@ -588,6 +633,9 @@
         </div>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/styleguide.js"></script>
   </body>
 </html>

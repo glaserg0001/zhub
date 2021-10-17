@@ -33,3 +33,13 @@ class toggleNavigation {
 let mainNav = new toggleNavigation('header-navbar', '.js-nav-btn')
 
 mainNav.init();
+
+
+// TEST
+$('.js-select').select2({
+    // placeholder: 'Select an option',
+    // allowClear: true,
+    // theme: "classicddddd",
+    width: 'style',
+    // multiple: true
+});

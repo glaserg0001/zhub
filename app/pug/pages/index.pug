@@ -3,6 +3,9 @@ extends ../base/main
 block variables
   - var pageTitle = 'Main Page'
 
+block styles
+  //- link(rel='stylesheet' href= URL_file('vendors/select2base/core', baseUrlLvl))
+
 block content
   .container
-    h1 Home Page
+    include ../components/filter
