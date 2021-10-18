@@ -90,25 +90,7 @@
               <use xlink:href="img/icons.svg#icon-search"></use>
             </svg>
           </button>
-        </form><br><br>
-        <select class="select-custom">
-          <option>Оберіть категорію</option>
-          <option>option text 2</option>
-          <option>option text 3</option>
-          <option>option text 4</option>
-        </select>
-        <select class="select-custom">
-          <option>Оберіть категорію</option>
-          <option>option text 2</option>
-          <option>option text 3</option>
-          <option>option text 4</option>
-        </select>
-        <select class="select-custom select-custom--secondary">
-          <option>Оберіть категорію</option>
-          <option>option text 2</option>
-          <option>option text 3</option>
-          <option>option text 4</option>
-        </select>
+        </form>
         <h1 class="sg-heading">Styleguide</h1>
         <h2 class="sg-heading">Colors</h2>
         <div class="sg-block">
@@ -150,40 +132,53 @@
           <div class="row align-items-end">
             <div class="col-md-6">
               <div class="form-field">
-                <label class="label" for="input1">Label</label>
+                <label class="label ">Label</label>
                 <input class="input" id="input1" type="text" placeholder="Placeholder">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-field">
-                <label class="label" for="input2">Label</label>
+                <label class="label ">Input Disabled</label>
                 <input class="input" id="input2" type="text" value="Value" disabled>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="form-field form-group form-group">
-                <label class="label" for="input3">Label Text</label>
+              <div class="form-field form-group">
+                <label class="label ">Label Text</label>
                 <input class="input" id="input3" type="text">
                 <input class="input" id="input3copy" type="text">
               </div>
             </div>
             <div class="col-md-6">
-              <div class="form-field form-group form-group">
-                <label class="label" for="input4">Small Input</label>
+              <div class="form-field form-group">
+                <label class="label ">Small Input</label>
                 <input class="input input--small" id="input4" type="text" placeholder="Placeholder">
                 <input class="input input--small" id="input4copy" type="text" placeholder="Placeholder">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-field">
-                <label class="label" for="input5">Input Secondary</label>
+                <label class="label ">Input Secondary</label>
                 <input class="input input--secondary" id="input5" type="text" placeholder="Placeholder">
               </div>
             </div>
             <div class="col-md-6">
-              <div class="form-field form-group form-group">
-                <label class="label" for="input6">Input Secondary</label>
+              <div class="form-field form-group">
+                <label class="label ">Input Secondary</label>
                 <input class="input input--secondary" id="input6" type="text" placeholder="Placeholder" value="Disabled" disabled>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field form-group">
+                <input class="input" id="input7" type="text" value="Value">
+                <input class="input" id="input7copy" type="text" value="Value">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field form-group">
+                <label class="label w-100">Label full width</label>
+                <input class="input" id="input8" type="text">
+                <input class="input" id="input8copy" type="text">
               </div>
             </div>
           </div>
@@ -194,8 +189,136 @@
           <div class="row align-items-end">
             <div class="col-md-6">
               <div class="form-field">
-                <label class="label" for="select1_browser">Select Default</label>
-                <select class="select-custom  select-custom--secondary" id="select1_browser" data-placeholder="Placeholder" data-allow-clear="true" data-theme="secondary">
+                <label class="label " for="select1_browser">Select Default</label>
+                <select class="select-custom" id="select1_browser" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
+                  <option>Оберіть категорію</option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label " for="select2_browser">Select Disabled</label>
+                <select class="select-custom" id="select2_browser" data-placeholder="Оберіть категорію" disabled>
+                  <option>Оберіть категорію</option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label " for="select3_browser">Select Search</label>
+                <select class="select-custom" id="select3_browser" data-placeholder="Оберіть категорію">
+                  <option>Оберіть категорію</option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label " for="select4_browser">Select Search &amp; Allow Clear</label>
+                <select class="select-custom" id="select4_browser" data-placeholder="Оберіть категорію" data-allow-clear="true">
+                  <option>Оберіть категорію</option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label " for="select5_browser">Select Secondary</label>
+                <select class="select-custom  select-custom--secondary" id="select5_browser" data-placeholder="Оберіть категорію" data-theme="secondary" data-minimum-results-for-search="-1">
+                  <option>Оберіть категорію</option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label " for="select6_browser">Select Secondary Disabled</label>
+                <select class="select-custom  select-custom--secondary" id="select6_browser" data-placeholder="Оберіть категорію" data-theme="secondary" data-minimum-results-for-search="-1" disabled>
+                  <option>Оберіть категорію</option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label " for="select7_browser">Select Small</label>
+                <select class="select-custom select-castom--small" id="select7_browser" data-placeholder="Оберіть категорію">
+                  <option>Оберіть категорію</option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field form-group">
+                <label class="label " for="select8_browser">Select Small</label>
+                <select class="select-custom select-castom--small" id="select8_browser" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
+                  <option>Оберіть категорію</option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field form-group">
+                <select class="select-custom" id="select9_browser" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
+                  <option>Оберіть категорію</option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+                <select class="select-custom" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
+                  <option>Оберіть категорію</option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                  <optgroup label="Group Title">
+                    <option>Шини та диски</option>
+                    <option disabled>Гальмівна система</option>
+                    <option>Кузов</option>
+                    <option>Двигун і вихлопна система</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field form-group">
+                <label class="label w-100" for="select10_browser">Label full width</label>
+                <select class="select-custom" id="select10_browser" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
+                  <option>Оберіть категорію</option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+                <select class="select-custom" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
+                  <option>Оберіть категорію</option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
                   <option>Кузов</option>
@@ -216,8 +339,136 @@
           <div class="row align-items-end">
             <div class="col-md-6">
               <div class="form-field">
-                <label class="label" for="select1">Select Default</label>
-                <select class="select-custom  select-custom--secondary js-select" id="select1" data-placeholder="Placeholder" data-allow-clear="true" data-theme="secondary">
+                <label class="label " for="select1">Select Default</label>
+                <select class="select-custom  js-select" id="select1" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
+                  <option></option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label " for="select2">Select Disabled</label>
+                <select class="select-custom  js-select" id="select2" data-placeholder="Оберіть категорію" disabled>
+                  <option></option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label " for="select3">Select Search</label>
+                <select class="select-custom  js-select" id="select3" data-placeholder="Оберіть категорію">
+                  <option></option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label " for="select4">Select Search &amp; Allow Clear</label>
+                <select class="select-custom  js-select" id="select4" data-placeholder="Оберіть категорію" data-allow-clear="true">
+                  <option></option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label " for="select5">Select Secondary</label>
+                <select class="select-custom  select-custom--secondary js-select" id="select5" data-placeholder="Оберіть категорію" data-theme="secondary" data-minimum-results-for-search="-1">
+                  <option></option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label " for="select6">Select Secondary Disabled</label>
+                <select class="select-custom  select-custom--secondary js-select" id="select6" data-placeholder="Оберіть категорію" data-theme="secondary" data-minimum-results-for-search="-1" disabled>
+                  <option></option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label " for="select7">Select Small</label>
+                <select class="select-custom select-castom--small js-select" id="select7" data-placeholder="Оберіть категорію">
+                  <option></option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field form-group">
+                <label class="label " for="select8">Select Small</label>
+                <select class="select-custom select-castom--small js-select" id="select8" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
+                  <option></option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field form-group">
+                <select class="select-custom  js-select" id="select9" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
+                  <option></option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+                <select class="select-custom  js-select" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
+                  <option></option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                  <optgroup label="Group Title">
+                    <option>Шини та диски</option>
+                    <option disabled>Гальмівна система</option>
+                    <option>Кузов</option>
+                    <option>Двигун і вихлопна система</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field form-group">
+                <label class="label w-100" for="select10">Label full width</label>
+                <select class="select-custom  js-select" id="select10" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
+                  <option></option>
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                </select>
+                <select class="select-custom  js-select" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
+                  <option></option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
                   <option>Кузов</option>

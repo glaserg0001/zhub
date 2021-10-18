@@ -1,0 +1,25 @@
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    * {
+        flex: 1 1 0;
+    }
+
+    *:not(:first-child) {
+        // margin-left: 10px;
+    }
+
+    .label {
+        flex: 0 1 auto;
+        margin-bottom: 0;
+        // margin: 5px 0 5px 10px;
+        // flex-shrink: 0;
+    }
+}

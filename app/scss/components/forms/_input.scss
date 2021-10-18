@@ -41,31 +41,13 @@
 
         @include on-event(focus) {
             border-color: color(white);
-            border-bottom-color: color(gray3);
+            // border-bottom-color: color(gray3);
         }
     }
 
     &--small {
         height: 35px;
         font-size: rem(14);
-    }
-}
-
-.form-field {
-    margin-bottom: 15px;
-}
-
-.form-group {
-    display: flex;
-    align-items: center;
-
-    *:not(:first-child) {
-        margin-left: 10px;
-    }
-
-    .label {
-        margin: 5px 0 5px 10px;
-        flex-shrink: 0;
     }
 }
 
