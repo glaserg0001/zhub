@@ -83,6 +83,32 @@
     </header>
     <div class="main">
       <div class="container sg-container">
+        <form class="filter">
+          <input class="input input--secondary" placeholder="Пошук">
+          <button class="button button__primary button--icon">
+            <svg class="icon-svg button__icon">
+              <use xlink:href="img/icons.svg#icon-search"></use>
+            </svg>
+          </button>
+        </form><br><br>
+        <select class="select-custom">
+          <option>Оберіть категорію</option>
+          <option>option text 2</option>
+          <option>option text 3</option>
+          <option>option text 4</option>
+        </select>
+        <select class="select-custom">
+          <option>Оберіть категорію</option>
+          <option>option text 2</option>
+          <option>option text 3</option>
+          <option>option text 4</option>
+        </select>
+        <select class="select-custom select-custom--secondary">
+          <option>Оберіть категорію</option>
+          <option>option text 2</option>
+          <option>option text 3</option>
+          <option>option text 4</option>
+        </select>
         <h1 class="sg-heading">Styleguide</h1>
         <h2 class="sg-heading">Colors</h2>
         <div class="sg-block">
@@ -163,12 +189,35 @@
           </div>
         </div>
         <h3 class="sg-heading">Select</h3>
+        <h4 class="sg-heading">Select Browser</h4>
+        <div class="sg-block sg-block--bg-transparent">
+          <div class="row align-items-end">
+            <div class="col-md-6">
+              <div class="form-field">
+                <label class="label" for="select1_browser">Select Default</label>
+                <select class="select-custom  select-custom--secondary" id="select1_browser" data-placeholder="Placeholder" data-allow-clear="true" data-theme="secondary">
+                  <option>Шини та диски</option>
+                  <option>Гальмівна система</option>
+                  <option>Кузов</option>
+                  <option>Двигун і вихлопна система</option>
+                  <optgroup label="Group Title">
+                    <option>Шини та диски</option>
+                    <option disabled>Гальмівна система</option>
+                    <option>Кузов</option>
+                    <option>Двигун і вихлопна система</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4 class="sg-heading">Select Custom</h4>
         <div class="sg-block sg-block--bg-transparent">
           <div class="row align-items-end">
             <div class="col-md-6">
               <div class="form-field">
                 <label class="label" for="select1">Select Default</label>
-                <select class="select-custom js-select  select-custom--secondary" id="select1" data-placeholder="Placeholder" data-allow-clear="true" data-theme="secondary">
+                <select class="select-custom  select-custom--secondary js-select" id="select1" data-placeholder="Placeholder" data-allow-clear="true" data-theme="secondary">
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
                   <option>Кузов</option>

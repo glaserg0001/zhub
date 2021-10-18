@@ -11,7 +11,9 @@ block styles
 
 block content
   .container.sg-container
-    //- include ../components/filter
+
+    include ../components/filter
+
     h1.sg-heading Styleguide
     //- COLOR START
     h2.sg-heading Colors
@@ -57,7 +59,7 @@ block content
     h2.sg-heading Forms
     h3.sg-heading Input
     //- FORM START
-    
+    //- INPUT
     .sg-block.sg-block--bg-transparent
       .row.align-items-end
         each item, id in sgInputFields
@@ -79,34 +81,42 @@ block content
               input.input(id=id type='text')&attributes(attrInput)
               if item.copyInput
                 input.input(id=id+'copy' type='text')&attributes(attrInput)
-
+    //- SELECT
     h3.sg-heading Select
-    .sg-block.sg-block--bg-transparent
-      .row.align-items-end
-        each item, id in sgSelectFields
-          - var attributes = {};
-          - attributes.class = 'form-field';
-          - attributes.class += item.group ? ' form-group' : '';
-          - attributes.class += item.group ? ' form-group' : '';
+    each browserSelect in [true, false]
+      h4.sg-heading=browserSelect ? 'Select Browser' : 'Select Custom'
+      .sg-block.sg-block--bg-transparent
+        .row.align-items-end
 
-          - var attrSelect = {};
-          - attrSelect.class = item.class ? item.class : '';
-          - attrSelect['data-placeholder'] = item.placeholder ? item.placeholder : false;
-          - attrSelect['data-allow-clear'] = item.placeholder ? 'true' : false;
-          - attrSelect.disabled = item.disabled ? true : false;
-          - attrSelect['data-theme'] = item.theme;
-          - attrSelect.class += item.theme ? ` select-custom--${item.theme}` : '';
+          each item, id in sgSelectFields
+            - var attributes = {};
+            - attributes.class = 'form-field';
+            - attributes.class += item.group ? ' form-group' : '';
+            - attributes.class += item.group ? ' form-group' : '';
 
-          .col-md-6
-            div&attributes(attributes)
-              if item.label
-                label.label(for=id)=item.label
-              select(id=id)&attributes(attrSelect).select-custom.js-select
-                each value, index in sgSelectOptions
-                  option=value
-                optgroup(label='Group Title')
+            - var attrLabel = {};
+            - attrLabel.for = browserSelect ? `${id}_browser` : id;
+
+            - var attrSelect = {};
+            - attrSelect.id = browserSelect ? `${id}_browser` : id;
+            - attrSelect.class = item.class ? item.class : '';
+            - attrSelect['data-placeholder'] = item.placeholder ? item.placeholder : false;
+            - attrSelect['data-allow-clear'] = item.placeholder ? 'true' : false;
+            - attrSelect.disabled = item.disabled ? true : false;
+            - attrSelect['data-theme'] = item.theme;
+            - attrSelect.class += item.theme ? ` select-custom--${item.theme}` : '';
+            - attrSelect.class += browserSelect ? '' : ' js-select';
+
+            .col-md-6
+              div&attributes(attributes)
+                if item.label
+                  label.label&attributes(attrLabel)=item.label
+                select&attributes(attrSelect).select-custom
                   each value, index in sgSelectOptions
-                    option( disabled=(index == 1 ? true : false) )=value
+                    option=value
+                  optgroup(label='Group Title')
+                    each value, index in sgSelectOptions
+                      option( disabled=(index == 1 ? true : false) )=value
 
     //- FORM END
 
