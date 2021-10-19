@@ -14,4 +14,31 @@ select.input__ {
     height: 45px;
     max-width: 100%;
     padding: 0 20px;
+    font-size: rem(16);
+    border-radius: 0;
+    color: color(text);
+    background-color: color(white);
+    border: 1px solid color(border);
+
+    @include on-event(focus) {
+        border-color: color(gray5);
+    }
+
+    &[disabled] {
+        color: color(disabled);
+        opacity: 1;
+    }
+
+    &--secondary {
+        border-color: transparent;
+
+        @include on-event(focus) {
+            border-color: transparent;
+        }
+    }
+
+    &--small {
+        height: 35px;
+        font-size: rem(14);
+    }
 }

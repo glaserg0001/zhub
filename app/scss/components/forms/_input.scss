@@ -37,10 +37,10 @@
     }
 
     &--secondary {
-        border-color: color(white);
+        border-color: color(transparent);
 
         @include on-event(focus) {
-            border-color: color(white);
+            border-color: color(transparent);
             // border-bottom-color: color(gray3);
         }
     }

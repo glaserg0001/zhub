@@ -34,6 +34,13 @@ $results-choice-fg-hover-color: white !default;
 $results-choice-fg-unselectable-color: grey !default;
 
 // ================ CUSTOM VARIABLES
+// == SELECTORS
+$select2-disabled: '.select2-container--disabled';
+$select2-secondary: '.select2-container--secondary';
+$select2-small: '.select2-selection--small';
+$results-small: '.select2-dropdown--small';
+
+// == UNITS
 $results-font-size-px: 16 !default;
 $results-font-size: rem($results-font-size-px) !default;
 $results-lihe-height: 1.32 !default;

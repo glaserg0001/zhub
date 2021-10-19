@@ -1,4 +1,4 @@
-@import "defaults";
+// @import "defaults";
 // delete
 // @import "mixins/gradients";
 
@@ -7,14 +7,15 @@
     display: block;
     width: 100%;
     max-width: 100%;
-    
     // delete
     // @import "mixins/gradients";
     
-    @import "single";
+    
     // @import "multiple";
     // @import "../select2base/theme/classic/multiple";
 }
+
+@import "single";
 
 
 @import "dropdown";

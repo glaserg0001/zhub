@@ -1,3 +1,5 @@
+@import "defaults";
+
 .select2-selection--single {
     display: block;
     height: 45px;
@@ -5,7 +7,15 @@
     border: 1px solid color(border);
     cursor: pointer;
     user-select: none;
-    
+
+    @include on-event(focus) {
+        border-color: color(gray5);
+    }
+
+    @include when-inside($select2-secondary) {
+        border-color: transparent;
+    }
+
     .select2-selection__rendered {
         display: block;
         padding-left: 20px;
@@ -15,6 +25,10 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+
+        @include when-inside($select2-disabled) {
+            color: color(disabled);
+        }
     }
     
     .select2-selection__clear {
@@ -27,9 +41,7 @@
         font-weight: $font-weight-bold;
     }
 
-    .select2-selection__placeholder {
-        // color: color(gray5);
-    }
+    // .select2-selection__placeholder {}
 
     .select2-selection__arrow {
         display: flex;
@@ -44,6 +56,10 @@
         color: color(text);
         background-color: transparent;
         border: none;
+
+        @include when-inside($select2-disabled) {
+            color: color(disabled);
+        }
 
         b {
             height: 0.7em;
@@ -63,7 +79,7 @@
     }
 }
 
-&.select2-container--open {
+.select2-container--open {
     .select2-selection--single {
         .select2-selection__arrow {
             b {

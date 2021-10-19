@@ -41,6 +41,7 @@ $('.js-select').select2({
     // allowClear: true,
     // theme: "classicddddd",
     width: 'style',
-    // minimumResultsForSearch: -1
+    // selectionCssClass: 'ttttttttttttt',
+    // minimumResultsForSearch: -1,
     // multiple: true
 });
