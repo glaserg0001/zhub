@@ -3,3 +3,18 @@
 mixin icon(name, cssClass)
   svg.icon-svg(class=cssClass)
     use(xlink:href=`${URL_file('icons', baseUrlLvl, 'svg')}#${name}`)
+
+mixin form_field(object)
+  if object.wrapper.exist
+    - var wrap = object.wrapper;
+    - var attrWrapper = {};
+    - attrWrapper.class = `form-field ${wrap.class ? wrap.class : ''}`;
+    - attrWrapper.class += wrap.group ? ' form-group' : '';
+    div&attributes(attrWrapper)
+      if object.label.exist
+        - var label = object.label;
+        - var attrLabel = {};
+        - attrLabel.for = label.id ? label.id : false;
+        - attrLabel.class = `label ${label.class ? label.class : ''}`;
+        label&attributes(attrLabel)=label.text
+      select

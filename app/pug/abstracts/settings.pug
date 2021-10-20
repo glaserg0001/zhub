@@ -30,6 +30,9 @@
     }
   ]
 
+  //- FORMS START
+  //- FORMS END
+
   //- Styleguide START
   var sgSpecialBreakpoints = [
     {
@@ -161,6 +164,45 @@
     },
   }
 
+  var selectCategory = {
+    wrapper: {
+      exist: true,
+      group: true,
+      class: false
+    },
+    label: {
+      exist: true,
+      id: 'category',
+      class: 'w-100',
+      //- class: false,
+      text: 'Категорія'
+    },
+    element: {
+      type: 'select',
+      value: [
+        'Автозвук і мультимедіа',
+        'Світло',
+        'Аксесуари',
+        'Гаджети',
+        'КПП',
+        'Двигун і вихлопна система',
+        'Інструменти',
+        'Клімат',
+        'Кузов',
+        'Підвіска',
+        'Рульове управління',
+        'Салон',
+        'Гальмівна система',
+        'Трансмісія',
+        'Шини і диски',
+        'Електрообладнання',
+        'Для ТО',
+        'Інше'
+      ]
+
+    }
+  }
+
   var sgSelectFields = {
     select1: {
       group: false,
@@ -191,6 +233,34 @@
       specificField: false
     },
     select3: {
+      group: true,
+      label: 'Select Default',
+      labelClass: false,
+      class: false,
+      theme: false,
+      size: false,
+      placeholder: 'Оберіть категорію',
+      allowClear: false,
+      search: false,
+      disabled: false,
+      copySelect: false,
+      specificField: false
+    },
+    select4: {
+      group: true,
+      label: 'Select Default',
+      labelClass: false,
+      class: false,
+      theme: false,
+      size: false,
+      placeholder: 'Оберіть категорію',
+      allowClear: false,
+      search: false,
+      disabled: false,
+      copySelect: true,
+      specificField: false
+    },
+    select5: {
       group: false,
       label: 'Select Search',
       labelClass: false,
@@ -204,7 +274,7 @@
       copySelect: false,
       specificField: true
     },
-    select4: {
+    select6: {
       group: false,
       label: 'Select Search & Allow Clear',
       labelClass: false,
@@ -218,7 +288,7 @@
       copySelect: false,
       specificField: true
     },
-    select5: {
+    select7: {
       group: false,
       label: 'Select Secondary',
       labelClass: false,
@@ -232,7 +302,7 @@
       copySelect: false,
       specificField: false
     },
-    select6: {
+    select8: {
       group: false,
       label: 'Select Secondary Disabled',
       labelClass: false,
@@ -246,11 +316,10 @@
       copySelect: false,
       specificField: false
     },
-    select7: {
+    select9: {
       group: false,
       label: 'Select Small',
       labelClass: false,
-      class: 'select-custom--small',
       class: false,
       theme: false,
       size: 'small',
@@ -261,7 +330,7 @@
       copySelect: false,
       specificField: false
     },
-    select8: {
+    select10: {
       group: true,
       label: 'Select Small Secondary',
       labelClass: 'w-100',
@@ -275,7 +344,7 @@
       copySelect: true,
       specificField: false
     },
-    select9: {
+    select11: {
       group: true,
       label: false,
       labelClass: false,
@@ -289,7 +358,7 @@
       copySelect: true,
       specificField: false
     },
-    select10: {
+    select12: {
       group: true,
       label: 'Label full width',
       labelClass: 'w-100',
