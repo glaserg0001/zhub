@@ -35,13 +35,14 @@ let mainNav = new toggleNavigation('header-navbar', '.js-nav-btn')
 mainNav.init();
 
 
-// TEST
+// select2
 $('.js-select').select2({
-    // placeholder: 'Select an option',
+    // placeholder: 'Оберіть категорію',
     // allowClear: true,
-    // theme: "classicddddd",
+    // theme: "secondary",
     width: 'style',
-    // selectionCssClass: 'ttttttttttttt',
+    // selectionCssClass: 'select2-selection--small',
+    // dropdownCssClass: 'select2-dropdown--small',
     // minimumResultsForSearch: -1,
-    // multiple: true
+    // multiple: false
 });

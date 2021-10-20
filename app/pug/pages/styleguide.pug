@@ -110,14 +110,15 @@ block content
             - attrSelect.class = item.class ? item.class : '';
             - attrSelect.class += item.theme ? ` select-custom--${item.theme}` : '';
             - attrSelect.class += item.size ? ` select-custom--${item.size}` : '';
-            - attrSelect.class += browserSelect ? '' : ' js-select';
-            - attrSelect['data-placeholder'] = item.placeholder ? item.placeholder : false;
-            - attrSelect['data-allow-clear'] = item.placeholder && item.allowClear ? 'true' : false;
-            - attrSelect['data-theme'] = item.theme;
-            - attrSelect['data-minimum-results-for-search'] = item.search ? false : '-1';
-            - attrSelect['data-selection-css-class'] = `select2-selection--${item.size}`;
-            - attrSelect['data-dropdown-css-class'] = `select2-dropdown--${item.size}`;
             - attrSelect.disabled = item.disabled ? true : false;
+            if !browserSelect
+              - attrSelect.class += browserSelect ? '' : ' js-select';
+              - attrSelect['data-placeholder'] = item.placeholder ? item.placeholder : false;
+              - attrSelect['data-allow-clear'] = item.placeholder && item.allowClear ? 'true' : false;
+              - attrSelect['data-theme'] = item.theme;
+              - attrSelect['data-minimum-results-for-search'] = item.search ? false : '-1';
+              - attrSelect['data-selection-css-class'] = `select2-selection--${item.size}`;
+              - attrSelect['data-dropdown-css-class'] = `select2-dropdown--${item.size}`;
 
             .col-md-6
               div&attributes(attributes)

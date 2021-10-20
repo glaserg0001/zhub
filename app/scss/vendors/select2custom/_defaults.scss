@@ -44,15 +44,31 @@ $results-small: '.select2-dropdown--small';
 $results-font-size-px: 16 !default;
 $results-font-size: rem($results-font-size-px) !default;
 $results-lihe-height: 1.32 !default;
+// small
+$results-font-size--small-px: 14 !default;
+$results-font-size--small: rem($results-font-size--small-px) !default;
 
 $results-option-padding-x: 20px !default;
 $results-option-padding-y: 12px !default;
 $results-option-padding: $results-option-padding-y $results-option-padding-x !default;
 $results-option-height: round($results-font-size-px * $results-lihe-height) + 2 * $results-option-padding-y !default;
 
+// small
+$results-option-padding--small-x: 10px !default;
+$results-option-padding--small-y: 8px !default;
+$results-option-padding--small: $results-option-padding--small-y $results-option-padding--small-x !default;
+$results-option-height--small: round($results-font-size--small-px * $results-lihe-height) + 2 * $results-option-padding--small-y !default;
+
 $results-group-padding-x: 10px !default;
 $results-group-padding-y: $results-option-padding-y !default;
 $results-group-padding: $results-group-padding-y $results-group-padding-x !default;
+// small
+$results-group-padding--small-x: 10px !default;
+$results-group-padding--small-y: $results-option-padding--small-y !default;
+$results-group-padding--small: $results-group-padding--small-y $results-group-padding--small-x !default;
 
 $results-options-max-items: 4 !default;
 $results-options-max-height: $results-option-height * $results-options-max-items !default;
+// small
+$results-options-max-items--small: 4 !default;
+$results-options-max-height--small: $results-option-height--small * $results-options-max-items--small !default;
