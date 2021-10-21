@@ -32,6 +32,7 @@ $dark: #132c3d !default;
 
 $black: #000 !default;
 $white: #fff !default;
+$transparent: transparent !default;
 
 $colors: (
     // == common
@@ -47,6 +48,12 @@ $colors: (
     light: $blue-100, // #dceaf3
     white: $white,
     black: $black,
+    // == gray
+    gray5: $gray-500, // #949597
+    gray4: $gray-400, // #d4d5d6
+    gray3: $gray-300, // #dadada
+    gray2: $gray-200, // #ededed
+    gray1: $gray-100, // #f5f5f5
     // == component
     body-bg: $gray-100,
     text: $dark,
@@ -60,12 +67,7 @@ $colors: (
     danger: $red, // #ce5d4e
     disabled: $gray-400,
     disabled-bg: $gray-100,
-    // == gray
-    gray5: $gray-500, // #949597
-    gray4: $gray-400, // #d4d5d6
-    gray3: $gray-300, // #dadada
-    gray2: $gray-200, // #ededed
-    gray1: $gray-100, // #f5f5f5
+    transparent: $transparent
 ) !default;
 
 $z-layers: (

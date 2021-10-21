@@ -84,18 +84,52 @@
     <div class="main">
       <div class="container sg-container">
         <form class="filter">
-          <input class="input input--secondary" placeholder="Пошук">
-          <button class="button button__primary button--icon">
-            <svg class="icon-svg button__icon">
-              <use xlink:href="img/icons.svg#icon-search"></use>
-            </svg>
-          </button>
-          <hr class="mb-2">
+          <div class="row no-gutters">
+            <div class="col">
+              <input class="input input--secondary" placeholder="Пошук">
+            </div>
+            <div class="col">
+              <input class="input input--secondary" placeholder="Пошук">
+            </div>
+            <div class="col-1">
+              <button class="button button__primary button--icon w-100 h-100">
+                <svg class="icon-svg button__icon">
+                  <use xlink:href="img/icons.svg#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <hr class="my-2">
           <div class="form-field  form-group">
             <label class="label w-100" for="category">Категорія</label>
-            <select></select>
+            <select class="js-select select-custom " id="category" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+              <option></option>
+              <option>Автозвук і мультимедіа</option>
+              <option>Світло</option>
+              <option>Аксесуари</option>
+              <option>Гаджети</option>
+              <option>КПП</option>
+              <option>Двигун і вихлопна система</option>
+              <option>Інструменти</option>
+              <option>Клімат</option>
+              <option>Кузов</option>
+              <option>Підвіска</option>
+              <option>Рульове управління</option>
+              <option>Салон</option>
+              <option>Гальмівна система</option>
+              <option>Трансмісія</option>
+              <option>Шини і диски</option>
+              <option>Електрообладнання</option>
+              <option>Для ТО</option>
+              <option>Інше</option>
+            </select>
+            <select class="js-select select-custom " data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+              <option></option>
+              <option>Автозвук і мультимедіа</option>
+              <option>Світло</option>
+            </select>
           </div>
-          <hr class="mt-2">
+          <hr class="my-2">
         </form>
         <h1 class="sg-heading">Styleguide</h1>
         <h2 class="sg-heading">Colors</h2>

@@ -4,17 +4,45 @@ mixin icon(name, cssClass)
   svg.icon-svg(class=cssClass)
     use(xlink:href=`${URL_file('icons', baseUrlLvl, 'svg')}#${name}`)
 
+//- Select
+mixin form_field_select(data, id)
+  each select, index in data
+    - var attrSelect = {}
+    - attrSelect.id = !index && id
+    - attrSelect.class = `js-select select-custom ${select.class ? select.class : ''}`;
+    - attrSelect.class += select.theme ? ` select-custom--${select.theme}` : '';
+    - attrSelect.class += select.size ? ` select-custom--${select.size}` : '';
+    - attrSelect.disabled = select.disabled ? true : false;
+    - attrSelect['data-placeholder'] = select.placeholder ? select.placeholder : false;
+    - attrSelect['data-allow-clear'] = select.placeholder && select.allowClear ? 'true' : false;
+    - attrSelect['data-theme'] = select.theme;
+    - attrSelect['data-minimum-results-for-search'] = select.search ? false : '-1';
+    - attrSelect['data-selection-css-class'] = `select2-selection--${select.size}`;
+    - attrSelect['data-dropdown-css-class'] = `select2-dropdown--${select.size}`;
+    select&attributes(attrSelect)
+      if select.placeholder
+        option
+      for val in select.value
+        option=val
+
+//- Form Field
 mixin form_field(object)
+  - var id
   if object.wrapper.exist
+    //- Wrapper
     - var wrap = object.wrapper;
     - var attrWrapper = {};
     - attrWrapper.class = `form-field ${wrap.class ? wrap.class : ''}`;
     - attrWrapper.class += wrap.group ? ' form-group' : '';
     div&attributes(attrWrapper)
+
       if object.label.exist
+        //- Label
         - var label = object.label;
         - var attrLabel = {};
         - attrLabel.for = label.id ? label.id : false;
         - attrLabel.class = `label ${label.class ? label.class : ''}`;
+        - id = label.id ? label.id : false;
         label&attributes(attrLabel)=label.text
-      select
+      //- Select
+      +form_field_select(object.element, id)

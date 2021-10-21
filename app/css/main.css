@@ -2613,6 +2613,10 @@ hr {
   }
 }
 
+.h-100 {
+  height: 100% !important;
+}
+
 .mw-100 {
   max-width: 100% !important;
 }
@@ -2823,8 +2827,13 @@ h4,
   color: #d4d5d6;
 }
 
+.input--secondary {
+  border-color: transparent;
+}
+
 .input--secondary:focus {
   outline: none;
+  border-color: transparent;
 }
 
 .input--small {

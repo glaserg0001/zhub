@@ -1,8 +1,13 @@
 form.filter
-  input.input.input--secondary(placeholder='Пошук')
-  button.button.button__primary.button--icon
-    +icon('icon-search', 'button__icon')
+  .row.no-gutters
+    .col
+      input.input.input--secondary(placeholder='Пошук')
+    .col
+      input.input.input--secondary(placeholder='Пошук')
+    .col-1
+      button.button.button__primary.button--icon.w-100.h-100
+        +icon('icon-search', 'button__icon')
   
-  hr.mb-2
+  hr.my-2
   +form_field(selectCategory)
-  hr.mt-2
+  hr.my-2
