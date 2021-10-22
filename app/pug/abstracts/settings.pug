@@ -164,7 +164,28 @@
     },
   }
 
-  var inputSearch = {}
+  var inputSearch = {
+    type: 'text',
+    id: 'search',
+    wrapper: {
+      exist: true,
+      group: true,
+      class: false
+    },
+    label: {
+      exist: false,
+      class: false, // w-100
+      text: 'Пошук Label'
+    },
+    element: [
+      {
+        class: 'input--secondary',
+        value: false,
+        placeholder: 'Пошук',
+        disabled: false
+      }
+    ]
+  }
 
   var selectCategory = {
     type: 'select',

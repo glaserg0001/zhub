@@ -8,45 +8,55 @@ mixin icon(name, cssClass)
 //- Wrapper
 mixin formFieldWrapper(data)
   if data.exist
-    - var attrWrapper = {};
-    - attrWrapper.class = `form-field ${data.class ? data.class : ''}`;
-    - attrWrapper.class += data.group ? ' form-group' : '';
-    div&attributes(attrWrapper)
+    - var attributes = {};
+    - attributes.class = `form-field ${data.class ? data.class : ''}`;
+    - attributes.class += data.group ? ' form-group' : '';
+    div&attributes(attributes)
       block
   else
     block
 
 //- Label
-mixin label(label, id)
-  if label.exist
-    - var attrLabel = {};
-    - attrLabel.for = id;
-    - attrLabel.class = `label ${label.class ? label.class : ''}`;
-    label&attributes(attrLabel)=label.text
+mixin label(data, id)
+  if data.exist
+    - var attributes = {};
+    - attributes.for = id;
+    - attributes.class = `label ${data.class ? data.class : ''}`;
+    label&attributes(attributes)=data.text
 
 //- Input
-//- mixin input(data, id)
+mixin input(data, id, type)
+  each item, index in data
+    - var attributes = {};
+    - attributes.id = !index && id
+    - attributes.class = `input ${item.class ? item.class : ''}`;
+    - attributes.value = item.value;
+    - attributes.placeholder = item.placeholder;
+    - attributes.disabled = item.disabled;
+    - attributes.type = type;
+
+    input&attributes(attributes)
 
 
 //- Select
 mixin select(data, id)
-  each select, index in data
-    - var attrSelect = {}
-    - attrSelect.id = !index && id
-    - attrSelect.class = `js-select select-custom ${select.class ? select.class : ''}`;
-    - attrSelect.class += select.theme ? ` select-custom--${select.theme}` : '';
-    - attrSelect.class += select.size ? ` select-custom--${select.size}` : '';
-    - attrSelect.disabled = select.disabled ? true : false;
-    - attrSelect['data-placeholder'] = select.placeholder ? select.placeholder : false;
-    - attrSelect['data-allow-clear'] = select.placeholder && select.allowClear ? 'true' : false;
-    - attrSelect['data-theme'] = select.theme;
-    - attrSelect['data-minimum-results-for-search'] = select.search ? false : '-1';
-    - attrSelect['data-selection-css-class'] = `select2-selection--${select.size}`;
-    - attrSelect['data-dropdown-css-class'] = `select2-dropdown--${select.size}`;
-    select&attributes(attrSelect)
-      if select.placeholder
+  each item, index in data
+    - var attributes = {}
+    - attributes.id = !index && id
+    - attributes.class = `js-select select-custom ${item.class ? item.class : ''}`;
+    - attributes.class += item.theme ? ` select-custom--${item.theme}` : '';
+    - attributes.class += item.size ? ` select-custom--${item.size}` : '';
+    - attributes.disabled = item.disabled ? true : false;
+    - attributes['data-placeholder'] = item.placeholder ? item.placeholder : false;
+    - attributes['data-allow-clear'] = item.placeholder && item.allowClear ? 'true' : false;
+    - attributes['data-theme'] = item.theme;
+    - attributes['data-minimum-results-for-search'] = item.search ? false : '-1';
+    - attributes['data-selection-css-class'] = `select2-selection--${item.size}`;
+    - attributes['data-dropdown-css-class'] = `select2-dropdown--${item.size}`;
+    select&attributes(attributes)
+      if item.placeholder
         option
-      for val in select.value
+      for val in item.value
         option=val
 
 
@@ -54,6 +64,10 @@ mixin select(data, id)
 mixin formField(data)
   +formFieldWrapper(data.wrapper)
     +label(data.label, data.id)
-    +select(data.element, data.id)
+    case data.type
+      when 'select'
+        +select(data.element, data.id)
+      default
+        +input(data.element, data.id, data.type)
 
 //- ==== FORMS END

@@ -1,13 +1,15 @@
 form.filter
   .row.no-gutters
     .col
-      input.input.input--secondary(placeholder='Пошук')
+     +formField(inputSearch)
     .col
       input.input.input--secondary(placeholder='Пошук')
     .col-1
-      button.button.button__primary.button--icon.w-100.h-100
+      button.button.button__primary.button--large.button--icon.w-100
         +icon('icon-search', 'button__icon')
   
-  hr.my-2
-  +formField(selectCategory)
-  hr.my-2
+  //- hr.my-2
+  //- +formField(inputSearch)
+  //- hr.my-2
+  //- +formField(selectCategory)
+  //- hr.my-2
