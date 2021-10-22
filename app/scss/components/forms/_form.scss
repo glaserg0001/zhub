@@ -14,12 +14,14 @@
     flex-wrap: wrap;
     gap: 10px;
 
-    * {
+    > * {
         flex: 1 1 0;
+        width: 0;
     }
 
     .label {
         flex: 0 1 auto;
         margin-bottom: 0;
+        width: auto;
     }
 }

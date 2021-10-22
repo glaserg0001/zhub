@@ -2786,13 +2786,15 @@ h4,
   gap: 10px;
 }
 
-.form-group * {
+.form-group > * {
   flex: 1 1 0;
+  width: 0;
 }
 
 .form-group .label {
   flex: 0 1 auto;
   margin-bottom: 0;
+  width: auto;
 }
 
 .input {

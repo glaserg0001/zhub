@@ -4,8 +4,32 @@ mixin icon(name, cssClass)
   svg.icon-svg(class=cssClass)
     use(xlink:href=`${URL_file('icons', baseUrlLvl, 'svg')}#${name}`)
 
+//- ==== FORMS START
+//- Wrapper
+mixin formFieldWrapper(data)
+  if data.exist
+    - var attrWrapper = {};
+    - attrWrapper.class = `form-field ${data.class ? data.class : ''}`;
+    - attrWrapper.class += data.group ? ' form-group' : '';
+    div&attributes(attrWrapper)
+      block
+  else
+    block
+
+//- Label
+mixin label(label, id)
+  if label.exist
+    - var attrLabel = {};
+    - attrLabel.for = id;
+    - attrLabel.class = `label ${label.class ? label.class : ''}`;
+    label&attributes(attrLabel)=label.text
+
+//- Input
+//- mixin input(data, id)
+
+
 //- Select
-mixin form_field_select(data, id)
+mixin select(data, id)
   each select, index in data
     - var attrSelect = {}
     - attrSelect.id = !index && id
@@ -25,24 +49,11 @@ mixin form_field_select(data, id)
       for val in select.value
         option=val
 
-//- Form Field
-mixin form_field(object)
-  - var id
-  if object.wrapper.exist
-    //- Wrapper
-    - var wrap = object.wrapper;
-    - var attrWrapper = {};
-    - attrWrapper.class = `form-field ${wrap.class ? wrap.class : ''}`;
-    - attrWrapper.class += wrap.group ? ' form-group' : '';
-    div&attributes(attrWrapper)
 
-      if object.label.exist
-        //- Label
-        - var label = object.label;
-        - var attrLabel = {};
-        - attrLabel.for = label.id ? label.id : false;
-        - attrLabel.class = `label ${label.class ? label.class : ''}`;
-        - id = label.id ? label.id : false;
-        label&attributes(attrLabel)=label.text
-      //- Select
-      +form_field_select(object.element, id)
+//- Form Field
+mixin formField(data)
+  +formFieldWrapper(data.wrapper)
+    +label(data.label, data.id)
+    +select(data.element, data.id)
+
+//- ==== FORMS END
