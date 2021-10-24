@@ -1,0 +1,41 @@
+.checkbox-btn {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+
+    & + label {
+        display: block;
+        padding: 7px 5px;
+        background-color: color(white);
+        border: 1px solid color(gray5);
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+
+        @include on-event {
+            background-color: color(gray1);
+        }
+    }
+
+    &:checked {
+        & + label {
+            color: (white);
+            background-color: color(primary);
+            border-color: color(primary);
+
+            @include on-event {
+                background-color: color(primary2);
+                border-color: color(primary2);
+            }
+        }
+    }
+    
+    &[disabled] {
+        & + label {
+            color: color(disabled);
+            background-color: color(disabled-bg);
+            border-color: color(disabled-border);
+            pointer-events: none;
+        }
+    }
+}

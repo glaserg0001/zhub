@@ -152,6 +152,23 @@
         --bg-color-disabled: #{color(secondary4)};
         --border-color-disabled: #{color(secondary4)};
     }
+
+    &__reset {
+        --color: #{color(danger)};
+        --color-hover: #{color(danger-hover)};
+        --bg-color: #{color(transparent)};
+        --bg-color-hover: #{color(transparent)};
+        --border-color: #{color(transparent)};
+        --border-color-hover: #{color(transparent)};
+
+        --color-disabled: #{color(danger-light)};
+        --bg-color-disabled: #{color(transparent)};
+        --border-color-disabled: #{color(transparent)};
+
+        &.#{$this}--loading:not(.#{$this}--icon) {
+            color: color(transparent);
+        }
+    }
 }
 
 @keyframes spinner-border {

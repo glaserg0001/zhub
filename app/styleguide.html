@@ -18,13 +18,13 @@
   <body>
     <header class="header">
       <div class="container header__content">
-        <button class="header-navbar__toggle header-navbar__toggle--primary js-nav-btn js-primary">
+        <button class="header-navbar__cta js-nav-btn">
           <svg class="icon-svg">
             <use xlink:href="img/icons.svg#icon-menu"></use>
           </svg>
         </button>
         <div class="header-navbar__backdrop js-nav-btn"></div>
-        <div class="header-navbar js-nav">
+        <div class="header-navbar">
           <div class="header-navbar__content"><a class="button button__secondary button--icon w-100 button--left" href="/app/index.html">
               <svg class="icon-svg button__icon">
                 <use xlink:href="img/icons.svg#icon-add"></use>
@@ -84,21 +84,288 @@
     <div class="main">
       <div class="container sg-container">
         <form class="filter">
-          <div class="row no-gutters">
-            <div class="col">
+          <div class="row no-gutters filter__row">
+            <div class="col col-lg-5">
               <div class="form-field  form-group">
                 <input class="input input--secondary" id="search" placeholder="Пошук" type="text"/>
               </div>
             </div>
-            <div class="col">
-              <input class="input input--secondary" placeholder="Пошук">
+            <div class="col-lg-3 order-1 order-lg-0">
+              <div class="form-field ">
+                <select class="js-select select-custom  select-custom--secondary" id="category" data-placeholder="Оберіть категорію" data-theme="secondary" data-minimum-results-for-search="-1">
+                  <option></option>
+                  <option>Автозвук і мультимедіа</option>
+                  <option>Світло</option>
+                  <option>Аксесуари</option>
+                  <option>Гаджети</option>
+                  <option>КПП</option>
+                  <option>Двигун і вихлопна система</option>
+                  <option>Інструменти</option>
+                  <option>Клімат</option>
+                  <option>Кузов</option>
+                  <option>Підвіска</option>
+                  <option>Рульове управління</option>
+                  <option>Салон</option>
+                  <option>Гальмівна система</option>
+                  <option>Трансмісія</option>
+                  <option>Шини і диски</option>
+                  <option>Електрообладнання</option>
+                  <option>Для ТО</option>
+                  <option>Інше</option>
+                </select>
+              </div>
             </div>
-            <div class="col-1">
-              <button class="button button__primary button--large button--icon w-100">
+            <div class="col-lg-3 order-1 order-lg-0">
+              <div class="form-field ">
+                <select class="js-select select-custom  select-custom--secondary" id="auto" data-placeholder="Оберіть марку авто" data-theme="secondary" data-minimum-results-for-search="-1">
+                  <option></option>
+                  <option>Acura</option>
+                  <option>Alfa Romeo</option>
+                  <option>Audi</option>
+                  <option>BMW</option>
+                  <option>Cadillac</option>
+                  <option>Chery</option>
+                  <option>Chevrolet</option>
+                  <option>Chrysler</option>
+                  <option>Citroen</option>
+                  <option>Dacia</option>
+                  <option>Daewoo</option>
+                  <option>Dodge</option>
+                  <option>Fiat</option>
+                  <option>Ford</option>
+                  <option>Geely</option>
+                  <option>Genesis</option>
+                  <option>GMC</option>
+                  <option>Great Wall</option>
+                  <option>Haval</option>
+                  <option>Honda</option>
+                  <option>Hummer</option>
+                  <option>Hyundai</option>
+                  <option>Infiniti</option>
+                  <option>Isuzu</option>
+                  <option>IVECO</option>
+                  <option>JAC</option>
+                  <option>Jaguar</option>
+                  <option>Jeep</option>
+                  <option>Kia</option>
+                  <option>LADA (ВАЗ)</option>
+                  <option>Land Rover</option>
+                  <option>Lexus</option>
+                  <option>Lifan</option>
+                  <option>Lincoln</option>
+                  <option>Mazda</option>
+                  <option>Mercedes-Benz</option>
+                  <option>MINI</option>
+                  <option>Mitsubishi</option>
+                  <option>Nissan</option>
+                  <option>Opel</option>
+                  <option>Peugeot</option>
+                  <option>Pontiac</option>
+                  <option>Porsche</option>
+                  <option>Renault</option>
+                  <option>Rover</option>
+                  <option>Saab</option>
+                  <option>SEAT</option>
+                  <option>Skoda</option>
+                  <option>Smart</option>
+                  <option>SsangYong</option>
+                  <option>Subaru</option>
+                  <option>Suzuki</option>
+                  <option>TATA</option>
+                  <option>Tatra</option>
+                  <option>Tesla</option>
+                  <option>Toyota</option>
+                  <option>Volkswagen</option>
+                  <option>Volvo</option>
+                  <option>ГАЗ</option>
+                  <option>ЗАЗ</option>
+                  <option>ЗИЛ</option>
+                  <option>ИЖ</option>
+                  <option>ЛуАЗ</option>
+                  <option>Москвич</option>
+                  <option>УАЗ</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-auto col-lg h-hidden-lg-up">
+              <button class="button button--large button--icon filter__cta js-filter-btn" type="button">
+                <svg class="icon-svg button__icon">
+                  <use xlink:href="img/icons.svg#icon-filter"></use>
+                </svg><span class="filter__count h-hidden__">2</span>
+              </button>
+            </div>
+            <div class="col-auto col-lg">
+              <button class="button button__primary button--large button--icon filter__cta">
                 <svg class="icon-svg button__icon">
                   <use xlink:href="img/icons.svg#icon-search"></use>
                 </svg>
               </button>
+            </div>
+          </div>
+          <div class="filter-navbar__backdrop js-filter-btn"></div>
+          <div class="filter-navbar">
+            <div class="filter-navbar__header">
+              <div class="filter-navbar__title">Фiльтри</div>
+              <div class="filter-navbar__close js-filter-btn">
+                <svg class="icon-svg">
+                  <use xlink:href="img/icons.svg#icon-cross"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="filter-navbar__content">
+              <div class="h-hidden-lg-up">
+                <div class="form-field ">
+                  <label class="label " for="category-mobile">Категорія</label>
+                  <select class="js-select select-custom  select-custom--secondary" id="category-mobile" data-placeholder="Оберіть категорію" data-theme="secondary" data-minimum-results-for-search="-1">
+                    <option></option>
+                    <option>Автозвук і мультимедіа</option>
+                    <option>Світло</option>
+                    <option>Аксесуари</option>
+                    <option>Гаджети</option>
+                    <option>КПП</option>
+                    <option>Двигун і вихлопна система</option>
+                    <option>Інструменти</option>
+                    <option>Клімат</option>
+                    <option>Кузов</option>
+                    <option>Підвіска</option>
+                    <option>Рульове управління</option>
+                    <option>Салон</option>
+                    <option>Гальмівна система</option>
+                    <option>Трансмісія</option>
+                    <option>Шини і диски</option>
+                    <option>Електрообладнання</option>
+                    <option>Для ТО</option>
+                    <option>Інше</option>
+                  </select>
+                </div>
+                <div class="form-field ">
+                  <label class="label " for="auto-mobile">Марка авто</label>
+                  <select class="js-select select-custom  select-custom--secondary" id="auto-mobile" data-placeholder="Оберіть марку авто" data-theme="secondary" data-minimum-results-for-search="-1">
+                    <option></option>
+                    <option>Acura</option>
+                    <option>Alfa Romeo</option>
+                    <option>Audi</option>
+                    <option>BMW</option>
+                    <option>Cadillac</option>
+                    <option>Chery</option>
+                    <option>Chevrolet</option>
+                    <option>Chrysler</option>
+                    <option>Citroen</option>
+                    <option>Dacia</option>
+                    <option>Daewoo</option>
+                    <option>Dodge</option>
+                    <option>Fiat</option>
+                    <option>Ford</option>
+                    <option>Geely</option>
+                    <option>Genesis</option>
+                    <option>GMC</option>
+                    <option>Great Wall</option>
+                    <option>Haval</option>
+                    <option>Honda</option>
+                    <option>Hummer</option>
+                    <option>Hyundai</option>
+                    <option>Infiniti</option>
+                    <option>Isuzu</option>
+                    <option>IVECO</option>
+                    <option>JAC</option>
+                    <option>Jaguar</option>
+                    <option>Jeep</option>
+                    <option>Kia</option>
+                    <option>LADA (ВАЗ)</option>
+                    <option>Land Rover</option>
+                    <option>Lexus</option>
+                    <option>Lifan</option>
+                    <option>Lincoln</option>
+                    <option>Mazda</option>
+                    <option>Mercedes-Benz</option>
+                    <option>MINI</option>
+                    <option>Mitsubishi</option>
+                    <option>Nissan</option>
+                    <option>Opel</option>
+                    <option>Peugeot</option>
+                    <option>Pontiac</option>
+                    <option>Porsche</option>
+                    <option>Renault</option>
+                    <option>Rover</option>
+                    <option>Saab</option>
+                    <option>SEAT</option>
+                    <option>Skoda</option>
+                    <option>Smart</option>
+                    <option>SsangYong</option>
+                    <option>Subaru</option>
+                    <option>Suzuki</option>
+                    <option>TATA</option>
+                    <option>Tatra</option>
+                    <option>Tesla</option>
+                    <option>Toyota</option>
+                    <option>Volkswagen</option>
+                    <option>Volvo</option>
+                    <option>ГАЗ</option>
+                    <option>ЗАЗ</option>
+                    <option>ЗИЛ</option>
+                    <option>ИЖ</option>
+                    <option>ЛуАЗ</option>
+                    <option>Москвич</option>
+                    <option>УАЗ</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="form-field  form-group">
+                    <label class="label w-100 w-lg-auto" for="region">Місто</label>
+                    <select class="js-select select-custom  select-custom--secondary" id="region" data-placeholder="Оберіть місто" data-theme="secondary" data-minimum-results-for-search="-1">
+                      <option></option>
+                      <option>Донецька обл.</option>
+                      <option>Сумська обл.</option>
+                      <option>Волинська обл.</option>
+                      <option>Дніпропетровська обл.</option>
+                      <option>Луганська обл.</option>
+                      <option>Житомирська обл.</option>
+                      <option>Закарпатська обл.</option>
+                      <option>Запорізька обл.</option>
+                      <option>Одеська обл.</option>
+                      <option>Івано-Франківська обл.</option>
+                      <option>Київська обл.</option>
+                      <option>Кіровоградська обл.</option>
+                      <option>Львівська обл.</option>
+                      <option>Миколаївська обл.</option>
+                      <option>Полтавська обл.</option>
+                      <option>Рівненська обл.</option>
+                      <option>Тернопільська обл.</option>
+                      <option>Харківська обл.</option>
+                      <option>Херсонська обл.</option>
+                      <option>Черкаська обл.</option>
+                      <option>Чернігівська обл.</option>
+                      <option>Хмельницька обл.</option>
+                      <option>Вінницька обл.</option>
+                      <option>Чернівецька обл.</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-field  form-group">
+                    <label class="label w-100 w-lg-auto" for="price">Ціна</label>
+                    <input class="input input--secondary" id="price" placeholder="Від" type="text"/>
+                    <input class="input input--secondary" placeholder="До" type="text"/>
+                  </div>
+                </div>
+                <div class="col-lg mt-lg-1">
+                  <div class="form-field  form-group">
+                    <label class="label w-100 w-lg-auto">Стан деталі</label>
+                    <input class="checkbox-btn" id="check1" type="checkbox"/>
+                    <label for="check1">Нова</label>
+                    <input class="checkbox-btn" id="check2" type="checkbox"/>
+                    <label for="check2">Тюнінг</label>
+                    <input class="checkbox-btn" id="check3" type="checkbox"/>
+                    <label for="check3">Кастом</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-navbar__footer">
+              <button class="button button__secondary w-100">Застосувати фiльтри</button>
+              <button class="button button__reset w-100 mt-1" type="reset">Скинути фільтри </button>
             </div>
           </div>
         </form>
@@ -377,7 +644,7 @@
             <div class="col-md-6">
               <div class="form-field">
                 <label class="label " for="select1">Select Default</label>
-                <select class="select-custom  js-select" id="select1" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+                <select class="select-custom  js-select" id="select1" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
                   <option></option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
@@ -389,7 +656,7 @@
             <div class="col-md-6">
               <div class="form-field">
                 <label class="label " for="select2">Select Disabled</label>
-                <select class="select-custom  js-select" id="select2" disabled data-placeholder="Оберіть категорію" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+                <select class="select-custom  js-select" id="select2" disabled data-placeholder="Оберіть категорію">
                   <option></option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
@@ -401,7 +668,7 @@
             <div class="col-md-6">
               <div class="form-field form-group">
                 <label class="label " for="select3">Select Default</label>
-                <select class="select-custom  js-select" id="select3" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+                <select class="select-custom  js-select" id="select3" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
                   <option></option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
@@ -413,14 +680,14 @@
             <div class="col-md-6">
               <div class="form-field form-group">
                 <label class="label " for="select4">Select Default</label>
-                <select class="select-custom  js-select" id="select4" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+                <select class="select-custom  js-select" id="select4" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
                   <option></option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
                   <option>Кузов</option>
                   <option>Двигун і вихлопна система</option>
                 </select>
-                <select class="select-custom  js-select" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+                <select class="select-custom  js-select" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
                   <option></option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
@@ -438,7 +705,7 @@
             <div class="col-md-6">
               <div class="form-field">
                 <label class="label " for="select5">Select Search</label>
-                <select class="select-custom  js-select" id="select5" data-placeholder="Оберіть категорію" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+                <select class="select-custom  js-select" id="select5" data-placeholder="Оберіть категорію">
                   <option></option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
@@ -450,7 +717,7 @@
             <div class="col-md-6">
               <div class="form-field">
                 <label class="label " for="select6">Select Search &amp; Allow Clear</label>
-                <select class="select-custom  js-select" id="select6" data-placeholder="Оберіть категорію" data-allow-clear="true" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+                <select class="select-custom  js-select" id="select6" data-placeholder="Оберіть категорію" data-allow-clear="true">
                   <option></option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
@@ -462,7 +729,7 @@
             <div class="col-md-6">
               <div class="form-field">
                 <label class="label " for="select7">Select Secondary</label>
-                <select class="select-custom  select-custom--secondary js-select" id="select7" data-placeholder="Оберіть категорію" data-theme="secondary" data-minimum-results-for-search="-1" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+                <select class="select-custom  select-custom--secondary js-select" id="select7" data-placeholder="Оберіть категорію" data-theme="secondary" data-minimum-results-for-search="-1">
                   <option></option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
@@ -474,7 +741,7 @@
             <div class="col-md-6">
               <div class="form-field">
                 <label class="label " for="select8">Select Secondary Disabled</label>
-                <select class="select-custom  select-custom--secondary js-select" id="select8" disabled data-placeholder="Оберіть категорію" data-theme="secondary" data-minimum-results-for-search="-1" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+                <select class="select-custom  select-custom--secondary js-select" id="select8" disabled data-placeholder="Оберіть категорію" data-theme="secondary" data-minimum-results-for-search="-1">
                   <option></option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
@@ -522,14 +789,14 @@
             </div>
             <div class="col-md-6">
               <div class="form-field form-group">
-                <select class="select-custom  js-select" id="select11" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+                <select class="select-custom  js-select" id="select11" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
                   <option></option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
                   <option>Кузов</option>
                   <option>Двигун і вихлопна система</option>
                 </select>
-                <select class="select-custom  js-select" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+                <select class="select-custom  js-select" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
                   <option></option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
@@ -547,14 +814,14 @@
             <div class="col-md-6">
               <div class="form-field form-group">
                 <label class="label w-100" for="select12">Label full width</label>
-                <select class="select-custom  js-select" id="select12" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+                <select class="select-custom  js-select" id="select12" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
                   <option></option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
                   <option>Кузов</option>
                   <option>Двигун і вихлопна система</option>
                 </select>
-                <select class="select-custom  js-select" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1" data-selection-css-class="select2-selection--false" data-dropdown-css-class="select2-dropdown--false">
+                <select class="select-custom  js-select" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1">
                   <option></option>
                   <option>Шини та диски</option>
                   <option>Гальмівна система</option>
@@ -847,6 +1114,70 @@
               </div>
             </div>
           </div>
+          <div class="col-sm-6 col-md-3 d-flex flex-column">
+            <h3 class="sg-heading align-self-start">Reset</h3>
+            <div class="sg-block flex-fill">
+              <h4 class="sg-heading">Default</h4>
+              <div class="sg-block__list"><a class="button button__reset" href="#">Скинути фільтри</a></div>
+              <div class="sg-block__list">
+                <button class="button button__reset">Скинути фільтри
+                </button>
+              </div>
+              <h4 class="sg-heading">Loading</h4>
+              <div class="sg-block__list"><a class="button button__reset button--loading" href="#">Скинути фільтри</a></div>
+              <div class="sg-block__list">
+                <button class="button button__reset button--loading">Скинути фільтри
+                </button>
+              </div>
+              <h4 class="sg-heading">Unable</h4>
+              <div class="sg-block__list"><a class="button button__reset button--disabled" href="#">Скинути фільтри</a></div>
+              <div class="sg-block__list">
+                <button class="button button__reset button--disabled">Скинути фільтри
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 d-flex flex-column">
+            <h3 class="sg-heading align-self-start">Reset icon</h3>
+            <div class="sg-block flex-fill">
+              <h4 class="sg-heading">Default</h4>
+              <div class="sg-block__list"><a class="button button__reset button--icon" href="#">
+                  <svg class="icon-svg button__icon">
+                    <use xlink:href="img/icons.svg#icon-cross"></use>
+                  </svg>Скинути фільтри</a></div>
+              <div class="sg-block__list">
+                <button class="button button__reset button--icon">
+                  <svg class="icon-svg button__icon">
+                    <use xlink:href="img/icons.svg#icon-cross"></use>
+                  </svg>Скинути фільтри
+                </button>
+              </div>
+              <h4 class="sg-heading">Loading</h4>
+              <div class="sg-block__list"><a class="button button__reset button--icon button--loading" href="#">
+                  <svg class="icon-svg button__icon">
+                    <use xlink:href="img/icons.svg#icon-cross"></use>
+                  </svg>Скинути фільтри</a></div>
+              <div class="sg-block__list">
+                <button class="button button__reset button--icon button--loading">
+                  <svg class="icon-svg button__icon">
+                    <use xlink:href="img/icons.svg#icon-cross"></use>
+                  </svg>Скинути фільтри
+                </button>
+              </div>
+              <h4 class="sg-heading">Unable</h4>
+              <div class="sg-block__list"><a class="button button__reset button--icon button--disabled" href="#">
+                  <svg class="icon-svg button__icon">
+                    <use xlink:href="img/icons.svg#icon-cross"></use>
+                  </svg>Скинути фільтри</a></div>
+              <div class="sg-block__list">
+                <button class="button button__reset button--icon button--disabled">
+                  <svg class="icon-svg button__icon">
+                    <use xlink:href="img/icons.svg#icon-cross"></use>
+                  </svg>Скинути фільтри
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
         <h2 class="sg-heading">Icons</h2>
         <div class="sg-block">
@@ -881,11 +1212,31 @@
                 <use xlink:href="img/icons.svg#icon-add"></use>
               </svg>
             </li>
+            <li class="sg-icons__item" data-name="icon-instagram">
+              <svg class="icon-svg">
+                <use xlink:href="img/icons.svg#icon-instagram"></use>
+              </svg>
+            </li>
+            <li class="sg-icons__item" data-name="icon-telegram">
+              <svg class="icon-svg">
+                <use xlink:href="img/icons.svg#icon-telegram"></use>
+              </svg>
+            </li>
+            <li class="sg-icons__item" data-name="icon-filter">
+              <svg class="icon-svg">
+                <use xlink:href="img/icons.svg#icon-filter"></use>
+              </svg>
+            </li>
+            <li class="sg-icons__item" data-name="icon-cross">
+              <svg class="icon-svg">
+                <use xlink:href="img/icons.svg#icon-cross"></use>
+              </svg>
+            </li>
           </ul>
         </div>
         <h2 class="sg-heading">Visibility</h2>
         <div class="sg-block">
-          <table class="sg-table">
+          <table class="sg-table text-nowrap">
             <thead class="text-left">
               <tr>
                 <th></th>
@@ -930,7 +1281,7 @@
         </div>
         <h2 class="sg-heading">Sizing</h2>
         <div class="sg-block">
-          <table class="sg-table">
+          <table class="sg-table text-nowrap">
             <thead class="text-left">
               <tr>
                 <th></th>
@@ -973,6 +1324,17 @@
             </tbody>
           </table>
         </div>
+      </div>
+    </div>
+    <div class="seo">
+      <div class="container">
+        <p>
+          Для оптимизациии сайта необходимо писать тексты для людей, изредка вставляя ключевые запросы так, чтобы при этом читабельность текста не упала, а даже наоборот, интересовала еще больше.
+          Заголовок текста в теге Н1 должен содержать самый частотный ключевой запрос. Например правильно - «Женская одежда». Неправильно – «Купить женскую одежду в Киеве».
+          Выделять тегом strong ключевые слова можно, но делать это необходимо для позитивного восприятия текста, не более трех раз на текст объемом 3000 символов.
+          Размер текста в символах в идеале должен быть от 2000 символов без пробелов.
+          Нет смысла использовать ключевые слова, которые не подтверждаются товарами на сайте или услугами. Не пишите о том, чего пользователь не сможет найти на целевой странице.
+        </p>
       </div>
     </div>
     <footer class="footer">

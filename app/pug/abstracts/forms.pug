@@ -1,0 +1,420 @@
+-
+  var inputSearch = {
+    type: 'text',
+    id: 'search',
+    wrapper: {
+      exist: true,
+      group: true,
+      class: false
+    },
+    label: {
+      exist: false,
+      class: false, // w-100
+      text: 'Пошук Label'
+    },
+    element: [
+      {
+        class: 'input--secondary',
+        value: false,
+        placeholder: 'Пошук',
+        disabled: false
+      }
+    ]
+  }
+
+  var selectCategory = {
+    type: 'select',
+    id: 'category',
+    wrapper: {
+      exist: true,
+      group: false,
+      class: false
+    },
+    label: {
+      exist: false,
+      class: false,
+      text: false
+    },
+    element: [
+      {
+        class: false,
+        theme: 'secondary',
+        size: false,
+        placeholder: 'Оберіть категорію',
+        allowClear: false,
+        search: false,
+        disabled: false,
+        value: [
+          'Автозвук і мультимедіа',
+          'Світло',
+          'Аксесуари',
+          'Гаджети',
+          'КПП',
+          'Двигун і вихлопна система',
+          'Інструменти',
+          'Клімат',
+          'Кузов',
+          'Підвіска',
+          'Рульове управління',
+          'Салон',
+          'Гальмівна система',
+          'Трансмісія',
+          'Шини і диски',
+          'Електрообладнання',
+          'Для ТО',
+          'Інше'
+        ]
+      }
+    ]
+  }
+
+  var selectCategoryMobile = {
+    type: 'select',
+    id: 'category-mobile',
+    wrapper: {
+      exist: true,
+      group: false,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: false,
+      text: 'Категорія'
+    },
+    element: [
+      {
+        class: false,
+        theme: 'secondary',
+        size: false,
+        placeholder: 'Оберіть категорію',
+        allowClear: false,
+        search: false,
+        disabled: false,
+        value: [
+          'Автозвук і мультимедіа',
+          'Світло',
+          'Аксесуари',
+          'Гаджети',
+          'КПП',
+          'Двигун і вихлопна система',
+          'Інструменти',
+          'Клімат',
+          'Кузов',
+          'Підвіска',
+          'Рульове управління',
+          'Салон',
+          'Гальмівна система',
+          'Трансмісія',
+          'Шини і диски',
+          'Електрообладнання',
+          'Для ТО',
+          'Інше'
+        ]
+      }
+    ]
+  }
+
+  var selectAuto = {
+    type: 'select',
+    id: 'auto',
+    wrapper: {
+      exist: true,
+      group: false,
+      class: false
+    },
+    label: {
+      exist: false,
+      class: false,
+      text: false
+    },
+    element: [
+      {
+        class: false,
+        theme: 'secondary',
+        size: false,
+        placeholder: 'Оберіть марку авто',
+        allowClear: false,
+        search: false,
+        disabled: false,
+        value: [
+          'Acura',
+          'Alfa Romeo',
+          'Audi',
+          'BMW',
+          'Cadillac',
+          'Chery',
+          'Chevrolet',
+          'Chrysler',
+          'Citroen',
+          'Dacia',
+          'Daewoo',
+          'Dodge',
+          'Fiat',
+          'Ford',
+          'Geely',
+          'Genesis',
+          'GMC',
+          'Great Wall',
+          'Haval',
+          'Honda',
+          'Hummer',
+          'Hyundai',
+          'Infiniti',
+          'Isuzu',
+          'IVECO',
+          'JAC',
+          'Jaguar',
+          'Jeep',
+          'Kia',
+          'LADA (ВАЗ)',
+          'Land Rover',
+          'Lexus',
+          'Lifan',
+          'Lincoln',
+          'Mazda',
+          'Mercedes-Benz',
+          'MINI',
+          'Mitsubishi',
+          'Nissan',
+          'Opel',
+          'Peugeot',
+          'Pontiac',
+          'Porsche',
+          'Renault',
+          'Rover',
+          'Saab',
+          'SEAT',
+          'Skoda',
+          'Smart',
+          'SsangYong',
+          'Subaru',
+          'Suzuki',
+          'TATA',
+          'Tatra',
+          'Tesla',
+          'Toyota',
+          'Volkswagen',
+          'Volvo',
+          'ГАЗ',
+          'ЗАЗ',
+          'ЗИЛ',
+          'ИЖ',
+          'ЛуАЗ',
+          'Москвич',
+          'УАЗ'
+        ]
+      }
+    ]
+  }
+
+  var selectAutoMobile = {
+    type: 'select',
+    id: 'auto-mobile',
+    wrapper: {
+      exist: true,
+      group: false,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: false,
+      text: 'Марка авто'
+    },
+    element: [
+      {
+        class: false,
+        theme: 'secondary',
+        size: false,
+        placeholder: 'Оберіть марку авто',
+        allowClear: false,
+        search: false,
+        disabled: false,
+        value: [
+          'Acura',
+          'Alfa Romeo',
+          'Audi',
+          'BMW',
+          'Cadillac',
+          'Chery',
+          'Chevrolet',
+          'Chrysler',
+          'Citroen',
+          'Dacia',
+          'Daewoo',
+          'Dodge',
+          'Fiat',
+          'Ford',
+          'Geely',
+          'Genesis',
+          'GMC',
+          'Great Wall',
+          'Haval',
+          'Honda',
+          'Hummer',
+          'Hyundai',
+          'Infiniti',
+          'Isuzu',
+          'IVECO',
+          'JAC',
+          'Jaguar',
+          'Jeep',
+          'Kia',
+          'LADA (ВАЗ)',
+          'Land Rover',
+          'Lexus',
+          'Lifan',
+          'Lincoln',
+          'Mazda',
+          'Mercedes-Benz',
+          'MINI',
+          'Mitsubishi',
+          'Nissan',
+          'Opel',
+          'Peugeot',
+          'Pontiac',
+          'Porsche',
+          'Renault',
+          'Rover',
+          'Saab',
+          'SEAT',
+          'Skoda',
+          'Smart',
+          'SsangYong',
+          'Subaru',
+          'Suzuki',
+          'TATA',
+          'Tatra',
+          'Tesla',
+          'Toyota',
+          'Volkswagen',
+          'Volvo',
+          'ГАЗ',
+          'ЗАЗ',
+          'ЗИЛ',
+          'ИЖ',
+          'ЛуАЗ',
+          'Москвич',
+          'УАЗ'
+        ]
+      }
+    ]
+  }
+
+  var selectRegion = {
+    type: 'select',
+    id: 'region',
+    wrapper: {
+      exist: true,
+      group: true,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: 'w-100 w-lg-auto',
+      text: 'Місто'
+    },
+    element: [
+      {
+        class: false,
+        theme: 'secondary',
+        size: false,
+        placeholder: 'Оберіть місто',
+        allowClear: false,
+        search: false,
+        disabled: false,
+        value: [
+          'Донецька обл.',
+          'Сумська обл.',
+          'Волинська обл.',
+          'Дніпропетровська обл.',
+          'Луганська обл.',
+          'Житомирська обл.',
+          'Закарпатська обл.',
+          'Запорізька обл.',
+          'Одеська обл.',
+          'Івано-Франківська обл.',
+          'Київська обл.',
+          'Кіровоградська обл.',
+          'Львівська обл.',
+          'Миколаївська обл.',
+          'Полтавська обл.',
+          'Рівненська обл.',
+          'Тернопільська обл.',
+          'Харківська обл.',
+          'Херсонська обл.',
+          'Черкаська обл.',
+          'Чернігівська обл.',
+          'Хмельницька обл.',
+          'Вінницька обл.',
+          'Чернівецька обл.'
+        ]
+      }
+    ]
+  }
+
+  var inputPrice = {
+    type: 'text',
+    id: 'price',
+    wrapper: {
+      exist: true,
+      group: true,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: 'w-100 w-lg-auto',
+      text: 'Ціна'
+    },
+    element: [
+      {
+        class: 'input--secondary',
+        value: false,
+        placeholder: 'Від',
+        disabled: false
+      },
+      {
+        class: 'input--secondary',
+        value: false,
+        placeholder: 'До',
+        disabled: false
+      }
+    ]
+  }
+
+  var checkboxFilter = {
+    type: 'checkbox',
+    //- id: 'price',
+    wrapper: {
+      exist: true,
+      group: true,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: 'w-100 w-lg-auto',
+      text: 'Стан деталі'
+    },
+    element: [
+      {
+        id: 'check1',
+        class: 'checkbox-btn',
+        text: 'Нова',
+        checked: false,
+        disabled: false
+      },
+      {
+        id: 'check2',
+        class: 'checkbox-btn',
+        text: 'Тюнінг',
+        checked: false,
+        disabled: false
+      },
+      {
+        id: 'check3',
+        class: 'checkbox-btn',
+        text: 'Кастом',
+        checked: false,
+        disabled: false
+      }
+    ]
+  }

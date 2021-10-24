@@ -20,7 +20,10 @@ $green-300: #6fa21a !default; // hover
 $green-200: #8dc334 !default; // secondary
 $green-100: #cee8a3 !default; // unable
 
-$red: #ce5d4e !default;
+$red-400: #871d0f !default;
+$red-300: #ae3c2d !default;
+$red-200: #ce5d4e !default;
+$red-100: #ffbab1 !default;
 
 $gray-500: #949597 !default;
 $gray-400: #d4d5d6 !default; // border
@@ -64,9 +67,12 @@ $colors: (
     border-tag: $blue-200, // #75aed6
     success: $green-400,
     success-bg: $green-100,
-    danger: $red, // #ce5d4e
+    danger: $red-200, // #ce5d4e
+    danger-hover: $red-300, // #b9516e
+    danger-light: $red-100,
     disabled: $gray-400,
     disabled-bg: $gray-100,
+    disabled-border: $gray-400,
     transparent: $transparent
 ) !default;
 
@@ -80,8 +86,10 @@ $z-layers: (
     header: 10,
     header-navbar: 1,
     header-navbar--above: 2,
-    // select2-dropdown: 1051,
-    select2-dropdown: 9,
+    filter-navbar: 12,
+    filter-navbar--backdrop: 11,
+    select2-dropdown: 1051,
+    // select2-dropdown: 9,
 ) !default;
 
 $grid-breakpoints: (
@@ -135,10 +143,11 @@ $spacers: map-merge(
 
 $sizes: () !default;
 $sizes: map-merge((
-  25: 25%,
-  50: 50%,
-  75: 75%,
-  100: 100%
+    auto: auto,
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%
 ), $sizes);
 
 $displays:

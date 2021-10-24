@@ -11,6 +11,7 @@
 
     @include when-inside($select2-secondary) {
         border: none;
+        box-shadow: 0 0 5px -1px color(dark, .2);
     }
 }
 
@@ -54,11 +55,11 @@
 
     &#{$select2-secondary} {
         .select2-dropdown--above {
-            border-bottom: 1px solid color(border);
+            // border-bottom: 1px solid color(border);
         }
 
         .select2-dropdown--below {
-            border-top: 1px solid color(border);
+            // border-top: 1px solid color(border);
         }
     }
 

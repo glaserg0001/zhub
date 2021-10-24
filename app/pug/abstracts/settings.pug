@@ -30,9 +30,6 @@
     }
   ]
 
-  //- FORMS START
-  //- FORMS END
-
   //- Styleguide START
   var sgSpecialBreakpoints = [
     {
@@ -79,6 +76,10 @@
         'icon-menu',
         'icon-search',
         'icon-add',
+        'icon-instagram',
+        'icon-telegram',
+        'icon-filter',
+        'icon-cross',
   ]
 
   var sgInputFields = {
@@ -162,102 +163,6 @@
       disabled: false,
       copyInput: true
     },
-  }
-
-  var inputSearch = {
-    type: 'text',
-    id: 'search',
-    wrapper: {
-      exist: true,
-      group: true,
-      class: false
-    },
-    label: {
-      exist: false,
-      class: false, // w-100
-      text: 'Пошук Label'
-    },
-    element: [
-      {
-        class: 'input--secondary',
-        value: false,
-        placeholder: 'Пошук',
-        disabled: false
-      }
-    ]
-  }
-
-  var selectCategory = {
-    type: 'select',
-    id: 'category',
-    wrapper: {
-      exist: true,
-      group: true,
-      class: false
-    },
-    label: {
-      exist: true,
-      class: 'w-100',
-      text: 'Категорія'
-    },
-    element: [
-      {
-        class: false,
-        theme: false,
-        size: false,
-        placeholder: 'Оберіть категорію',
-        allowClear: false,
-        search: false,
-        disabled: false,
-        value: [
-          'Автозвук і мультимедіа',
-          'Світло',
-          'Аксесуари',
-          'Гаджети',
-          'КПП',
-          'Двигун і вихлопна система',
-          'Інструменти',
-          'Клімат',
-          'Кузов',
-          'Підвіска',
-          'Рульове управління',
-          'Салон',
-          'Гальмівна система',
-          'Трансмісія',
-          'Шини і диски',
-          'Електрообладнання',
-          'Для ТО',
-          'Інше'
-        ]
-      },
-      {
-        class: false,
-        theme: false,
-        size: false,
-        placeholder: 'Оберіть категорію',
-        allowClear: false,
-        search: false,
-        disabled: false,
-        value: [
-          'Автозвук і мультимедіа',
-          'Світло',
-          'Автозвук і мультимедіа Автозвук і мультимедіа Автозвук і мультимедіа',
-        ]
-      },
-      {
-        class: false,
-        theme: false,
-        size: false,
-        placeholder: 'Оберіть категорію',
-        allowClear: false,
-        search: false,
-        disabled: false,
-        value: [
-          'Автозвук і мультимедіа',
-          'Світло',
-        ]
-      }
-    ]
   }
 
   var sgSelectFields = {
@@ -451,11 +356,6 @@
       icon: false,
       addClass: null
     },
-    //- {
-    //-   title: 'Base with Icon',
-    //-   text: 'Додати оголошення',
-    //-   icon: 'add'
-    //- },
     {
       title: 'Base small & icon',
       text: 'Додати оголошення',
@@ -498,9 +398,21 @@
       icon: 'add',
       addClass: 'button__secondary'
     },
+    {
+      title: 'Reset',
+      text: 'Скинути фільтри',
+      icon: false,
+      addClass: 'button__reset'
+    },
+    {
+      title: 'Reset icon',
+      text: 'Скинути фільтри',
+      icon: 'cross',
+      addClass: 'button__reset'
+    },
   ]
 
-  sgVisibility = [
+  var sgVisibility = [
     {
       class: '.h-hidden',
       small: false,

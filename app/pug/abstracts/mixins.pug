@@ -37,6 +37,18 @@ mixin input(data, id, type)
 
     input&attributes(attributes)
 
+mixin checkbox(data)
+  each item in data
+    - var attrInput = {}
+    - attrInput.id = item.id;
+    - attrInput.class = item.class;
+    - attrInput.checked = item.checked;
+    - attrInput.disabled = item.disabled;
+    - attrInput.type = 'checkbox';
+    - var attrLabel = {}
+    - attrLabel.for = item.id
+    input&attributes(attrInput)
+    label&attributes(attrLabel)=item.text
 
 //- Select
 mixin select(data, id)
@@ -51,8 +63,8 @@ mixin select(data, id)
     - attributes['data-allow-clear'] = item.placeholder && item.allowClear ? 'true' : false;
     - attributes['data-theme'] = item.theme;
     - attributes['data-minimum-results-for-search'] = item.search ? false : '-1';
-    - attributes['data-selection-css-class'] = `select2-selection--${item.size}`;
-    - attributes['data-dropdown-css-class'] = `select2-dropdown--${item.size}`;
+    - attributes['data-selection-css-class'] = item.size && `select2-selection--${item.size}`;
+    - attributes['data-dropdown-css-class'] = item.size && `select2-dropdown--${item.size}`;
     select&attributes(attributes)
       if item.placeholder
         option
@@ -67,6 +79,8 @@ mixin formField(data)
     case data.type
       when 'select'
         +select(data.element, data.id)
+      when 'checkbox'
+        +checkbox(data.element)
       default
         +input(data.element, data.id, data.type)
 

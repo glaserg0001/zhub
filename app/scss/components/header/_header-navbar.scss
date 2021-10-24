@@ -1,6 +1,7 @@
 .header-navbar {
     $this: 'header-navbar';
-    $opened: '.#{$this}__opened';
+    $m-opened: '--opened';
+    $opened: '.#{$this}#{$m-opened}';
 
     position: fixed;
     top: 0;
@@ -25,7 +26,7 @@
 
     &::before {
         content: '';
-       
+
         display: block;
         height: 60px;
         flex-shrink: 0;
@@ -38,11 +39,7 @@
         padding: 20px;
     }
 
-    &__opened {
-        @include disableScroll;
-    }
-
-    &__toggle {
+    &__cta {
         padding: 0 5px;
         margin-right: 5px;
         font-size: rem(18);
@@ -56,31 +53,10 @@
     }
 
     &__backdrop {
-        display: none;
-
-        @include media-breakpoint-down(md) {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: color(primary, 0.5);
-            border: none;
-            display: block;
-            visibility: hidden;
-            opacity: 0;
-
-            @include when-inside($opened) {
-                visibility: visible;
-                opacity: 1;
-                transition: opacity 0.1s linear 0.1s;
-            }
-        }
+        @include navbarBackdrop($opened, md);
     }
 
-    // &__header {
-    //     display: flex;
-    //     align-items: center;
-    //     padding: 10px 0;
-    // }
+    &#{$m-opened} {
+        @include disableScroll(md);
+    }
 }

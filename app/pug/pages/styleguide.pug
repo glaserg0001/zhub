@@ -114,8 +114,8 @@ block content
               - attrSelect['data-allow-clear'] = item.placeholder && item.allowClear ? 'true' : false;
               - attrSelect['data-theme'] = item.theme;
               - attrSelect['data-minimum-results-for-search'] = item.search ? false : '-1';
-              - attrSelect['data-selection-css-class'] = `select2-selection--${item.size}`;
-              - attrSelect['data-dropdown-css-class'] = `select2-dropdown--${item.size}`;
+              - attrSelect['data-selection-css-class'] = item.size && `select2-selection--${item.size}`;
+              - attrSelect['data-dropdown-css-class'] = item.size && `select2-dropdown--${item.size}`;
 
             .col-md-6
               div&attributes(attributes)
@@ -182,7 +182,7 @@ block content
     h2.sg-heading Visibility
     //- h3.sg-heading Hidden multiply
     .sg-block
-      table.sg-table
+      table.sg-table.text-nowrap
         thead.text-left
           tr
             th
@@ -202,7 +202,7 @@ block content
     h2.sg-heading Sizing
     //- h3.sg-heading Hidden multiply
     .sg-block
-      table.sg-table
+      table.sg-table.text-nowrap
         thead.text-left
           tr
             th

@@ -76,13 +76,55 @@
     }
 }
 
-@mixin disableScroll {
-    @include media-breakpoint-down(md) {
+@mixin disableScroll($breakpoint: false) {
+    @include media-breakpoint-down($breakpoint) {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         overflow-y: scroll;
+    }
+}
+
+
+@mixin navbarBackdrop($opened, $breakpoint: false) {
+    @if $breakpoint {
+        display: none;
+    }
+
+    @include media-breakpoint-down($breakpoint) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: color(primary, 0.5);
+        border: none;
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+
+        @include when-inside($opened) {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.1s linear 0.1s;
+        }
+    }
+}
+
+@mixin makeFormFieldPrimary() {
+    .select2-selection--single,
+    .select-custom,
+    .input {
+        border-color: color(border);
+    }
+}
+
+@mixin makeFormFieldSecondary() {
+    .select2-selection--single,
+    .select-custom,
+    .input {
+        border-color: color(transparent);
     }
 }

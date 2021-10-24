@@ -12,6 +12,7 @@ html(lang="en")
     include ../layout/header
     div.main(class=`${pageMainClass ? pageMainClass : ''}`)
       block content
+    include ../components/seo
     include ../layout/footer
     include scripts
     block scripts

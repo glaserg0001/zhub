@@ -1,15 +1,44 @@
+include ../abstracts/forms
 form.filter
-  .row.no-gutters
-    .col
+  .row.no-gutters.filter__row
+    .col.col-lg-5
      +formField(inputSearch)
-    .col
-      input.input.input--secondary(placeholder='Пошук')
-    .col-1
-      button.button.button__primary.button--large.button--icon.w-100
+
+    .col-lg-3.order-1.order-lg-0
+      +formField(selectCategory)
+
+    .col-lg-3.order-1.order-lg-0
+      +formField(selectAuto)
+
+    //- navbar button
+    .col-auto.col-lg.h-hidden-lg-up
+      button(type='button').button.button--large.button--icon.filter__cta.js-filter-btn
+        +icon('icon-filter', 'button__icon')
+        span.filter__count.h-hidden__ 2
+
+    .col-auto.col-lg
+      button.button.button__primary.button--large.button--icon.filter__cta
         +icon('icon-search', 'button__icon')
-  
-  //- hr.my-2
-  //- +formField(inputSearch)
-  //- hr.my-2
-  //- +formField(selectCategory)
-  //- hr.my-2
+
+    //- navbar
+  .filter-navbar__backdrop.js-filter-btn
+  .filter-navbar
+    .filter-navbar__header
+      .filter-navbar__title Фiльтри
+      .filter-navbar__close.js-filter-btn
+        +icon('icon-cross')
+
+    .filter-navbar__content
+      .h-hidden-lg-up
+        +formField(selectCategoryMobile)
+        +formField(selectAutoMobile)
+      .row
+        .col-lg-4
+          +formField(selectRegion)
+        .col-lg-4
+          +formField(inputPrice)
+        .col-lg.mt-lg-1
+          +formField(checkboxFilter)
+    .filter-navbar__footer
+        button.button.button__secondary.w-100 Застосувати фiльтри
+        button(type='reset').button.button__reset.w-100.mt-1 Скинути фільтри 
