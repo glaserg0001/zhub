@@ -1,5 +1,7 @@
 .product-tile {
     position: relative;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     padding: 15px;
     color: color(text);
@@ -14,18 +16,60 @@
     }
 
     &__link {
-        position: absolute;
+        // position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
     }
 
-    &__image {}
+    &__image {
+        @include imageContainer();
 
-    &__img {}
+        margin-bottom: 10px;
+    }
+
+    &__name {
+        margin-bottom: auto;
+    }
+
+    &__price {
+        margin-top: 15px;
+        font-size: rem(20);
+        font-weight: $font-weight-bold;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        font-size: rem(10);
+        margin-top: 10px;
+
+        @include media-breakpoint-up(md) {
+            margin-top: 15px;
+            font-size: rem(12);
+        }
+    }
     
-    &__name {}
+    &__location {
+        margin-right: 5px;
+
+        .icon {
+            font-size: rem(14);
+            vertical-align: top;
+        }
+    }
+
+    &__date {
+        margin-right: 5px;
+
+        &::before {
+            content: '·';
+            display: inline-block;
+            margin-right: 5px;
+            font-weight: $font-weight-bold;
+        }
+    }
 
     @include on-event {
         color: color(text);

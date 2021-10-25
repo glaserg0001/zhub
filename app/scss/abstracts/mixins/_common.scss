@@ -128,3 +128,22 @@
         border-color: color(transparent);
     }
 }
+
+@mixin imageContainer($ratio: 100%, $position: relative) {
+    position: $position;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-top: $ratio;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
