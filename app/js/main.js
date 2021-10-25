@@ -1,8 +1,8 @@
 class NavigationBar {
     constructor(name, btn) {
         this.root = 'body'
-        this.openedClass = `${name}--opened`;
-        this.btn = btn;
+        this.openedClass = `${name}--opened`
+        this.btn = btn
     }
 
     init() {
@@ -19,7 +19,6 @@ class NavigationBar {
 
     toggleEvent() {
         const root = document.querySelector(this.root);
-        console.log(this.root)
         let position = window.pageYOffset;
 
         if (position) {
@@ -37,10 +36,37 @@ class NavigationBar {
     }
 }
 
+class AddToWishList {
+    constructor(btn) {
+        this.btn = btn
+        this.activeClass = 'm-active'
+    }
+
+    init() {
+        this.toggleActive();
+    }
+
+    toggleActive() {
+        const btn = document.querySelectorAll(this.btn);
+
+        btn.forEach(i => {
+            i.addEventListener('click', this.toggleEvent.bind(this))
+        })
+    }
+
+    toggleEvent(e) {
+        e.stopPropagation()
+        e.preventDefault()
+        e.currentTarget.classList.toggle(this.activeClass)
+        console.log(this.activeClass)
+    }
+}
+
+
 new NavigationBar('header-navbar', '.js-nav-btn').init();
 new NavigationBar('filter-navbar', '.js-filter-btn').init();
 
-
+new AddToWishList('.js-wishlist-btn').init();
 
 
 // select2

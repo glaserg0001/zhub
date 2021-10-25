@@ -175,8 +175,12 @@ block content
       if sgIconsSVG
         ul.sg-icons__list
           each val in sgIconsSVG
-            li.sg-icons__item(data-name=val)
-              +icon(val)
+            if typeof val == 'string'
+              li.sg-icons__item(data-name=val)
+                +icon(val)
+            else
+              li.sg-icons__item(data-name=val[0])
+                +icon(val[0], val[1])
     //- ICONS END
     //- VISAVILITY START
     h2.sg-heading Visibility

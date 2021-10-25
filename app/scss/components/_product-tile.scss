@@ -1,0 +1,33 @@
+.product-tile {
+    position: relative;
+    height: 100%;
+    padding: 15px;
+    color: color(text);
+    background-color: color(white);
+
+    &__col {
+        margin-bottom: $grid-gutter-width-xs;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: $grid-gutter-width-lg;
+        }
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &__image {}
+
+    &__img {}
+    
+    &__name {}
+
+    @include on-event {
+        color: color(text);
+    }
+}

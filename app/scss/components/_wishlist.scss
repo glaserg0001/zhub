@@ -1,0 +1,31 @@
+.wishlist {
+    &__cta {
+        --icon-color: #{color(white)};
+        --icon-stroke: #{color(primary)};
+    
+        position: relative;
+        font-size: rem(16);
+        background-color: color(transparent);
+        border: none;
+        line-height: 1;
+        z-index: z(above);
+    
+        @include media-breakpoint-up(lg) {
+            font-size: rem(22);
+        }
+    
+        .icon {
+            color: var(--icon-color);
+            stroke: var(--icon-stroke);
+        }
+    
+        @include on-event(hover) {
+            --icon-color: #{color(light)};
+        }
+    
+        &.m-active {
+            --icon-color: #{color(secondary)};
+            --icon-stroke: var(--icon-color);
+        }
+    }
+}

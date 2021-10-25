@@ -18,23 +18,23 @@
     <header class="header">
       <div class="container header__content">
         <button class="header-navbar__cta js-nav-btn">
-          <svg class="icon-svg">
+          <svg class="icon">
             <use xlink:href="img/icons.svg#icon-menu"></use>
           </svg>
         </button>
         <div class="header-navbar__backdrop js-nav-btn"></div>
         <div class="header-navbar">
           <div class="header-navbar__content"><a class="button button__secondary button--icon w-100 button--left" href="/app/index.html">
-              <svg class="icon-svg button__icon">
+              <svg class="icon button__icon">
                 <use xlink:href="img/icons.svg#icon-add"></use>
               </svg>Додати оголошення</a><a class="button button--icon button--left w-100 mt-2" href="#">
-              <svg class="icon-svg button__icon">
+              <svg class="icon button__icon">
                 <use xlink:href="img/icons.svg#icon-heart-solid"></use>
               </svg>Збережені оголошення</a>
             <div class="navigation my-4">
               <ul class="navigation__list">
                 <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Про сервіс</a></li>
-                <li class="navigation__item"><a class="active navigation__link" href="/app/styleguide.html">Блог</a></li>
+                <li class="navigation__item"><a class="m-active navigation__link" href="/app/styleguide.html">Блог</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Доставка та оплата</a></li>
               </ul>
             </div>
@@ -48,18 +48,18 @@
         <nav class="navigation mr-lg-auto h-hidden-md-down">
           <ul class="navigation__list">
             <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Про сервіс</a></li>
-            <li class="navigation__item"><a class="active navigation__link" href="/app/styleguide.html">Блог</a></li>
+            <li class="navigation__item"><a class="m-active navigation__link" href="/app/styleguide.html">Блог</a></li>
             <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Доставка та оплата</a></li>
           </ul>
         </nav><a class="button button__secondary button--icon button--small h-hidden-md-down" href="/app/index.html">
-          <svg class="icon-svg button__icon">
+          <svg class="icon button__icon">
             <use xlink:href="img/icons.svg#icon-add"></use>
           </svg>Додати оголошення</a><a class="header-widhlist ml-lg-3 h-hidden-md-down" href="#">
-          <svg class="icon-svg">
+          <svg class="icon">
             <use xlink:href="img/icons.svg#icon-heart-solid"></use>
           </svg></a>
         <div class="header-account dropdown ml-lg-3"><a class="header-account__link dropdown__head" href="#">
-            <svg class="icon-svg">
+            <svg class="icon">
               <use xlink:href="img/icons.svg#icon-user"></use>
             </svg></a>
           <ul class="dropdown__list dropdown--left-xs dropdown--left-md">
@@ -67,7 +67,7 @@
             <li class="dropdown__item"><a class="dropdown__link" href="#">Панель керування</a></li>
             <li class="dropdown__item"><a class="dropdown__link" href="#">Налаштування</a></li>
             <li class="dropdown__item"><a class="dropdown__link m-mutted" href="#">
-                <svg class="icon-svg dropdown__icon">
+                <svg class="icon dropdown__icon">
                   <use xlink:href="img/icons.svg#icon-exit"></use>
                 </svg>Вийти</a></li>
           </ul>
@@ -188,14 +188,14 @@
             </div>
             <div class="col-auto col-lg h-hidden-lg-up">
               <button class="button button--large button--icon filter__cta js-filter-btn" type="button">
-                <svg class="icon-svg button__icon">
+                <svg class="icon button__icon">
                   <use xlink:href="img/icons.svg#icon-filter"></use>
                 </svg><span class="filter__count h-hidden__">2</span>
               </button>
             </div>
             <div class="col-auto col-lg">
               <button class="button button__primary button--large button--icon filter__cta">
-                <svg class="icon-svg button__icon">
+                <svg class="icon button__icon">
                   <use xlink:href="img/icons.svg#icon-search"></use>
                 </svg>
               </button>
@@ -206,7 +206,7 @@
             <div class="filter-navbar__header">
               <div class="filter-navbar__title">Фiльтри</div>
               <div class="filter-navbar__close js-filter-btn">
-                <svg class="icon-svg">
+                <svg class="icon">
                   <use xlink:href="img/icons.svg#icon-cross"></use>
                 </svg>
               </div>
@@ -368,15 +368,146 @@
             </div>
           </div>
         </form>
-      </div>
-      <div class="product-tile">
-        <div class="product-tile__image"><img class="product-tile__img" src="img/product-tile1.jpg" alt="image"></div>
-        <h3 class="product-tile__name">Переднiй Сальнiк Колiнвала BMW e46 n46b20a</h3>
-        <ul class="tags">
-          <li class="tags__item m-primary">Vip</li>
-          <li class="tags__item">BMW</li>
-          <li class="tags__item">Нова</li>
-        </ul>
+        <div class="row">
+          <div class="col-lg-3 product-tile__col">
+            <div class="product-tile"><a class="product-tile__link" href="#"></a>
+              <div class="product-tile__image"><img class="product-tile__img" src="img/product-tile1.jpg" alt="image"></div>
+              <h3 class="product-tile__name">Переднiй Сальнiк Колiнвала BMW e46 n46b20a</h3>
+              <ul class="tags">
+                <li class="tags__item m-primary">Vip</li>
+                <li class="tags__item">BMW</li>
+                <li class="tags__item">Нова</li>
+              </ul>
+              <div class="product-tile__price">220 грн</div>
+              <div class="product-tile__info">
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#icon-location"></use>
+                </svg>Київ
+                <time>24.05.2020</time>
+                <button class="wishlist__cta js-wishlist-btn" type="button">
+                  <svg class="icon icon-heart">
+                    <use xlink:href="img/icons.svg#icon-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 product-tile__col">
+            <div class="product-tile"><a class="product-tile__link" href="#"></a>
+              <div class="product-tile__image"><img class="product-tile__img" src="img/product-tile2.jpg" alt="image"></div>
+              <h3 class="product-tile__name">Колодки тормозні Тріал Спорт Ваз 2101 нові</h3>
+              <ul class="tags">
+                <li class="tags__item m-primary">Vip</li>
+                <li class="tags__item">BMW</li>
+                <li class="tags__item">Нова</li>
+              </ul>
+              <div class="product-tile__price">220 грн</div>
+              <div class="product-tile__info">
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#icon-location"></use>
+                </svg>Київ
+                <time>24.05.2020</time>
+                <button class="wishlist__cta js-wishlist-btn" type="button">
+                  <svg class="icon icon-heart">
+                    <use xlink:href="img/icons.svg#icon-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 product-tile__col">
+            <div class="product-tile"><a class="product-tile__link" href="#"></a>
+              <div class="product-tile__image"><img class="product-tile__img" src="img/product-tile2.jpg" alt="image"></div>
+              <h3 class="product-tile__name">Колодки тормозні</h3>
+              <ul class="tags">
+                <li class="tags__item m-primary">Vip</li>
+                <li class="tags__item">BMW</li>
+                <li class="tags__item">Нова</li>
+              </ul>
+              <div class="product-tile__price">220 грн</div>
+              <div class="product-tile__info">
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#icon-location"></use>
+                </svg>Київ
+                <time>24.05.2020</time>
+                <button class="wishlist__cta js-wishlist-btn" type="button">
+                  <svg class="icon icon-heart">
+                    <use xlink:href="img/icons.svg#icon-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 product-tile__col">
+            <div class="product-tile"><a class="product-tile__link" href="#"></a>
+              <div class="product-tile__image"><img class="product-tile__img" src="img/product-tile2.jpg" alt="image"></div>
+              <h3 class="product-tile__name">Колодки тормозні Тріал Спорт Ваз 2101 нові Колодки тормозні Тріал Спорт Ваз 2101 нові</h3>
+              <ul class="tags">
+                <li class="tags__item m-primary">Vip</li>
+                <li class="tags__item">BMW</li>
+                <li class="tags__item">Нова</li>
+              </ul>
+              <div class="product-tile__price">220 грн</div>
+              <div class="product-tile__info">
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#icon-location"></use>
+                </svg>Київ
+                <time>24.05.2020</time>
+                <button class="wishlist__cta js-wishlist-btn" type="button">
+                  <svg class="icon icon-heart">
+                    <use xlink:href="img/icons.svg#icon-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 product-tile__col">
+            <div class="product-tile"><a class="product-tile__link" href="#"></a>
+              <div class="product-tile__image"><img class="product-tile__img" src="img/product-tile2.jpg" alt="image"></div>
+              <h3 class="product-tile__name">Колодки тормозні Тріал Спорт Ваз 2101 нові</h3>
+              <ul class="tags">
+                <li class="tags__item m-primary">Vip</li>
+                <li class="tags__item">BMW</li>
+                <li class="tags__item">Нова</li>
+              </ul>
+              <div class="product-tile__price">220 грн</div>
+              <div class="product-tile__info">
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#icon-location"></use>
+                </svg>Київ
+                <time>24.05.2020</time>
+                <button class="wishlist__cta js-wishlist-btn" type="button">
+                  <svg class="icon icon-heart">
+                    <use xlink:href="img/icons.svg#icon-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 product-tile__col">
+            <div class="product-tile"><a class="product-tile__link" href="#"></a>
+              <div class="product-tile__image"><img class="product-tile__img" src="img/product-tile2.jpg" alt="image"></div>
+              <h3 class="product-tile__name">Колодки тормозні Тріал Спорт Ваз 2101 нові</h3>
+              <ul class="tags">
+                <li class="tags__item m-primary">Vip</li>
+                <li class="tags__item">BMW</li>
+                <li class="tags__item">Нова</li>
+              </ul>
+              <div class="product-tile__price">220 грн</div>
+              <div class="product-tile__info">
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#icon-location"></use>
+                </svg>Київ
+                <time>24.05.2020</time>
+                <button class="wishlist__cta js-wishlist-btn" type="button">
+                  <svg class="icon icon-heart">
+                    <use xlink:href="img/icons.svg#icon-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="seo">
@@ -399,11 +530,11 @@
           <div class="col-6 col-md-2 col-lg-auto my-1 order-md-last text-md-right">
             <ul class="footer-social">
               <li class="footer-social__item"><a class="footer-social__link" href="https://www.instagram.com/zaphub.com.ua/" target="_blank">
-                  <svg class="icon-svg">
+                  <svg class="icon">
                     <use xlink:href="img/icons.svg#icon-instagram"></use>
                   </svg></a></li>
               <li class="footer-social__item"><a class="footer-social__link" href="https://t.me/joinchat/8-fx0NfMSu1mMjRi" target="_blank">
-                  <svg class="icon-svg">
+                  <svg class="icon">
                     <use xlink:href="img/icons.svg#icon-telegram"></use>
                   </svg></a></li>
             </ul>
@@ -412,7 +543,7 @@
             <div class="navigation navigation--secondary">
               <ul class="navigation__list">
                 <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Про сервіс</a></li>
-                <li class="navigation__item"><a class="active navigation__link" href="/app/styleguide.html">Блог</a></li>
+                <li class="navigation__item"><a class="m-active navigation__link" href="/app/styleguide.html">Блог</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Доставка та оплата</a></li>
               </ul>
             </div>

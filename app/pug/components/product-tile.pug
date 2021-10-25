@@ -1,0 +1,15 @@
+.row
+  each product in productTole
+    .col-lg-3.product-tile__col
+      .product-tile
+        a(href=product.link).product-tile__link
+        .product-tile__image
+          img(src=URL_file(product.image, baseUrlLvl, 'jpg'), alt="image").product-tile__img
+        h3.product-tile__name=product.name
+        include ../components/tags
+        .product-tile__price 220 грн
+        .product-tile__info
+          +icon('icon-location')
+          | Київ
+          time 24.05.2020
+          include ../components/wishlist-cta

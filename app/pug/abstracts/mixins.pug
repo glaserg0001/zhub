@@ -1,7 +1,7 @@
 //- mixins
 
 mixin icon(name, cssClass)
-  svg.icon-svg(class=cssClass)
+  svg.icon(class=cssClass)
     use(xlink:href=`${URL_file('icons', baseUrlLvl, 'svg')}#${name}`)
 
 //- ==== FORMS START
