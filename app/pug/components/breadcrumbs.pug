@@ -1,0 +1,8 @@
+if breadcrumbs.length
+  ul.breadcrumbs
+    each value, index in breadcrumbs
+      li.breadcrumbs__item
+        if index != breadcrumbs.length - 1
+          a(href='#!').breadcrumbs__link=value
+        else
+          span.breadcrumbs__current=value

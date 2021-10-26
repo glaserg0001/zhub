@@ -91,8 +91,9 @@
 }
 
 .select2-results > .select2-results__options {
+    @include scrollbar-vertical;
+
     max-height: $results-options-max-height;
-    overflow-y: auto;
     
     @include when-inside($results-small) {
         max-height: $results-options-max-height--small;

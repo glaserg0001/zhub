@@ -147,3 +147,19 @@
         object-fit: cover;
     }
 }
+
+@mixin line-clamp(
+    $lines: 1,
+    $line-height: $line-height-base,
+    $font-size: $font-size-base,
+    $is-height: false
+) {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    overflow: hidden;
+
+    @if $is-height {
+        min-height: $line-height * $font-size * $lines;
+    }
+}

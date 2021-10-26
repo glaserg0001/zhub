@@ -1,0 +1,50 @@
+@mixin scroll-hide {
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar { /* WebKit */
+        height: 0;
+        width: 0;
+    }
+}
+
+// Scrollbar
+
+@mixin scrollbar-vertical(
+    $size: 4px,
+    $border-radius: 0,
+    $thumb-color: color(gray4),
+    $track-color: color(gray1)
+) {
+    overflow-y: auto;
+    scrollbar-color: $thumb-color $track-color; // Firefox styles
+    scrollbar-width: thin; // Firefox styles
+
+    &::-webkit-scrollbar {
+        width: $size;
+    }
+
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-track-piece {
+        background: $track-color;
+        border-radius: $border-radius;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $thumb-color;
+        border-radius: $border-radius;
+    }
+}
+
+@mixin scrollbar-horizontal($size: 4px) {
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        height: $size;
+    }
+}

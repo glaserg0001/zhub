@@ -418,3 +418,34 @@
       }
     ]
   }
+
+  var selectSorting = {
+    type: 'select',
+    id: 'sorting',
+    wrapper: {
+      exist: true,
+      group: true,
+      class: 'mb-0'
+    },
+    label: {
+      exist: true,
+      class: false,
+      text: 'Сортування'
+    },
+    element: [
+      {
+        class: false,
+        theme: 'secondary',
+        size: false,
+        placeholder: false,
+        allowClear: false,
+        search: false,
+        disabled: false,
+        value: [
+          'За ціною',
+          'Найновіші'
+        ]
+      }
+    ]
+  }
+

@@ -81,9 +81,10 @@
 
     &__content {
         @include media-breakpoint-down(md) {
-            overflow-x: visible;
-            overflow-y: auto;
-            padding: 0 20px;
+            @include scrollbar-vertical;
+
+            padding: 0 10px;
+            margin: 0 10px;
         }
     }
 

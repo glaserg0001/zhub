@@ -1,0 +1,45 @@
+.breadcrumbs {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: rem(12);
+    font-weight: $font-weight-light;
+    cursor: default;
+    user-select: none;
+
+    @include media-breakpoint-up(lg) {
+        padding: 10px 5px;
+        font-size: rem(14);
+        background-color: color(gray2);
+    }
+
+    &__item {
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 0.8em;
+            height: 0.8em;
+            margin-right: 10px;
+            background: url($icon-chevron-right) center no-repeat;
+        }
+
+        &:first-child {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: color(text);
+
+        @include on-event {
+            color: color(primary2);
+        }
+    }
+
+    &__current {
+        font-weight: $font-weight-medium;
+    }
+}
