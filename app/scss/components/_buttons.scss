@@ -38,6 +38,7 @@
         border-color: var(--border-color-hover)
     }
 
+    // text align (left, center)
     @each $breakpoint in map-keys($special-breakpoints) {
         $infix: breakpoint-infix($breakpoint, $special-breakpoints);
 
@@ -101,7 +102,7 @@
                 display: none;
             }
 
-            .#{$this}__icon {
+            .icon {
                 display: none;
             }
         }
@@ -114,23 +115,30 @@
         border-color: var(--border-color-disabled);
     }
 
+    .icon {
+        font-size: rem(20);
+        flex-shrink: 0;
+    }
+
     &--small {
         min-height: 35px;
+
+        &::before,
+        .icon {
+            font-size: rem(16);
+        }
     }
 
     &--large {
         min-height: 45px;
     }
 
-    &__icon {
-        font-size: rem(20);
-        flex-shrink: 0;
-    }
 
     &__primary {
         --color: #{color(white)};
         --bg-color: #{color(primary)};
         --border-color: #{color(primary)};
+
         --color-hover: #{color(white)};
         --bg-color-hover: #{color(primary2)};
         --border-color-hover: #{color(primary2)};
@@ -144,6 +152,7 @@
         --color: #{color(white)};
         --color-hover: #{color(white)};
         --bg-color: #{color(secondary)};
+
         --bg-color-hover: #{color(secondary2)};
         --border-color: #{color(secondary)};
         --border-color-hover: #{color(secondary2)};
@@ -157,6 +166,7 @@
         --color: #{color(danger)};
         --color-hover: #{color(danger-hover)};
         --bg-color: #{color(transparent)};
+
         --bg-color-hover: #{color(transparent)};
         --border-color: #{color(transparent)};
         --border-color-hover: #{color(transparent)};
@@ -168,6 +178,20 @@
         &.#{$this}--loading:not(.#{$this}--icon) {
             color: color(transparent);
         }
+    }
+
+    &__simple {
+        --color: #{color(text)};
+        --bg-color: #{color(gray2)};
+        --border-color: #{color(gray2)};
+
+        --color-hover: #{color(primary2)};
+        --bg-color-hover: #{color(gray2)};
+        --border-color-hover: #{color(gray2)};
+
+        --color-disabled: #{color(gray5)};
+        --bg-color-disabled: #{color(gray1)};
+        --border-color-disabled: #{color(gray1)};
     }
 }
 

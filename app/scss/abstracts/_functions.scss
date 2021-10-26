@@ -16,3 +16,20 @@
     // Example: z(above);
     @return map-get($z-layers, $key);
 }
+
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1)+$replace+str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+@function icon($viewbox: false, $svg-color: color(text), $body: false) {
+    $svg-color-str: quote(#{$svg-color});
+    $svg-color: str-replace($svg-color-str, '#', '');
+
+    @return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='#{$viewbox}' fill='%23#{$svg-color}' #{$body} %3C/svg%3E";
+}
