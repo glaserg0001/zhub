@@ -58,15 +58,46 @@ class AddToWishList {
         e.stopPropagation()
         e.preventDefault()
         e.currentTarget.classList.toggle(this.activeClass)
-        console.log(this.activeClass)
     }
 }
 
+class GridToggle {
+    constructor(container, cssClass) {
+        this.container = document.querySelector(`.${container}`)
+        this.toggle = document.querySelector(`.${container}-toggle`)
+        this.btn = `${container}-btn`
+        this.activeClass = 'm-active'
+        this.modifierClass = `${cssClass}--list`
+    }
+
+    init() {
+        this.gridToggle();
+    }
+
+    gridToggle() {
+        this.toggle.addEventListener('click', this.gridToggleEvent.bind(this))
+    }
+
+    gridToggleEvent(e) {
+        e.stopPropagation()
+        e.preventDefault()
+
+        if (!e.target.classList.contains(this.btn)) return;
+
+        if (!e.target.classList.contains(this.activeClass)) {
+            this.container.classList.toggle(this.modifierClass)
+            e.currentTarget.querySelector(`.${this.activeClass}`).classList.remove(this.activeClass)
+            e.target.classList.add(this.activeClass)
+        }
+    }
+}
 
 new NavigationBar('header-navbar', '.js-nav-btn').init();
 new NavigationBar('filter-navbar', '.js-filter-btn').init();
 
 new AddToWishList('.js-wishlist-btn').init();
+
+new GridToggle('js-grid', 'product-tile').init()
 
 
 // select2
@@ -82,23 +113,3 @@ $('.js-select').select2({
 
 // https://select2.org/dropdown
 // https://select2.org/selections
-function formatState (state) {
-    if (!state.id) {
-      return state.text;
-    }
-  
-    var baseUrl = "/user/pages/images/flags";
-    var $state = $(
-      '<span><img class="img-flag" /> <span></span></span>'
-    );
-  
-    // Use .text() instead of HTML string concatenation to avoid script injection issues
-    $state.find("span").text(state.text);
-    $state.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
-  
-    return $state;
-  };
-  
-  $(".js-example-templating").select2({
-    templateSelection: formatState
-  });

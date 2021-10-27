@@ -1,18 +1,19 @@
 include ../tags
 include ../wishlist-cta
 
-.row
-  each product in productTile
-    .col-6.col-md-4.col-lg-3.mb-2.mb-lg-3
-      .product-tile
-        a(href=product.link).product-tile__link
-        .product-tile__image
-          img(src=URL_file(product.image, baseUrlLvl, 'jpg'), alt="image")
-        h3.h3.product-tile__name=product.name
-        +tags('mt-2')
-        .product-tile__description=product.description
-        .product-tile__price 220 грн
-        .product-tile__info
-          .product-tile__location #[+icon('icon-location')] Київ
-          time.product-tile__date 24.05.2020
-          +wishlistCta('ml-auto')
+.product-tile__container.js-grid
+  .row
+    each product in productTile
+      .product-tile__col.col-6.col-md-4.col-lg-3.mb-2.mb-lg-3
+        .product-tile
+          a(href=product.link).product-tile__link
+          .product-tile__image
+            img(src=URL_file(product.image, baseUrlLvl, 'jpg'), alt="image")
+          h3.h3.product-tile__name=product.name
+          +tags('mt-2')
+          .product-tile__description=product.description
+          .product-tile__price 220 грн
+          .product-tile__info
+            .product-tile__location #[+icon('icon-location')] Київ
+            time.product-tile__date 24.05.2020
+            +wishlistCta('ml-auto')

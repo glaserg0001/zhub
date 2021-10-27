@@ -1,11 +1,28 @@
 .product-tile {
+    $this: 'product-tile';
+    $modifierList: '.#{$this}--list';
+    
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 15px;
     color: color(text);
     background-color: color(white);
+    
+    @include media-breakpoint-up(lg) {
+        padding: 15px;
+    }
+
+    @include when-inside($modifierList) {
+        flex-direction: row;
+    }
+
+    &__col {
+        @include when-inside($modifierList) {
+            max-width: 100%;
+            flex-basis: 100%;
+        }
+    }
 
     &__link {
         position: absolute;
@@ -13,12 +30,19 @@
         left: 0;
         right: 0;
         bottom: 0;
+        border: 2px solid color(transparent);
+        z-index: z(above);
+
     }
 
     &__image {
         @include imageContainer;
 
         margin-bottom: 10px;
+
+        @include when-inside($modifierList) {
+            width: 135px;
+        }
     }
 
     &__name {
@@ -73,5 +97,9 @@
             margin-right: 5px;
             font-weight: $font-weight-bold;
         }
+    }
+
+    @include on-event {
+        box-shadow: inset 0 0 0 2px color(gray5);
     }
 }

@@ -108,10 +108,3 @@ $font-weight-bold: $font-weight-medium !default;
 
 $line-height-base: 1.2 !default;
 $font-size-base: rem(16) !default;
-
-
-
-
-
-$icon-chevron-right-body: "%3E%3Cpath d='M0.726563 7.06L3.7799 4L0.726563 0.94L1.66656 -2.38419e-07L5.66656 4L1.66656 8L0.726563 7.06Z'/%3E";
-$icon-chevron-right: icon($viewbox: "0 0 6 8", $body: $icon-chevron-right-body);

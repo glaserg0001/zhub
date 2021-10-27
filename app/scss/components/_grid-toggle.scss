@@ -1,3 +1,15 @@
 .grid-toggle {
-    &__btn {}
+    display: flex;
+    gap: 15px;
+
+    &__btn {
+        font-size: rem(18);
+        color: color(gray5);
+        background-color: color(transparent);
+        border: none;
+
+        &.m-active {
+            color: color(text);
+        } 
+    }
 }

@@ -3,14 +3,10 @@
     .col-12
       .h2.mb-1 156 оголошень
     .col
-      include ../components/breadcrumbs
+      include breadcrumbs
     .col-3.ml-auto
       +formField(selectSorting)
     .col-auto
-      .grid-toggle.js-grid-toggle
-        button(type='button').grid-toggle__btn.m-active.js-grid-cta
-          +icon('icon-table')
-        button(type='button').grid-toggle__btn.js-grid-cta
-          +icon('icon-list')
+      include grid-toggle
 
-include ../components/product/product-tile
+include product/product-tile
