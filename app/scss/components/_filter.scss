@@ -1,8 +1,8 @@
 .filter {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     
     @include media-breakpoint-up(lg) {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     &__row {

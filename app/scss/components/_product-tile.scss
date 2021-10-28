@@ -77,16 +77,18 @@
 
             @include media-breakpoint-up(lg) {
                 @include line-clamp(1);
-                margin-right: 140px;
+                margin: 0 140px 0 0;
             }
         }
     }
 
     &__description {
-        @include line-clamp(2, $is-height: true);
+        // @include line-clamp(2, $is-height: true);
+        @include line-clamp(2);
 
         position: absolute;
-        margin-top: 5px;
+        padding: 5px 0;
+        margin: auto 140px auto 0;
         font-size: rem(14);
         line-height: 1.4;
         font-weight: $font-weight-light;
@@ -96,7 +98,6 @@
             @include media-breakpoint-up(lg) {
                 visibility: visible;
                 position: static;
-                margin-right: 140px;
             }
         }
     }
@@ -126,6 +127,12 @@
         @include media-breakpoint-up(md) {
             margin-top: 15px;
             font-size: rem(12);
+        }
+
+        @include when-inside($modifierList) {
+            @include media-breakpoint-up(lg) {
+                margin-top: 0;
+            }
         }
     }
     

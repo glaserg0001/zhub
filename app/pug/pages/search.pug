@@ -1,12 +1,14 @@
 extends ../base/main
 
 block variables
-  - var pageTitle = 'Homepage'
-  - var resultsTitle = 'Останнi оголошення'
+  - var pageTitle = 'Search Results'
+  - var isSearchPage = true
 
 block styles
 
 block content
   .container
+    .mb-2.h-hidden-lg-up
+      include ../components/breadcrumbs
     include ../components/filter
     include ../components/results

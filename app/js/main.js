@@ -95,13 +95,12 @@ class GridToggle {
 
 new NavigationBar('header-navbar', '.js-nav-btn').init();
 new NavigationBar('filter-navbar', '.js-filter-btn').init();
-
 new AddToWishList('.js-wishlist-btn').init();
-
 new GridToggle('js-grid', 'product-tile').init()
 
 
-// select2
+
+// ==== select2 START
 $('.js-select').select2({
     width: 'style',
     // placeholder: 'Оберіть категорію',
@@ -114,3 +113,24 @@ $('.js-select').select2({
 
 // https://select2.org/dropdown
 // https://select2.org/selections
+
+// ==== select2 END
+
+
+// ==== TEST START
+function _search() {
+    const form = document.querySelector('.filter') || false;
+    if (form) {
+        form.action = '/app/search.html';
+        form.method = 'GET';
+    }
+}
+
+_search()
+// ==== TEST END
+
+// ==== SLIDER START
+// https://swiperjs.com/
+// https://itchief.ru/javascript/slider#demo
+// https://splidejs.com/
+// ==== SLIDER END

@@ -13,9 +13,10 @@ include ../wishlist-cta
           .product-tile__content
             h3.h3.product-tile__name=product.name
             +tags('mt-2')
+            // must be present even if empty
             .product-tile__description=product.description
             .product-tile__price 220 грн
             .product-tile__info
-              .product-tile__location #[+icon('icon-location')] Київdffsesesfesfse
+              .product-tile__location #[+icon('icon-location')] Київ
               time.product-tile__date 24.05.2020
               +wishlistCta('ml-auto')

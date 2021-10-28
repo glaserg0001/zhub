@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Homepage</title>
+    <title>Search Results</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="noindex, nofollow">
@@ -82,6 +82,16 @@
     </header>
     <div class="main">
       <div class="container">
+        <div class="mb-2 h-hidden-lg-up">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#!">Клімат</a>
+            </li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#!">Кондиціонери</a>
+            </li>
+            <li class="breadcrumbs__item"><span class="breadcrumbs__current">BMW</span>
+            </li>
+          </ul>
+        </div>
         <form class="filter">
           <div class="row no-gutters filter__row">
             <div class="col col-lg-5">
@@ -369,8 +379,27 @@
           </div>
         </form>
         <div class="row align-items-center mb-2 mb-lg-3">
-          <div class="col-auto mr-auto">
-            <div class="h2 mb-0">Останнi оголошення</div>
+          <div class="col-auto col-lg-12 mr-auto">
+            <div class="h2 mb-0 mb-lg-1">156 оголошень</div>
+          </div>
+          <div class="col h-hidden-md-down">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#!">Клімат</a>
+              </li>
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#!">Кондиціонери</a>
+              </li>
+              <li class="breadcrumbs__item"><span class="breadcrumbs__current">BMW</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-4 col-xl-3 ml-auto h-hidden-md-down">
+            <div class="form-field mb-0 form-group">
+              <label class="label " for="sorting">Сортування</label>
+              <select class="js-select select-custom  select-custom--secondary" id="sorting" data-theme="secondary" data-minimum-results-for-search="-1">
+                <option>За ціною</option>
+                <option>Найновіші</option>
+              </select>
+            </div>
           </div>
           <div class="col-auto">
             <div class="grid-toggle js-grid-toggle">
