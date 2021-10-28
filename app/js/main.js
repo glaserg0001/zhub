@@ -75,7 +75,8 @@ class GridToggle {
     }
 
     gridToggle() {
-        this.toggle.addEventListener('click', this.gridToggleEvent.bind(this))
+        if (this.toggle)
+            this.toggle.addEventListener('click', this.gridToggleEvent.bind(this))
     }
 
     gridToggleEvent(e) {

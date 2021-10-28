@@ -2,12 +2,14 @@
     position: sticky;
     top: 0;
     padding: 10px 0;
+    margin-bottom: 15px;
     background-color: color(white);
     box-shadow: 0 -8px 31px color(black, 0.2);
     z-index: z(header);
-
+    
     @include media-breakpoint-up(lg) {
         padding: 20px 0;
+        margin-bottom: 30px;
     }
 
     &__content {

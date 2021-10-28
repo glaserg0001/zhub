@@ -8,7 +8,7 @@
         background-color: color(transparent);
         border: none;
         line-height: 1;
-        z-index: z(above);
+        z-index: z(upper);
     
         @include media-breakpoint-up(lg) {
             font-size: rem(22);

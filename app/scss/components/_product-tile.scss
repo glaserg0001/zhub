@@ -5,16 +5,28 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    gap: 5px;
     height: 100%;
     color: color(text);
     background-color: color(white);
     
     @include media-breakpoint-up(lg) {
         padding: 15px;
+        gap: 15px;
     }
 
     @include when-inside($modifierList) {
         flex-direction: row;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: z(above);
     }
 
     &__col {
@@ -30,41 +42,79 @@
         left: 0;
         right: 0;
         bottom: 0;
-        border: 2px solid color(transparent);
         z-index: z(above);
-
     }
 
     &__image {
         @include imageContainer;
 
-        margin-bottom: 10px;
+        @include when-inside($modifierList) {
+            flex: 0 0 135px;
+        }
+    }
+
+    &__content {
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 0;
+        }
 
         @include when-inside($modifierList) {
-            width: 135px;
+            width: 0;
         }
     }
 
     &__name {
-        @include line-clamp(2);
-
         margin-bottom: auto;
+
+        @include when-inside($modifierList) {
+            @include line-clamp(2);
+
+            @include media-breakpoint-up(lg) {
+                @include line-clamp(1);
+                margin-right: 140px;
+            }
+        }
     }
 
     &__description {
         @include line-clamp(2, $is-height: true);
-        
-        display: none;
+
+        position: absolute;
         margin-top: 5px;
         font-size: rem(14);
         line-height: 1.4;
         font-weight: $font-weight-light;
+        visibility: hidden;
+
+        @include when-inside($modifierList) {
+            @include media-breakpoint-up(lg) {
+                visibility: visible;
+                position: static;
+                margin-right: 140px;
+            }
+        }
     }
 
     &__price {
-        margin-top: 15px;
+        margin-top: 10px;
         font-size: rem(20);
         font-weight: $font-weight-bold;
+
+        @include when-inside($modifierList) {
+
+            @include media-breakpoint-up(lg) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+            }
+        }
     }
 
     &__info {
@@ -81,15 +131,20 @@
     
     &__location {
         margin-right: 5px;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        overflow: hidden;
 
         .icon {
             font-size: rem(14);
-            vertical-align: top;
+            flex-shrink: 0;
         }
     }
 
     &__date {
         margin-right: 5px;
+        white-space: nowrap;
 
         &::before {
             content: '·';
@@ -100,6 +155,8 @@
     }
 
     @include on-event {
-        box-shadow: inset 0 0 0 2px color(gray5);
+        &::before {
+            box-shadow: inset 0 0 0 2px color(gray5);
+        }
     }
 }

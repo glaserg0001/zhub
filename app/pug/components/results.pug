@@ -1,10 +1,10 @@
 .results
   .row.align-items-center.mb-2.mb-lg-3
-    .col-12
-      .h2.mb-1 156 оголошень
-    .col
+    .col-auto.col-lg-12.mr-auto
+      .h2.mb-0.mb-lg-1 156 оголошень
+    .col.h-hidden-md-down
       include breadcrumbs
-    .col-3.ml-auto
+    .col-4.col-xl-3.ml-auto.h-hidden-md-down
       +formField(selectSorting)
     .col-auto
       include grid-toggle
