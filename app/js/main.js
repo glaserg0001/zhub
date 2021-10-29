@@ -129,6 +129,8 @@ function _search() {
 _search()
 // ==== TEST END
 
+// 'ontouchstart' in window
+
 // ==== SLIDER START
 // https://swiperjs.com/
 // https://itchief.ru/javascript/slider#demo
