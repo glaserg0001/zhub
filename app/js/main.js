@@ -142,10 +142,11 @@ _search()
 
 
 const swiper = new Swiper('.swiper', {
-  loop: true,
+//   loop: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+    hideOnClick: true
   },
   navigation: {
     nextEl: '.swiper-button-next',

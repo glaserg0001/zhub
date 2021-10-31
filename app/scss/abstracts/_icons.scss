@@ -1,2 +1,8 @@
 $icon-chevron-right-body: "%3E%3Cpath d='M0.726563 7.06L3.7799 4L0.726563 0.94L1.66656 -2.38419e-07L5.66656 4L1.66656 8L0.726563 7.06Z'/%3E";
+$icon-chevron-left-body: "%3E%3Cpath d='M8.05225 11.2813L3.28141 6.5L8.05225 1.71875L6.5835 0.25L0.333495 6.5L6.5835 12.75L8.05225 11.2813Z'/%3E";
+
 $icon-chevron-right: icon($viewbox: "0 0 6 8", $body: $icon-chevron-right-body);
+$icon-chevron-right-white: icon($viewbox: "0 0 6 8", $color: color(white), $body: $icon-chevron-right-body);
+
+$icon-chevron-left: icon($viewbox: "0 0 9 13", $body: $icon-chevron-left-body);
+$icon-chevron-left-white: icon($viewbox: "0 0 9 13", $color: color(white), $body: $icon-chevron-left-body);

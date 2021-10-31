@@ -1,4 +1,6 @@
 .tags {
+    $this: 'tags';
+ 
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
@@ -19,6 +21,18 @@
             background-color: color(secondary);
             border-color: color(secondary);
             color: color(white);
+        }
+    }
+
+    &--large {
+        .#{$this}__item {
+            font-size: rem(16);
+            padding: 7px 10px;
+            
+            @include media-breakpoint-up(lg) {
+                font-size: rem(18);
+                padding: 8px 20px;
+            }
         }
     }
 }

@@ -24,7 +24,12 @@ $z-layers: (
     filter-navbar: 12,
     filter-navbar--backdrop: 11,
     select2-dropdown: 1051,
-    // select2-dropdown: 9,
+    // swiper
+    swiper: 1,
+    swiper-wrapper: 1,
+    swiper-slide-shadow: 10,
+    swiper-buttons: 10,
+    swiper-pagination: 10,
 ) !default;
 
 $grid-breakpoints: (

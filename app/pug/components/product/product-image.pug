@@ -1,13 +1,18 @@
+-
+  var mainImage = [
+    'product1',
+    'product2',
+    'product3',
+    'product4'
+  ]
+
 .product-image
   .swiper
-    .swiper-wrapper 
-      .swiper-slide #[img(src=URL_file('product1', baseUrlLvl, 'jpeg'), alt="image")]
-      .swiper-slide #[img(src=URL_file('product2', baseUrlLvl, 'jpeg'), alt="image")]
-      .swiper-slide #[img(src=URL_file('product3', baseUrlLvl, 'jpeg'), alt="image")]
-      .swiper-slide #[img(src=URL_file('product4', baseUrlLvl, 'jpeg'), alt="image")]
-
-    .swiper-pagination 
-
-    .swiper-button-prev 
-    .swiper-button-next 
-
+    .swiper-wrapper
+      each name in mainImage
+        .swiper-slide
+          .product-image__item
+            img(src=URL_file(name, baseUrlLvl, 'jpeg'), alt="image")
+    .swiper-pagination
+    .swiper-button-prev
+    .swiper-button-next

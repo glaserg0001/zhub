@@ -87,7 +87,6 @@
     }
 }
 
-
 @mixin navbarBackdrop($opened, $breakpoint: false) {
     @if $breakpoint {
         display: none;
@@ -132,6 +131,10 @@
 @mixin imageContainer($ratio: 100%, $position: relative) {
     position: $position;
 
+    @if unit($ratio) != '%' {
+        $ratio: round(percentage($ratio));
+    }
+
     &::before {
         content: '';
         display: block;
@@ -161,5 +164,16 @@
 
     @if $is-height {
         min-height: $line-height * $font-size * $lines;
+    }
+}
+
+@mixin no-gutter-container($lg: false) {
+    @if $lg {
+        margin-left: (-$grid-gutter-width-lg);
+        margin-right: (-$grid-gutter-width-lg);
+    }
+    @else {
+        margin-left: (-$grid-gutter-width-xs);
+        margin-right: (-$grid-gutter-width-xs);
     }
 }
