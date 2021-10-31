@@ -1,1 +1,12 @@
 // helper .h-#{class}
+.h-block {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: color(white);
+
+    @include media-breakpoint-up(lg) {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
+

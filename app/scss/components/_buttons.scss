@@ -193,6 +193,27 @@
         --bg-color-disabled: #{color(gray1)};
         --border-color-disabled: #{color(gray1)};
     }
+
+    &__link {
+        --color: #{color(text)};
+        --bg-color: #{color(transparent)};
+        --border-color: #{color(transparent)};
+
+        --color-hover: #{color(primary2)};
+        --bg-color-hover: #{color(transparent)};
+        --border-color-hover: #{color(transparent)};
+
+        --color-disabled: #{color(gray5)};
+        --bg-color-disabled: #{color(transparent)};
+        --border-color-disabled: #{color(transparent)};
+
+        padding: 0;
+        min-height: 0;
+
+        &.#{$this}--loading:not(.#{$this}--icon) {
+            color: color(transparent);
+        }
+    }
 }
 
 @keyframes spinner-border {

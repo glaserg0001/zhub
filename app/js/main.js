@@ -130,9 +130,27 @@ _search()
 // ==== TEST END
 
 // 'ontouchstart' in window
+// stopImmediatePropagation
 
 // ==== SLIDER START
 // https://swiperjs.com/
+// https://github.com/nolimits4web/swiper
+// https://unpkg.com/browse/swiper@7.2.0/
+
 // https://itchief.ru/javascript/slider#demo
 // https://splidejs.com/
+
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+
 // ==== SLIDER END
