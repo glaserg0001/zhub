@@ -14,13 +14,13 @@ block content
       include ../components/breadcrumbs
   
     .row
-      .col-md-8
+      .col-md-7.col-xl-8
         include ../components/product/product-image
         - var authorClass = 'h-hidden-md-up'
         include ../components/product/product-author
         include ../components/product/product-description
 
-      .col-md-4
+      .col-md-5.col-xl-4
         - var authorClass = 'h-hidden-xs-down'
         include ../components/product/product-author
 
@@ -38,5 +38,13 @@ block content
                 th=item.name
                 td=item.value
 
-        .h-block
+        .product-utility.h-block
+          - var socialClass = 'social--small'
           include ../components/social
+
+          - var infoClass = 'h-hidden-md-down'
+          include ../components/product/product-info
+
+    - var productTileSlider = true
+    - var productTileCount = 8
+    include ../components/product/product-tile-slider

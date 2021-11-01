@@ -16,12 +16,29 @@ mixin product-tile(product)
         - var wishlistCtaClass = 'ml-auto'
         include ../wishlist-cta
 
+//- Compact
 if productTileCompact
   .product-tile__container.product-tile--list.product-tile--compact
     each product, index in productTile
       if productTileCount == index
         - break
       +product-tile(product)
+
+//- Slider
+else if productTileSlider
+  .swiper.js-product-tile-slider
+    .swiper-wrapper
+        each product, index in productTile
+          if productTileCount == index
+            - break
+          .swiper-slide
+            +product-tile(product)
+
+    //- .swiper-pagination
+    .swiper-button-prev
+    .swiper-button-next
+
+//- Grid
 else
   .product-tile__container.js-grid
     .row
@@ -33,3 +50,4 @@ else
 
 - var productTileCompact = null
 - var productTileCount = null
+- var productTileSlider = null

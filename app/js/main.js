@@ -141,17 +141,35 @@ _search()
 // https://splidejs.com/
 
 
-const swiper = new Swiper('.swiper', {
-//   loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    hideOnClick: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
+new Swiper('.js-product-image', {
+    //   loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        hideOnClick: true
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
 });
+
+
+new Swiper('.js-product-tile-slider', {
+      loop: true,
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     clickable: true,
+    //     hideOnClick: true
+    //   },
+    slidesPerView: 4,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+});
+
+// https://swiperjs.com/demos#slides-per-view-auto
 
 // ==== SLIDER END

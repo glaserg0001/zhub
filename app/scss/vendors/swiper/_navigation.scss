@@ -16,7 +16,7 @@
     &.swiper-button-disabled {
         background-color: color(transparent);
         opacity: 0.4;
-        pointer-events: none;
+        // pointer-events: none;
     }
 
     @include on-event {

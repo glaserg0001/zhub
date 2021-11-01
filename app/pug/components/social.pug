@@ -1,7 +1,7 @@
 - var socialTitle = socialTitle ? socialTitle : 'Подiлитися'
 - var socialList = socialList ? socialList : socialListBase
 
-.social
+.social(class=socialClass)
   .social__title=socialTitle
   ul.social__list
     each item in socialList
@@ -11,3 +11,4 @@
 
 - socialTitle = null
 - socialList = null
+- socialClass = null
