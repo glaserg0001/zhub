@@ -1,3 +1,4 @@
-mixin wishlistCta(addClass)
-  button(type='button' class=addClass).wishlist__cta.js-wishlist-btn
-    +icon('icon-heart', 'icon-heart')
+button(type='button' class=wishlistCtaClass).wishlist__cta.js-wishlist-btn
+  +icon('icon-heart', 'icon-heart')
+
+- var wishlistCtaClass = null

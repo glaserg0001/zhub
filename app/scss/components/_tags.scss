@@ -12,7 +12,7 @@
         font-size: rem(10);
         font-weight: $font-weight-bold;
 
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(lg) {
             padding: 5px 10px;
             font-size: rem(14);
         }

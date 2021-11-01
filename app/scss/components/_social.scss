@@ -1,0 +1,43 @@
+.social {
+    &__title {
+        font-size: rem(17);
+
+        @include media-breakpoint-up(lg) {
+            font-size: rem(20);
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    // &__item {}
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2em;
+        height: 2em; 
+        font-size: rem(20);
+        border-radius: 50%;
+        color: color(white);
+        background-color: color(primary);
+        text-decoration: none;
+
+        .icon {
+            font-size: 1.1em;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: rem(22.5);
+        }
+
+        @include on-event {
+            color: color(white);
+            background-color: color(primary2);
+        }
+    }
+}

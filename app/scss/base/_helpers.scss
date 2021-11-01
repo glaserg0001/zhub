@@ -1,11 +1,11 @@
 // helper .h-#{class}
 .h-block {
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: $grid-gutter-width-xs;
+    margin-bottom: $grid-gutter-width-xs;
     background-color: color(white);
 
     @include media-breakpoint-up(lg) {
-        padding: 20px;
-        margin-bottom: 20px;
+        padding: $grid-gutter-width-lg;
+        margin-bottom: $grid-gutter-width-lg;
     }
 }

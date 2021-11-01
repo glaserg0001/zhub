@@ -16,10 +16,27 @@ block content
     .row
       .col-md-8
         include ../components/product/product-image
-        .h-block.h-hidden-md-up
-          include ../components/product/product-author
-        include ../components/product/product-info
-        
+        - var authorClass = 'h-hidden-md-up'
+        include ../components/product/product-author
+        include ../components/product/product-description
+
       .col-md-4
-        .h-block.h-hidden-xs-down
-          include ../components/product/product-author
+        - var authorClass = 'h-hidden-xs-down'
+        include ../components/product/product-author
+
+        .h-block
+          h2.h2 Iншi оголошення автора
+          - var productTileCompact = true
+          - var productTileCount = 3
+          include ../components/product/product-tile
+        
+        .h-block
+          h2.h2 Характеристики
+          table.product-data
+            each item in productData
+              tr(class=item.highlight ? 'product-data--highlight' : '')
+                th=item.name
+                td=item.value
+
+        .h-block
+          include ../components/social

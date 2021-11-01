@@ -1,8 +1,6 @@
-.product-author
+.product-author.h-block(class=authorClass)
   .product-author__image
     img(src=URL_file('user', baseUrlLvl, 'svg'), alt="image")
-  //- .product-author__image
-  //-   img(src='https://zaphub.com.ua/storage/uploads/7UDyJh9ywUDJBLxw1HE7y5oWFvLV3c9cK6xu7w6M.jpeg')
   
   .product-author__info
     .product-author__name Сергей Стецюра
@@ -10,3 +8,5 @@
   .product-author__location
     +icon('icon-location')
     | Київ
+
+- var authorClass = null

@@ -1,0 +1,13 @@
+- var socialTitle = socialTitle ? socialTitle : 'Подiлитися'
+- var socialList = socialList ? socialList : socialListBase
+
+.social
+  .social__title=socialTitle
+  ul.social__list
+    each item in socialList
+      li.social__item
+        a(href=item.link target='_blank').social__link
+          +icon(`icon-${item.id}`)
+
+- socialTitle = null
+- socialList = null

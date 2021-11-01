@@ -155,15 +155,20 @@
     $lines: 1,
     $line-height: $line-height-base,
     $font-size: $font-size-base,
-    $is-height: false
+    $is-height: null
 ) {
+    // $is-height: true - calculate min-height
+    // $is-height: false - min-height auto
+    // $is-height: null - not displayed
     -webkit-box-orient: vertical;
     display: -webkit-box;
     -webkit-line-clamp: $lines;
     overflow: hidden;
 
-    @if $is-height {
+    @if $is-height == true {
         min-height: $line-height * $font-size * $lines;
+    } @else if $is-height == false {
+        min-height: auto
     }
 }
 

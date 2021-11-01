@@ -1,0 +1,28 @@
+.product-data {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 5px;
+    font-size: rem(14);
+    font-weight: $font-weight-bold;
+    text-align: left;
+
+    @include media-breakpoint-up(lg) {
+        border-spacing: 0 10px;
+        font-size: rem(16);
+    }
+
+    th {
+        font-weight: $font-weight-light;
+        padding: 8px 10px;
+        width: 40%;
+        min-width: 140px;
+    }
+    
+    td {
+        padding: 8px 10px;
+    }
+
+    &--highlight {
+        background-color: color(gray1);
+    }
+}

@@ -1,6 +1,7 @@
 .product-tile {
     $this: 'product-tile';
     $modifierList: '.#{$this}--list';
+    $modifierCompact: '.#{$this}--compact';
     
     position: relative;
     display: flex;
@@ -19,6 +20,16 @@
         flex-direction: row;
     }
 
+    @include when-inside($modifierCompact) {
+        padding: $grid-gutter-width-xs / 2;
+        margin: 0 (-$grid-gutter-width-xs / 2);
+        
+        @include media-breakpoint-up(lg) {
+            padding: $grid-gutter-width-lg / 2;
+            margin: 0 (-$grid-gutter-width-lg / 2);
+        }
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -30,6 +41,12 @@
     }
 
     &__col {
+        margin-bottom: 10px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 20px;
+        }
+
         @include when-inside($modifierList) {
             max-width: 100%;
             flex-basis: 100%;
@@ -49,7 +66,18 @@
         @include imageContainer;
 
         @include when-inside($modifierList) {
-            flex: 0 0 135px;
+            flex: 0 0 125px;
+            align-self: flex-start;
+
+            @include media-breakpoint-up(lg) {
+                flex-basis: 135px;
+            }
+        }
+
+        @include when-inside($modifierCompact) {
+            @include media-breakpoint-down(md) {
+                flex-basis: 110px;
+            }
         }
     }
 
@@ -73,28 +101,34 @@
         margin-bottom: auto;
 
         @include when-inside($modifierList) {
-            @include line-clamp(2);
+            @include line-clamp(2, $font-size: rem(12), $is-height: true);
+            margin-bottom: 0;
 
             @include media-breakpoint-up(lg) {
-                @include line-clamp(1);
+                @include line-clamp(1, $is-height: false);
                 margin: 0 140px 0 0;
+            }
+        }
+
+        @include when-inside($modifierCompact) {
+            @include media-breakpoint-up(lg) {
+                margin: 0;
+                font-size: rem(16);
             }
         }
     }
 
     &__description {
-        // @include line-clamp(2, $is-height: true);
         @include line-clamp(2);
 
         position: absolute;
-        padding: 5px 0;
-        margin: auto 140px auto 0;
+        margin: auto 140px 0 0;
         font-size: rem(14);
         line-height: 1.4;
         font-weight: $font-weight-light;
         visibility: hidden;
 
-        @include when-inside($modifierList) {
+        @include when-inside('#{$modifierList}:not(#{$modifierCompact})') {
             @include media-breakpoint-up(lg) {
                 visibility: visible;
                 position: static;
@@ -108,12 +142,20 @@
         font-weight: $font-weight-bold;
 
         @include when-inside($modifierList) {
-
             @include media-breakpoint-up(lg) {
                 position: absolute;
                 top: 0;
                 right: 0;
                 margin: 0;
+            }
+        }
+
+        @include when-inside($modifierCompact) {
+            position: static;
+            margin-top: 10px;
+
+            @include media-breakpoint-down(md) {
+                font-size: rem(14);
             }
         }
     }
@@ -130,9 +172,7 @@
         }
 
         @include when-inside($modifierList) {
-            @include media-breakpoint-up(lg) {
-                margin-top: 0;
-            }
+            margin-top: auto;
         }
     }
     
@@ -163,7 +203,11 @@
 
     @include on-event {
         &::before {
-            box-shadow: inset 0 0 0 2px color(gray5);
+            box-shadow: inset 0 0 0 1px color(gray5);
+
+            @include media-breakpoint-up(lg) {
+                box-shadow: inset 0 0 0 2px color(gray5);
+            }
         }
     }
 }
