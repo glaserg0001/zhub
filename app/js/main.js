@@ -137,12 +137,7 @@ _search()
 // https://github.com/nolimits4web/swiper
 // https://unpkg.com/browse/swiper@7.2.0/
 
-// https://itchief.ru/javascript/slider#demo
-// https://splidejs.com/
-
-
 new Swiper('.js-product-image', {
-    //   loop: true,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -154,22 +149,24 @@ new Swiper('.js-product-image', {
     }
 });
 
-
 new Swiper('.js-product-tile-slider', {
-      loop: true,
-    //   pagination: {
-    //     el: '.swiper-pagination',
-    //     clickable: true,
-    //     hideOnClick: true
-    //   },
-    slidesPerView: 4,
+    loop: true,
+    slidesPerView: 2,
     spaceBetween: 10,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 3,
+            spaceBetween :10,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 20
+        },
     }
 });
-
-// https://swiperjs.com/demos#slides-per-view-auto
 
 // ==== SLIDER END

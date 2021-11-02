@@ -30,14 +30,27 @@
     }
 }
 
-@mixin is-hover {
-    @media(hover: hover) {
-        @content;
+@mixin is-hover($hover: true) {
+    @if $hover {
+        @media(any-hover: hover) {
+            @content;
+        }
+    }
+    @else {
+        @media (any-hover: none) {
+            @content;
+        }
     }
 }
 
-@mixin on-event($events: null) {
+@mixin on-event($events: null, $self: false) {
     // Example: @include on-event([hover, focus])
+    // Example: @include on-event([no-hover]) - for touch devices without pointing devices
+    // https://drafts.csswg.org/mediaqueries-4/#any-input
+
+    @if $self {
+        @content;
+    }
 
     @if $events == null {
         @include is-hover {
@@ -54,6 +67,12 @@
                     &:#{$event} {
                         @content;
                     }
+                }
+            }
+
+            @else if &event == no-hover {
+                @include is-hover(false) {
+                    @content;
                 }
             }
 
