@@ -116,19 +116,6 @@ $('.js-select').select2({
 
 // ==== select2 END
 
-
-// ==== TEST START
-function _search() {
-    const form = document.querySelector('.filter') || false;
-    if (form) {
-        form.action = '/app/search.html';
-        form.method = 'GET';
-    }
-}
-
-_search()
-// ==== TEST END
-
 // 'ontouchstart' in window
 // stopImmediatePropagation
 

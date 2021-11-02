@@ -133,6 +133,15 @@ block content
                       each value, index in sgSelectOptions
                         option( disabled=(index == 1 ? true : false) )=value
 
+
+    h3.sg-heading Upload file
+    h4.sg-heading Primary
+    .upload-file
+      input(type='file')#upload-file-1.upload-file__input
+      label(for='upload-file-1').upload-file__label
+        //- +icon('icon-add-image')
+        +icon('icon-border-dashed')
+
     //- FORM END
 
     //- BUTTON START
@@ -162,20 +171,6 @@ block content
                   if item.icon
                     +icon(`icon-${item.icon}`)
                   | #{item.text}
-
-      //- .col-sm-6.col-md-3.d-flex.flex-column
-        h3.sg-heading.align-self-start Other Buttons
-        .sg-block.flex-fill
-          h4.sg-heading Button Back
-          .sg-block__list
-            a(href='#').button__back
-              +icon('icon-arrow-left')
-              span.button__back-text Назад
-          .sg-block__list
-            button.button.button__back
-              +icon('icon-arrow-left')
-              span.button__back-text Назад
-
 
     //- BUTTON END
 

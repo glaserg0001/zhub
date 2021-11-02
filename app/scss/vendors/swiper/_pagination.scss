@@ -15,12 +15,13 @@
     position: absolute;
     display: flex;
     gap: 5px;
-    transition: 300ms opacity;
+    transition: 300ms opacity, 300ms transform;
     transform: translate3d(0, 0, 0);
     z-index: z(swiper-pagination);
     
     &.swiper-pagination-hidden {
         opacity: 0;
+        transform: translate3d(0, 100%, 0);
     }
 }
 /* Common Styles */
