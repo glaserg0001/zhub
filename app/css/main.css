@@ -3726,9 +3726,7 @@ select.input__ {
 }
 
 .upload-file__label .icon {
-  font-size: 1.875rem;
-  width: 100%;
-  height: 100%;
+  font-size: 3.125rem;
 }
 
 .header-navbar {
