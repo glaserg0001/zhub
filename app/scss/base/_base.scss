@@ -36,12 +36,17 @@ a {
     color: color(link);
 
     @include on-event {
-        color: color(link-hover);
+        text-decoration: none;
+        // color: color(link-hover);
     }
 }
 
 p {
     margin-bottom: 1.5em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 hr {

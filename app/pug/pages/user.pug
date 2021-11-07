@@ -1,0 +1,103 @@
+extends ../base/main
+
+block variables
+  - var pageTitle = 'Сергей Стецюра'
+  - var pageMainClass = 'user'
+  - var isUserPage = true
+
+  -
+    var tagsListCategory = [
+      {
+        name: 'Фари',
+        count: 15
+      },
+      {
+        name: 'Система запалювання',
+        count: 7
+      },
+      {
+        name: 'Паливна система',
+        count: 2
+      },
+      {
+        name: 'Колодки',
+        count: 18
+      },
+      {
+        name: 'Генератори',
+        count: 1
+      },
+      {
+        name: 'Датчики',
+        count: 6
+      },
+      {
+        name: 'Внутрішні частини',
+        count: 10
+      }
+    ]
+
+    var tagsListAuto = [
+      {
+        name: 'BMW',
+        count: 15
+      },
+      {
+        name: 'Ford',
+        count: 7
+      }
+    ]
+
+block styles
+
+block content
+  .container.js-tabs
+    .user__head
+      .backcover
+        .backcover__image.h-hidden
+          img(src=URL_file('product1', baseUrlLvl, 'jpeg'), alt="image")
+        // upload-backcover--loading
+        .upload-backcover
+          input(type='file')#upload-file-1.upload-file
+          label(for='upload-file-1')
+            .upload-backcover__icon
+              +icon('icon-add-image')
+            .upload-backcover__text Додати обкладинку
+
+      .user-info
+        .user-info__image
+          img(src=URL_file('user', baseUrlLvl, 'svg'), alt="image")
+        .user-info__content
+          .user-info__name Сергей Стецюра
+          a(href='tel:+380999999999').user-info__phone +38 099 999 99 99
+        .user-info__description.js-readmore.
+          Продаю запчастини до Форд Сієри 1992 року. DOHC Також є дещо до BMW e46 n46b20a.
+          Радий проконсультувати) Буду дуже вдячний за фідбеки)
+        .user-info__location
+          +icon('icon-location')
+          | Київ
+    
+    ul.tabs
+      li.tabs__item
+        button#tab-1.tabs__btn.m-active.js-tabs-cta Оголошення
+      li.tabs__item
+        button#tab-2.tabs__btn.js-tabs-cta Інформація
+
+    .row
+      .col-md-4.col-lg-3.tabs__content.m-show.js-tabs-content(data-target='#tab-2')
+        .h-block
+          h2.h2 Адреса
+          .user__address М. Київ, вул. Шевченка 23б
+          img(src=URL_file('map', baseUrlLvl, 'jpg'), alt="image").w-100
+        .h-block
+          h2.h2 Категорiї
+          - var tagsList = tagsListCategory
+          include ../components/tags-list
+          
+        .h-block
+          h2.h2 Марки автомобiлей
+          - var tagsList = tagsListAuto
+          include ../components/tags-list
+
+      .col-md-8.col-lg-9.tabs__content.js-tabs-content(data-target='#tab-1')
+        include ../components/results

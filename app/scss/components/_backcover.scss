@@ -1,0 +1,13 @@
+.backcover {
+    height: 200px;
+
+    @include media-breakpoint-up(md) {
+        height: 230px;
+    }
+
+    &__image {
+        @include imageContainer($ratio: null);
+
+        height: 100%;
+    }
+}

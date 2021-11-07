@@ -1,27 +1,137 @@
 // https: //tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
 .upload-file {
-    width: 135px;
-    // width: 100%;
-    height: 135px;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
 
-    &__input {
-        width: 0.1px;
-        height: 0.1px;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        z-index: -1;
+.upload-image {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 100%;
     }
 
-    &__label {
+    label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         display: flex;
         flex-direction: column;
-        height: 100%;
+        align-items: center;
+        justify-content: center;
+        color: color(primary3);
+        // background: url($icon-border-dashed) center / contain no-repeat;
+        background-color: color(white);
+        cursor: pointer;
 
-        .icon {
+        @include on-event {
+            // filter: contrast(60%);
+            color: color(primary2);
+        }
+    }
+
+    .icon {
+        // font-size: rem(50);
+        // max-width: 60%;
+        // max-height: 60%;
+        width: 100%;
+        height: 100%;
+    }
+
+    &--loading {
+        label::before,
+        label::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        label::before {
+            width: 80%;
+            height: 80%;
+            background-color: inherit;
+        }
+        label::after {
+            width: 35px;
+            height: 35px;
+            border: 4px solid currentColor;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spinner-border 0.75s linear infinite;
+        }
+    }
+}
+
+.upload-backcover {
+    $this: 'upload-backcover';
+
+    height: 100%;
+
+    label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: color(white);
+        background-color: color(primary3);
+        cursor: pointer;
+
+        @include on-event {
+            background-color: color(primary2);
+        }
+    }
+
+    &__icon {
+        position: relative;
+        font-size: rem(40);
+
+        @include media-breakpoint-up(md) {
             font-size: rem(50);
-            // width: 100%;
-            // height: 100%;
+        }
+    }
+
+    &__text {
+        margin-top: 10px;
+        font-size: rem(16);
+        font-weight: $font-weight-medium;
+
+        @include media-breakpoint-up(md) {
+            margin-top: 15px;
+            font-size: rem(18);
+        }
+    }
+
+    &--loading {
+        .#{$this}__icon {
+            color: transparent;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 1em;
+                height: 1em;
+                border: 4px solid color(white);
+                border-top-color: transparent;
+                border-radius: 50%;
+                animation: spinner-border 0.75s linear infinite;
+            }
         }
     }
 }

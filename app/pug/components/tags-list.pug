@@ -1,0 +1,10 @@
+- var tagsList = tagsList ? tagsList : false
+
+if tagsList
+  ul.tags-list
+    each item, index in tagsList
+      li.tags-list__item
+        a(href=URL_Pug_MainNav('search') class=(index == 2 ? 'm-current' : '')).tags-list__link #{item.name} #[b=item.count]
+
+
+- tagsList = null

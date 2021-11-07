@@ -93,10 +93,51 @@ class GridToggle {
     }
 }
 
+class ReadMore {
+    constructor(btn) {
+        this.btn = btn
+        this.activeClass = 'm-expand'
+    }
+
+    init() {
+        this.toggleActive();
+    }
+
+    toggleActive() {
+        const btn = document.querySelectorAll(this.btn);
+
+        btn.forEach(i => {
+            i.addEventListener('click', this.toggleEvent.bind(this))
+        })
+    }
+
+    toggleEvent(e) {
+        e.stopPropagation()
+        e.preventDefault()
+        e.currentTarget.classList.toggle(this.activeClass)
+    }
+}
+
+class Tabs {
+    // https://codepen.io/steanull/pen/KKvorpy?editors=0010
+    // https://codepen.io/wangel13/pen/OXBrRp?editors=0010
+    constructor(container) {
+        this.container = document.querySelector(`.${container}`)
+        this.btn = `${container}-btn`
+        this.content = `${container}-content`
+    }
+
+    init() {
+
+    }
+}
+
 new NavigationBar('header-navbar', '.js-nav-btn').init();
 new NavigationBar('filter-navbar', '.js-filter-btn').init();
 new AddToWishList('.js-wishlist-btn').init();
 new GridToggle('js-grid', 'product-tile').init()
+new ReadMore('.js-readmore').init()
+new Tabs('js-tabs').init()
 
 
 

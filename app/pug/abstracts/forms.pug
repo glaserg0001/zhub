@@ -383,7 +383,6 @@
 
   var checkboxFilter = {
     type: 'checkbox',
-    //- id: 'price',
     wrapper: {
       exist: true,
       group: true,
@@ -449,3 +448,357 @@
     ]
   }
 
+  // advert page start
+  var inputProdName = {
+    type: 'text',
+    id: 'prod-name',
+    wrapper: {
+      exist: true,
+      group: false,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: false, // w-100
+      text: 'Назва'
+    },
+    element: [
+      {
+        class: 'input--small',
+        value: false,
+        placeholder: 'Бампер передній Mitsubishi Outlander 16 року',
+        disabled: false
+      }
+    ]
+  }
+
+  var inputProdNumber = {
+    type: 'text',
+    id: 'prod-numb',
+    wrapper: {
+      exist: true,
+      group: false,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: false, // w-100
+      text: 'Номер/Код деталі'
+    },
+    element: [
+      {
+        class: 'input--small',
+        value: false,
+        placeholder: '2101-3502090',
+        disabled: false
+      }
+    ]
+  }
+
+  var inputProdBrand = {
+    type: 'text',
+    id: 'prod-numb',
+    wrapper: {
+      exist: true,
+      group: false,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: false, // w-100
+      text: 'Бренд'
+    },
+    element: [
+      {
+        class: 'input--small',
+        value: false,
+        placeholder: 'Триал Спорт',
+        disabled: false
+      }
+    ]
+  }
+
+  var checkboxProdCondition = {
+    type: 'checkbox',
+    wrapper: {
+      exist: true,
+      group: true,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: 'w-100',
+      text: 'Стан деталі'
+    },
+    element: [
+      {
+        id: 'check1',
+        class: 'checkbox-btn',
+        text: 'Нова',
+        checked: false,
+        disabled: false
+      },
+      {
+        id: 'check2',
+        class: 'checkbox-btn',
+        text: 'Тюнінг',
+        checked: false,
+        disabled: false
+      },
+      {
+        id: 'check3',
+        class: 'checkbox-btn',
+        text: 'Кастом',
+        checked: false,
+        disabled: false
+      }
+    ]
+  }
+
+  var selectProdCategory = {
+    type: 'select',
+    id: 'category',
+    wrapper: {
+      exist: true,
+      group: false,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: false,
+      text: 'Категорія'
+    },
+    element: [
+      {
+        class: false,
+        theme: false,
+        size: 'small',
+        placeholder: 'Оберіть категорію',
+        allowClear: false,
+        search: false,
+        disabled: false,
+        value: [
+          'Автозвук і мультимедіа',
+          'Світло',
+          'Аксесуари',
+          'Гаджети',
+          'КПП',
+          'Двигун і вихлопна система',
+          'Інструменти',
+          'Клімат',
+          'Кузов',
+          'Підвіска',
+          'Рульове управління',
+          'Салон',
+          'Гальмівна система',
+          'Трансмісія',
+          'Шини і диски',
+          'Електрообладнання',
+          'Для ТО',
+          'Інше'
+        ]
+      }
+    ]
+  }
+
+  var selectProdAuto = {
+    type: 'select',
+    id: 'category',
+    wrapper: {
+      exist: true,
+      group: false,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: false,
+      text: 'Марка авто'
+    },
+    element: [
+      {
+        class: false,
+        theme: false,
+        size: 'small',
+        placeholder: 'Оберіть марку авто',
+        allowClear: false,
+        search: false,
+        disabled: false,
+        value: [
+          'Acura',
+          'Alfa Romeo',
+          'Audi',
+          'BMW',
+          'Cadillac',
+          'Chery',
+          'Chevrolet',
+          'Chrysler',
+          'Citroen',
+          'Dacia',
+          'Daewoo',
+          'Dodge',
+          'Fiat',
+          'Ford',
+          'Geely',
+          'Genesis',
+          'GMC',
+          'Great Wall',
+          'Haval',
+          'Honda',
+          'Hummer',
+          'Hyundai',
+          'Infiniti',
+          'Isuzu',
+          'IVECO',
+          'JAC',
+          'Jaguar',
+          'Jeep',
+          'Kia',
+          'LADA (ВАЗ)',
+          'Land Rover',
+          'Lexus',
+          'Lifan',
+          'Lincoln',
+          'Mazda',
+          'Mercedes-Benz',
+          'MINI',
+          'Mitsubishi',
+          'Nissan',
+          'Opel',
+          'Peugeot',
+          'Pontiac',
+          'Porsche',
+          'Renault',
+          'Rover',
+          'Saab',
+          'SEAT',
+          'Skoda',
+          'Smart',
+          'SsangYong',
+          'Subaru',
+          'Suzuki',
+          'TATA',
+          'Tatra',
+          'Tesla',
+          'Toyota',
+          'Volkswagen',
+          'Volvo',
+          'ГАЗ',
+          'ЗАЗ',
+          'ЗИЛ',
+          'ИЖ',
+          'ЛуАЗ',
+          'Москвич',
+          'УАЗ'
+        ]
+      }
+    ]
+  }
+
+  var inputProdPrice = {
+    type: 'text',
+    id: 'prod-proce',
+    wrapper: {
+      exist: true,
+      group: false,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: false, // w-100
+      text: 'Ціна'
+    },
+    element: [
+      {
+        class: 'input--small',
+        value: false,
+        placeholder: false,
+        disabled: false
+      }
+    ]
+  }
+
+  var checkboxProdCurrency = {
+    type: 'radio',
+    wrapper: {
+      exist: true,
+      group: true,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: 'w-100',
+      text: 'Валюта'
+    },
+    element: [
+      {
+        id: 'curr1',
+        class: 'checkbox-btn',
+        text: '₴',
+        checked: false,
+        disabled: false,
+        name: 'curr'
+      },
+      {
+        id: 'curr2',
+        class: 'checkbox-btn',
+        text: '$',
+        checked: false,
+        disabled: false,
+        name: 'curr'
+      },
+      {
+        id: 'curr3',
+        class: 'checkbox-btn',
+        text: '€',
+        checked: false,
+        disabled: false,
+        name: 'curr'
+      }
+    ]
+  }
+
+  var textareaProdDescribe = {
+    type: 'textarea',
+    id: 'prod-desc',
+    wrapper: {
+      exist: true,
+      group: false,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: false, // w-100
+      text: 'Опис'
+    },
+    element: [
+      {
+        class: 'input--small',
+        value: false,
+        placeholder: 'Додати опис',
+        disabled: false
+      }
+    ]
+  }
+  // advert page end
+  var inputLoginPhone = {
+    type: 'text',
+    id: 'login-phone',
+    wrapper: {
+      exist: true,
+      group: false,
+      class: false
+    },
+    label: {
+      exist: true,
+      class: false, // w-100
+      text: 'Номер телефону'
+    },
+    element: [
+      {
+        class: 'input--small',
+        value: false,
+        placeholder: '+38 (___) ___ __ __',
+        disabled: false
+      }
+    ]
+  }

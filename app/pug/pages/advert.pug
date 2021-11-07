@@ -1,0 +1,57 @@
+extends ../base/main
+
+block variables
+  - var pageTitle = 'Додати оголошення'
+  - var isAdvertPage = true
+  - var pageMainClass = 'advert'
+
+block styles
+
+block content
+  .container
+    h1 Нове оголошення
+    .h-block
+      .advert__head.mb-3
+        h2.mb-1 Фото
+        .advert__description Люди частіше купують товари з гарними фото різних ракурсів
+      .row
+        for i in [1,2,3,4, 1, 1, 1, 1]
+          .col-6.col-sm-3.col-md-2.mb-2.mb-lg-3
+            .add-image
+              img(src=URL_file('product-tile1', baseUrlLvl, 'jpg'), alt="image")
+              .add-image__edit
+                button(type='button').add-image__btn
+                  +icon('icon-refresh')
+                button(type='button').add-image__btn
+                  +icon('icon-delete')
+        .col-6.col-sm-3.col-md-2
+          .upload-image
+            input(type='file')#upload-file-1.upload-file
+            label(for='upload-file-1')
+              +icon('icon-border-dashed-draw')
+
+    .h-block
+      .advert__head.mb-3
+        h2.mb-1 Данi товару
+        .advert__description Заповніть повну інформацію про товар
+      form.row
+        .col-12
+          +formField(inputProdName)
+        .col-md-4
+          +formField(inputProdNumber)
+        .col-md-4
+          +formField(inputProdBrand)
+        .col-md-4
+          +formField(checkboxProdCondition)
+        .col-md-6
+          +formField(selectProdCategory)
+        .col-md-6
+          +formField(selectProdAuto)
+        .col-md-6
+          +formField(inputProdPrice)
+        .col-md-3
+          +formField(checkboxProdCurrency)
+        .col-12
+          +formField(textareaProdDescribe)
+        .col-12
+          button.button.button__secondary.button--left-md.w-100.mt-md-2 Опублiкувати оголошення

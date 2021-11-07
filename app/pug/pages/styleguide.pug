@@ -135,11 +135,20 @@ block content
 
 
     h3.sg-heading Upload file
-    h4.sg-heading Primary
-    .upload-file
-      input(type='file')#upload-file-1.upload-file__input
-      label(for='upload-file-1').upload-file__label
-        +icon('icon-add-image')
+    h4.sg-heading Upload Image
+    .sg-block
+      .row
+        .col-4.col-lg-2
+          .upload-image
+            input(type='file')#upload-file-1.upload-file
+            label(for='upload-file-1')
+              +icon('icon-border-dashed-draw')
+
+        .col-4.col-lg-2
+          .upload-image.upload-image--loading
+            input(type='file')#upload-file-2.upload-file
+            label(for='upload-file-2')
+              +icon('icon-border-dashed-draw')
 
     //- FORM END
 
@@ -161,7 +170,7 @@ block content
               
               h4.sg-heading=helperItem
               .sg-block__list
-                a(href='#')&attributes(attributes)
+                a(href='#!')&attributes(attributes)
                   if item.icon
                     +icon(`icon-${item.icon}`)
                   | #{item.text}

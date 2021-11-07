@@ -1,0 +1,18 @@
+.advert {
+    &__head {
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+    }
+
+    &__description {
+        font-size: rem(12);
+        font-weight: $font-weight-light;
+
+        @include media-breakpoint-up(lg) {
+            font-size: rem(14);
+        }
+    }
+}

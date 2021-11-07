@@ -13,25 +13,29 @@
         margin-right: 10px;
         flex-shrink: 0;
         border-radius: 50%;
-        overflow: hidden;
 
         @include media-breakpoint-up(lg) {
             width: 60px;
             margin-right: 20px;
         }
     }
+
     &__info {
         margin-right: auto;
     }
 
     &__name {
+        display: block;
         margin-bottom: 5px;
         font-size: rem(17);
+        text-decoration: none;
+        color: color(text);
 
         @include media-breakpoint-up(lg) {
             font-size: rem(24);
         }
     }
+
     &__phone {
         font-size: rem(14);
         text-decoration: none;
@@ -45,6 +49,7 @@
             color: color(primary2);
         }
     }
+
     &__location {
         font-size: rem(14);
         font-weight: $font-weight-light;

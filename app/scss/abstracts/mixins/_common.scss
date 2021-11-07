@@ -47,6 +47,17 @@
     // Example: @include on-event([hover, focus])
     // Example: @include on-event([no-hover]) - for touch devices without pointing devices
     // https://drafts.csswg.org/mediaqueries-4/#any-input
+    //
+    // Example: show for touch devices and show when hover for other devices
+    // .class {
+    //     @include on-event {
+    //         opacity: 1;
+    //     }
+
+    //     @include is-hover {
+    //         opacity: 0; // hide if device support hover
+    //     }
+    // }
 
     @if $self {
         @content;
@@ -149,15 +160,18 @@
 
 @mixin imageContainer($ratio: 100%, $position: relative) {
     position: $position;
+    overflow: hidden;
 
-    @if unit($ratio) != '%' {
-        $ratio: round(percentage($ratio));
-    }
-
-    &::before {
-        content: '';
-        display: block;
-        padding-top: $ratio;
+    @if $ratio {
+        @if unit($ratio) != '%' {
+            $ratio: round(percentage($ratio));
+        }
+    
+        &::before {
+            content: '';
+            display: block;
+            padding-top: $ratio;
+        }
     }
 
     img {

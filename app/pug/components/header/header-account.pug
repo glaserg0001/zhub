@@ -1,9 +1,9 @@
 .header-account.dropdown.ml-lg-3
-  a.header-account__link.dropdown__head(href="#")
+  a.header-account__link.dropdown__head(href=URL_Pug_MainNav('login'))
     +icon('icon-user')
   ul.dropdown__list.dropdown--left-xs.dropdown--left-md
     li.dropdown__item
-      a(href="#").dropdown__link Акаунт
+      a(href=URL_Pug_MainNav('user')).dropdown__link Акаунт
     li.dropdown__item
       a(href="#").dropdown__link Панель керування
     li.dropdown__item

@@ -1,9 +1,9 @@
 .product-author.h-block(class=authorClass)
-  .product-author__image
+  a(href=URL_Pug_MainNav('user')).product-author__image
     img(src=URL_file('user', baseUrlLvl, 'svg'), alt="image")
   
   .product-author__info
-    .product-author__name Сергей Стецюра
+    a(href=URL_Pug_MainNav('user')).product-author__name Сергей Стецюра
     a(href='tel:+380999999999').product-author__phone +38 099 999 99 99
   .product-author__location
     +icon('icon-location')

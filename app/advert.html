@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Додати оголошення</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__content">
+        <button class="header-navbar__cta js-nav-btn">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="header-navbar__backdrop js-nav-btn"></div>
+        <div class="header-navbar">
+          <div class="header-navbar__content"><a class="button w-100" href="/app/index.html">Повернутися на головну</a><a class="button button--icon button--left w-100 mt-2" href="#">
+              <svg class="icon">
+                <use xlink:href="img/icons.svg#icon-heart-solid"></use>
+              </svg>Збережені оголошення</a>
+            <div class="navigation my-4">
+              <ul class="navigation__list">
+                <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Про сервіс</a></li>
+                <li class="navigation__item"><a class="m-active navigation__link" href="/app/styleguide.html">Блог</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Доставка та оплата</a></li>
+              </ul>
+            </div>
+            <ul class="language">
+              <li class="language__item"><a class="language__link m-current" href="#">Укр</a></li>
+              <li class="language__item"><a class="language__link" href="#">Рус</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-logo"><a href="/"><img src="img/logo.svg" alt="Zap Hub logotype"></a></div>
+        <nav class="navigation mr-lg-auto h-hidden-md-down">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Про сервіс</a></li>
+            <li class="navigation__item"><a class="m-active navigation__link" href="/app/styleguide.html">Блог</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Доставка та оплата</a></li>
+          </ul>
+        </nav><a class="button button--small h-hidden-md-down" href="/app/index.html">Повернутися на головну</a><a class="header-widhlist ml-lg-3 h-hidden-md-down" href="#">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#icon-heart-solid"></use>
+          </svg></a>
+        <div class="header-account dropdown ml-lg-3"><a class="header-account__link dropdown__head" href="/app/login.html">
+            <svg class="icon">
+              <use xlink:href="img/icons.svg#icon-user"></use>
+            </svg></a>
+          <ul class="dropdown__list dropdown--left-xs dropdown--left-md">
+            <li class="dropdown__item"><a class="dropdown__link" href="/app/user.html">Акаунт</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">Панель керування</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">Налаштування</a></li>
+            <li class="dropdown__item"><a class="dropdown__link m-mutted" href="#">
+                <svg class="icon dropdown__icon">
+                  <use xlink:href="img/icons.svg#icon-exit"></use>
+                </svg>Вийти</a></li>
+          </ul>
+        </div>
+        <div class="ml-lg-3 h-hidden-md-down">
+          <ul class="language">
+            <li class="language__item"><a class="language__link m-current" href="#">Укр</a></li>
+            <li class="language__item"><a class="language__link" href="#">Рус</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="main advert">
+      <div class="container">
+        <h1>Нове оголошення</h1>
+        <div class="h-block">
+          <div class="advert__head mb-3">
+            <h2 class="mb-1">Фото</h2>
+            <div class="advert__description">Люди частіше купують товари з гарними фото різних ракурсів</div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-sm-3 col-md-2 mb-2 mb-lg-3">
+              <div class="add-image"><img src="img/product-tile1.jpg" alt="image">
+                <div class="add-image__edit">
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-refresh"></use>
+                    </svg>
+                  </button>
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-delete"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3 col-md-2 mb-2 mb-lg-3">
+              <div class="add-image"><img src="img/product-tile1.jpg" alt="image">
+                <div class="add-image__edit">
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-refresh"></use>
+                    </svg>
+                  </button>
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-delete"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3 col-md-2 mb-2 mb-lg-3">
+              <div class="add-image"><img src="img/product-tile1.jpg" alt="image">
+                <div class="add-image__edit">
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-refresh"></use>
+                    </svg>
+                  </button>
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-delete"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3 col-md-2 mb-2 mb-lg-3">
+              <div class="add-image"><img src="img/product-tile1.jpg" alt="image">
+                <div class="add-image__edit">
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-refresh"></use>
+                    </svg>
+                  </button>
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-delete"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3 col-md-2 mb-2 mb-lg-3">
+              <div class="add-image"><img src="img/product-tile1.jpg" alt="image">
+                <div class="add-image__edit">
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-refresh"></use>
+                    </svg>
+                  </button>
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-delete"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3 col-md-2 mb-2 mb-lg-3">
+              <div class="add-image"><img src="img/product-tile1.jpg" alt="image">
+                <div class="add-image__edit">
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-refresh"></use>
+                    </svg>
+                  </button>
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-delete"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3 col-md-2 mb-2 mb-lg-3">
+              <div class="add-image"><img src="img/product-tile1.jpg" alt="image">
+                <div class="add-image__edit">
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-refresh"></use>
+                    </svg>
+                  </button>
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-delete"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3 col-md-2 mb-2 mb-lg-3">
+              <div class="add-image"><img src="img/product-tile1.jpg" alt="image">
+                <div class="add-image__edit">
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-refresh"></use>
+                    </svg>
+                  </button>
+                  <button class="add-image__btn" type="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#icon-delete"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3 col-md-2">
+              <div class="upload-image">
+                <input class="upload-file" type="file" id="upload-file-1">
+                <label for="upload-file-1">
+                  <svg class="icon">
+                    <use xlink:href="img/icons.svg#icon-border-dashed-draw"></use>
+                  </svg>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="h-block">
+          <div class="advert__head mb-3">
+            <h2 class="mb-1">Данi товару</h2>
+            <div class="advert__description">Заповніть повну інформацію про товар</div>
+          </div>
+          <form class="row">
+            <div class="col-12">
+              <div class="form-field ">
+                <label class="label " for="prod-name">Назва</label>
+                <input class="input input--small" id="prod-name" placeholder="Бампер передній Mitsubishi Outlander 16 року" type="text"/>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-field ">
+                <label class="label " for="prod-numb">Номер/Код деталі</label>
+                <input class="input input--small" id="prod-numb" placeholder="2101-3502090" type="text"/>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-field ">
+                <label class="label " for="prod-numb">Бренд</label>
+                <input class="input input--small" id="prod-numb" placeholder="Триал Спорт" type="text"/>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-field  form-group">
+                <label class="label w-100">Стан деталі</label>
+                <input class="checkbox-btn" id="check1" type="checkbox"/>
+                <label for="check1">Нова</label>
+                <input class="checkbox-btn" id="check2" type="checkbox"/>
+                <label for="check2">Тюнінг</label>
+                <input class="checkbox-btn" id="check3" type="checkbox"/>
+                <label for="check3">Кастом</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field ">
+                <label class="label " for="category">Категорія</label>
+                <select class="js-select select-custom  select-custom--small" id="category" data-placeholder="Оберіть категорію" data-minimum-results-for-search="-1" data-selection-css-class="select2-selection--small" data-dropdown-css-class="select2-dropdown--small">
+                  <option></option>
+                  <option>Автозвук і мультимедіа</option>
+                  <option>Світло</option>
+                  <option>Аксесуари</option>
+                  <option>Гаджети</option>
+                  <option>КПП</option>
+                  <option>Двигун і вихлопна система</option>
+                  <option>Інструменти</option>
+                  <option>Клімат</option>
+                  <option>Кузов</option>
+                  <option>Підвіска</option>
+                  <option>Рульове управління</option>
+                  <option>Салон</option>
+                  <option>Гальмівна система</option>
+                  <option>Трансмісія</option>
+                  <option>Шини і диски</option>
+                  <option>Електрообладнання</option>
+                  <option>Для ТО</option>
+                  <option>Інше</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field ">
+                <label class="label " for="category">Марка авто</label>
+                <select class="js-select select-custom  select-custom--small" id="category" data-placeholder="Оберіть марку авто" data-minimum-results-for-search="-1" data-selection-css-class="select2-selection--small" data-dropdown-css-class="select2-dropdown--small">
+                  <option></option>
+                  <option>Acura</option>
+                  <option>Alfa Romeo</option>
+                  <option>Audi</option>
+                  <option>BMW</option>
+                  <option>Cadillac</option>
+                  <option>Chery</option>
+                  <option>Chevrolet</option>
+                  <option>Chrysler</option>
+                  <option>Citroen</option>
+                  <option>Dacia</option>
+                  <option>Daewoo</option>
+                  <option>Dodge</option>
+                  <option>Fiat</option>
+                  <option>Ford</option>
+                  <option>Geely</option>
+                  <option>Genesis</option>
+                  <option>GMC</option>
+                  <option>Great Wall</option>
+                  <option>Haval</option>
+                  <option>Honda</option>
+                  <option>Hummer</option>
+                  <option>Hyundai</option>
+                  <option>Infiniti</option>
+                  <option>Isuzu</option>
+                  <option>IVECO</option>
+                  <option>JAC</option>
+                  <option>Jaguar</option>
+                  <option>Jeep</option>
+                  <option>Kia</option>
+                  <option>LADA (ВАЗ)</option>
+                  <option>Land Rover</option>
+                  <option>Lexus</option>
+                  <option>Lifan</option>
+                  <option>Lincoln</option>
+                  <option>Mazda</option>
+                  <option>Mercedes-Benz</option>
+                  <option>MINI</option>
+                  <option>Mitsubishi</option>
+                  <option>Nissan</option>
+                  <option>Opel</option>
+                  <option>Peugeot</option>
+                  <option>Pontiac</option>
+                  <option>Porsche</option>
+                  <option>Renault</option>
+                  <option>Rover</option>
+                  <option>Saab</option>
+                  <option>SEAT</option>
+                  <option>Skoda</option>
+                  <option>Smart</option>
+                  <option>SsangYong</option>
+                  <option>Subaru</option>
+                  <option>Suzuki</option>
+                  <option>TATA</option>
+                  <option>Tatra</option>
+                  <option>Tesla</option>
+                  <option>Toyota</option>
+                  <option>Volkswagen</option>
+                  <option>Volvo</option>
+                  <option>ГАЗ</option>
+                  <option>ЗАЗ</option>
+                  <option>ЗИЛ</option>
+                  <option>ИЖ</option>
+                  <option>ЛуАЗ</option>
+                  <option>Москвич</option>
+                  <option>УАЗ</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field ">
+                <label class="label " for="prod-proce">Ціна</label>
+                <input class="input input--small" id="prod-proce" type="text"/>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-field  form-group">
+                <label class="label w-100">Валюта</label>
+                <input class="checkbox-btn" id="curr1" type="radio" name="curr"/>
+                <label for="curr1">₴</label>
+                <input class="checkbox-btn" id="curr2" type="radio" name="curr"/>
+                <label for="curr2">$</label>
+                <input class="checkbox-btn" id="curr3" type="radio" name="curr"/>
+                <label for="curr3">€</label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-field ">
+                <label class="label " for="prod-desc">Опис</label>
+                <textarea class="input input--small" id="prod-desc" placeholder="Додати опис"></textarea>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="button button__secondary button--left-md w-100 mt-md-2">Опублiкувати оголошення</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="seo">
+      <div class="container">
+        <p>
+          Для оптимизациии сайта необходимо писать тексты для людей, изредка вставляя ключевые запросы так, чтобы при этом читабельность текста не упала, а даже наоборот, интересовала еще больше.
+          Заголовок текста в теге Н1 должен содержать самый частотный ключевой запрос. Например правильно - «Женская одежда». Неправильно – «Купить женскую одежду в Киеве».
+          Выделять тегом strong ключевые слова можно, но делать это необходимо для позитивного восприятия текста, не более трех раз на текст объемом 3000 символов.
+          Размер текста в символах в идеале должен быть от 2000 символов без пробелов.
+          Нет смысла использовать ключевые слова, которые не подтверждаются товарами на сайте или услугами. Не пишите о том, чего пользователь не сможет найти на целевой странице.
+        </p>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container footer__content_">
+        <div class="row justify-content-lg-between align-items-lg-center">
+          <div class="col-6 col-md-4 col-lg-auto my-1">
+            <div class="footer-logo"><a href="/"><img src="img/logo-secondary.svg" alt="Zap Hub logotype"></a></div>
+          </div>
+          <div class="col-6 col-md-2 col-lg-auto my-1 order-md-last text-md-right">
+            <ul class="footer-social">
+              <li class="footer-social__item"><a class="footer-social__link" href="https://www.instagram.com/zaphub.com.ua/" target="_blank">
+                  <svg class="icon">
+                    <use xlink:href="img/icons.svg#icon-instagram"></use>
+                  </svg></a></li>
+              <li class="footer-social__item"><a class="footer-social__link" href="https://t.me/joinchat/8-fx0NfMSu1mMjRi" target="_blank">
+                  <svg class="icon">
+                    <use xlink:href="img/icons.svg#icon-telegram"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 col-lg-auto my-4 my-md-0">
+            <div class="navigation navigation--secondary">
+              <ul class="navigation__list">
+                <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Про сервіс</a></li>
+                <li class="navigation__item"><a class="m-active navigation__link" href="/app/styleguide.html">Блог</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/app/styleguide.html">Доставка та оплата</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 col-lg-auto my-4 my-md-0">
+            <div class="navigation navigation--secondary font-weight-normal">
+              <ul class="navigation__list">
+                <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Усі категорії</a></li>
+                <li class="navigation__item"><a class="active navigation__link" href="/app/index.html">Усі регіони</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/app/index.html">Усі автомобілі</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-auto mt-md-4 mt-lg-0 order-md-last order-lg-0">
+            <ul class="footer-copy">
+              <li class="footer-copy__item">&copy; All rights reserved</li>
+              <li class="footer-copy__item">ZapHub 2021</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

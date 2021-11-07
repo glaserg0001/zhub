@@ -1,0 +1,35 @@
+.add-image {
+    @include imageContainer;
+
+    &__edit {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        @include on-event {
+            opacity: 1;
+        }
+
+        @include is-hover {
+            opacity: 0;
+        }
+    }
+
+    &__btn {
+        padding: 5px;
+        font-size: rem(40);
+        background-color: color(white, 0.5);
+        border: none;
+        line-height: 0;
+
+        @include on-event {
+            color: color(primary);
+        }
+    }
+}

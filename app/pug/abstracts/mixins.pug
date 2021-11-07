@@ -37,18 +37,30 @@ mixin input(data, id, type)
 
     input&attributes(attributes)
 
-mixin checkbox(data)
+mixin checkbox(data, type)
   each item in data
     - var attrInput = {}
     - attrInput.id = item.id;
     - attrInput.class = item.class;
     - attrInput.checked = item.checked;
     - attrInput.disabled = item.disabled;
-    - attrInput.type = 'checkbox';
+    - attrInput.type = type;
+    - attrInput.name = item.name;
     - var attrLabel = {}
     - attrLabel.for = item.id
     input&attributes(attrInput)
     label&attributes(attrLabel)=item.text
+
+mixin textarea(data, id)
+  each item in data
+    - var attributes = {}
+    - attributes.id = !index && id
+    - attributes.class = `input ${item.class ? item.class : ''}`;
+    - attributes.value = item.value;
+    - attributes.placeholder = item.placeholder;
+    - attributes.disabled = item.disabled;
+
+    textarea&attributes(attributes)
 
 //- Select
 mixin select(data, id)
@@ -80,7 +92,10 @@ mixin formField(data)
       when 'select'
         +select(data.element, data.id)
       when 'checkbox'
-        +checkbox(data.element)
+      when 'radio'
+        +checkbox(data.element, data.type)
+      when 'textarea'
+        +textarea(data.element, data.id)
       default
         +input(data.element, data.id, data.type)
 

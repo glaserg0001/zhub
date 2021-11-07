@@ -9,9 +9,12 @@ header.header
     nav.navigation.mr-lg-auto.h-hidden-md-down
       include ../components/navigation
 
-    a.button.button__secondary.button--icon.button--small.h-hidden-md-down(href=URL_Pug_MainNav('index'))
-      +icon('icon-add')
-      | Додати оголошення
+    if isAdvertPage
+      a.button.button--small.h-hidden-md-down(href=URL_Pug_MainNav('index')) Повернутися на головну
+    else
+      a.button.button__secondary.button--icon.button--small.h-hidden-md-down(href=URL_Pug_MainNav('advert'))
+        +icon('icon-add')
+        | Додати оголошення
 
     a(href="#").header-widhlist.ml-lg-3.h-hidden-md-down
       +icon('icon-heart-solid')

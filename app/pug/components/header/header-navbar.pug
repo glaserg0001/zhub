@@ -5,9 +5,12 @@ button.header-navbar__cta.js-nav-btn
 
 .header-navbar
   .header-navbar__content
-    a.button.button__secondary.button--icon.w-100.button--left(href=URL_Pug_MainNav('index'))
-      +icon('icon-add')
-      | Додати оголошення
+    if isAdvertPage
+      a.button.w-100(href=URL_Pug_MainNav('index')) Повернутися на головну
+    else
+      a.button.button__secondary.button--icon.w-100.button--left(href=URL_Pug_MainNav('advert'))
+        +icon('icon-add')
+        | Додати оголошення
 
     a(href="#").button.button--icon.button--left.w-100.mt-2
       +icon('icon-heart-solid')

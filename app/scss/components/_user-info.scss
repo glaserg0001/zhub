@@ -1,0 +1,96 @@
+.user-info {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px 20px;
+    padding: 20px;
+    background-color: color(white);
+
+    &__image {
+        @include imageContainer;
+
+        flex-shrink: 0;
+        width: 100px;
+        margin: -70px 0 0 0;
+        border-radius: 50%;
+        background-color: color(white);
+        
+        @include media-breakpoint-up(lg) {
+            width: 125px;
+            margin: -80px 0 0 0;
+        }
+    }
+
+    &__content {
+        flex: 1 1 auto;
+        
+        @include media-breakpoint-up(md) {
+            flex: 0 1 20%;
+        }
+    }
+
+    &__name {
+        font-size: rem(17);
+        font-weight: $font-weight-bold;
+
+        @include media-breakpoint-up(lg) {
+            font-size: rem(24);
+        }
+    }
+
+    &__phone {
+        font-size: rem(12);
+        text-decoration: none;
+        color: color(primary);
+
+        @include media-breakpoint-up(lg) {
+            font-size: rem(16);
+        }
+
+        @include on-event {
+            color: color(primary2);
+        }
+    }
+    &__description {
+        flex-basis: 100%;
+        font-size: rem(12);
+        line-height: 1.6;
+        font-weight: $font-weight-light;
+        // white-space: pre-wrap;
+
+        @include media-breakpoint-down(sm) {
+            &:not(.m-expand) {
+                @include line-clamp(1);
+
+                &::before {
+                    content: 'ще';
+                    font-weight: $font-weight-bold;
+                    float: right;
+                }
+            }
+        }
+
+        
+        @include media-breakpoint-up(md) {
+            font-size: rem(14);
+            flex: 1 1 0;
+        }
+    }
+    
+    &__location {
+        font-size: rem(14);
+        font-weight: $font-weight-light;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        
+        .icon {
+            flex-shrink: 0;
+        }
+        
+        @include media-breakpoint-up(lg) {
+            gap: 10px;
+            font-size: rem(24);
+        }
+    }
+}

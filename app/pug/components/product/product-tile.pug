@@ -38,6 +38,14 @@ else if productTileSlider
     .swiper-button-prev
     .swiper-button-next
 
+else if isUserPage
+  .product-tile__container.js-grid
+    .row
+      each product, index in productTile
+        if productTileCount == index
+          - break
+        .product-tile__col.col-6.col-sm-4
+          +product-tile(product)
 //- Grid
 else
   .product-tile__container.js-grid

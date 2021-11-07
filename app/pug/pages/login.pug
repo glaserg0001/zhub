@@ -1,0 +1,20 @@
+extends ../base/main
+
+block variables
+  - var pageTitle = 'Вхiд'
+
+block styles
+
+block content
+  .container
+    .row.justify-content-center
+      .col-md-4
+        h1 Вхiд
+        .h-block
+          +formField(inputLoginPhone)
+          button.button.button__secondary.w-100 Надiслати код
+        .h-block
+          - socialTitle = 'Увійти з допомогою'
+          - socialList = socialListLogin
+          include ../components/social
+
