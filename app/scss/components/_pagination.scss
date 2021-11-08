@@ -1,0 +1,16 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    &__item {}
+    &__link {
+        display: block;
+        min-width: 40px;
+        height: 40px;
+        padding: 0 5px;
+        text-decoration: none;
+
+        &.m-prev {}
+        &.m-next {}
+    }
+}

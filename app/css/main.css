@@ -4247,6 +4247,7 @@ select.input__ {
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.6;
+  white-space: pre-wrap;
 }
 
 .product-author {
@@ -5519,12 +5520,25 @@ select.input__ {
 }
 
 @media (max-width: 767.98px) {
-  .tabs__content {
+  .tabs__content:not(.m-show) {
     position: absolute;
     height: 0;
     visibility: hidden;
     overflow: hidden;
   }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination__link {
+  display: block;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 5px;
+  text-decoration: none;
 }
 
 .header {

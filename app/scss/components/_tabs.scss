@@ -27,11 +27,13 @@
     }
 
     &__content {
-        @include media-breakpoint-down(sm) {
-            position: absolute;
-            height: 0;
-            visibility: hidden;
-            overflow: hidden;
+        &:not(.m-show) {
+            @include media-breakpoint-down(sm) {
+                position: absolute;
+                height: 0;
+                visibility: hidden;
+                overflow: hidden;
+            }
         }
     }
 }

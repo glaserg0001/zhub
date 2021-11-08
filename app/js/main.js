@@ -121,14 +121,37 @@ class ReadMore {
 class Tabs {
     // https://codepen.io/steanull/pen/KKvorpy?editors=0010
     // https://codepen.io/wangel13/pen/OXBrRp?editors=0010
-    constructor(container) {
-        this.container = document.querySelector(`.${container}`)
-        this.btn = `${container}-btn`
-        this.content = `${container}-content`
+    constructor(name) {
+        this.container = document.querySelector(`.${name}-container`)
+        this.btn = `${name}-btn`
+        this.tabs = document.querySelector(`.${name}`)
+        this.content = `${name}-content`
+        this.activeClass = 'm-active'
+        this.showClass = 'm-show'
     }
 
     init() {
+        this.tabsToggle()
+    }
 
+    tabsToggle() {
+        if (this.container)
+            this.tabs.addEventListener('click', this.tabsToggleEvent.bind(this))
+    }
+
+    tabsToggleEvent(e) {
+        if (e.target.classList.contains(this.btn) && !e.target.classList.contains(this.activeClass)) {
+            const activeBtn = e.currentTarget.querySelector(`.${this.btn}.${this.activeClass}`) || false
+            const activeContent = this.container.querySelector(`.${this.content}.${this.showClass}`) || false
+            const dataTarget = e.target.dataset.target
+            const targetContent = this.container.querySelector(dataTarget)
+
+            activeBtn && activeBtn.classList.remove(this.activeClass)
+            activeContent && activeContent.classList.remove(this.showClass)
+            
+            e.target.classList.add(this.activeClass)
+            targetContent.classList.add(this.showClass)
+        }
     }
 }
 
@@ -156,9 +179,6 @@ $('.js-select').select2({
 // https://select2.org/selections
 
 // ==== select2 END
-
-// 'ontouchstart' in window
-// stopImmediatePropagation
 
 // ==== SLIDER START
 // https://swiperjs.com/

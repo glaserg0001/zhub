@@ -81,7 +81,7 @@
       </div>
     </header>
     <div class="main user">
-      <div class="container js-tabs">
+      <div class="container js-tabs-container">
         <div class="user__head">
           <div class="backcover">
             <div class="backcover__image h-hidden"><img src="img/product1.jpeg" alt="image"></div>
@@ -114,16 +114,16 @@
             </div>
           </div>
         </div>
-        <ul class="tabs">
+        <ul class="tabs js-tabs">
           <li class="tabs__item">
-            <button class="tabs__btn m-active js-tabs-cta" id="tab-1">Оголошення</button>
+            <button class="tabs__btn m-active js-tabs-btn" data-target="#tab-1">Оголошення</button>
           </li>
           <li class="tabs__item">
-            <button class="tabs__btn js-tabs-cta" id="tab-2">Інформація</button>
+            <button class="tabs__btn js-tabs-btn" data-target="#tab-2">Інформація</button>
           </li>
         </ul>
         <div class="row">
-          <div class="col-md-4 col-lg-3 tabs__content m-show js-tabs-content" data-target="#tab-2">
+          <div class="col-md-4 col-lg-3 tabs__content js-tabs-content" id="tab-2">
             <div class="h-block">
               <h2 class="h2">Адреса</h2>
               <div class="user__address">М. Київ, вул. Шевченка 23б</div><img class="w-100" src="img/map.jpg" alt="image">
@@ -148,7 +148,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-8 col-lg-9 tabs__content js-tabs-content" data-target="#tab-1">
+          <div class="col-md-8 col-lg-9 tabs__content m-show js-tabs-content" id="tab-1">
             <div class="row align-items-center mb-2 mb-lg-3">
               <div class="col-auto mr-auto">
                 <h2 class="h2 mb-0">156 оголошень</h2>
@@ -340,6 +340,19 @@
                 </div>
               </div>
             </div>
+            <ul class="pagination">
+              <li class="pagination__item"><a class="pagination__link m-prev" href="#!">
+                  <svg class="icon">
+                    <use xlink:href="img/icons.svg#icon-chevron-left"></use>
+                  </svg></a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#!">1</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#!">2</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#!">3</a></li>
+              <li class="pagination__item"><a class="pagination__link m-next" href="#!">
+                  <svg class="icon">
+                    <use xlink:href="img/icons.svg#icon-chevron-right"></use>
+                  </svg></a></li>
+            </ul>
           </div>
         </div>
       </div>

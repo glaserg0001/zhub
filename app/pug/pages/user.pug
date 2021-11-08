@@ -51,7 +51,7 @@ block variables
 block styles
 
 block content
-  .container.js-tabs
+  .container.js-tabs-container
     .user__head
       .backcover
         .backcover__image.h-hidden
@@ -77,14 +77,14 @@ block content
           +icon('icon-location')
           | Київ
     
-    ul.tabs
+    ul.tabs.js-tabs
       li.tabs__item
-        button#tab-1.tabs__btn.m-active.js-tabs-cta Оголошення
+        button(data-target='#tab-1').tabs__btn.m-active.js-tabs-btn Оголошення
       li.tabs__item
-        button#tab-2.tabs__btn.js-tabs-cta Інформація
+        button(data-target='#tab-2').tabs__btn.js-tabs-btn Інформація
 
     .row
-      .col-md-4.col-lg-3.tabs__content.m-show.js-tabs-content(data-target='#tab-2')
+      #tab-2.col-md-4.col-lg-3.tabs__content.js-tabs-content
         .h-block
           h2.h2 Адреса
           .user__address М. Київ, вул. Шевченка 23б
@@ -99,5 +99,5 @@ block content
           - var tagsList = tagsListAuto
           include ../components/tags-list
 
-      .col-md-8.col-lg-9.tabs__content.js-tabs-content(data-target='#tab-1')
+      #tab-1.col-md-8.col-lg-9.tabs__content.m-show.js-tabs-content
         include ../components/results
