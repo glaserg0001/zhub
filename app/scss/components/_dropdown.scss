@@ -5,7 +5,7 @@
     font-size: rem(16);
 
     &__list {
-        display: none;
+        // display: none;
         position: absolute;
         top: 100%;
         left: 50%;
@@ -20,7 +20,7 @@
         opacity: 0;
 
         @include is-hover {
-            display: block;
+            // display: block;
         }
 
         &::before {
@@ -87,7 +87,7 @@
         }
     }
 
-    @include on-event {
+    &:hover {
         .#{$this}__list {
             visibility: visible;
             opacity: 1;

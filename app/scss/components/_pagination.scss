@@ -1,16 +1,47 @@
 .pagination {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 
-    &__item {}
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        margin-left: -1px;
+    }
+
     &__link {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         min-width: 40px;
         height: 40px;
         padding: 0 5px;
+        font-size: rem(20);
+        font-weight: $font-weight-medium;
         text-decoration: none;
+        background-color: color(white);
+        color: color(primary3);
+        border: 1px solid color(primary3);
 
-        &.m-prev {}
-        &.m-next {}
+        @include on-event {
+            background-color: color(light);
+        }
+
+        .icon {
+            font-size: 0.8em;
+        }
+
+        &.m-current {
+            color: color(white);
+            background-color: color(primary3);
+        }
+
+        &.m-disabled {
+            color: color(disabled);
+            background-color: color(disabled-bg);
+            cursor: default;
+        }
     }
 }

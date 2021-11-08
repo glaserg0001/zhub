@@ -1,13 +1,15 @@
 ul.pagination
   li.pagination__item
-    a(href='#!').pagination__link.m-prev
+    a(href='#!').pagination__link.m-disabled
      +icon('icon-chevron-left')
   li.pagination__item
-    a(href='#!').pagination__link 1
+    a(href='#!').pagination__link.m-current 1
   li.pagination__item
     a(href='#!').pagination__link 2
   li.pagination__item
-    a(href='#!').pagination__link 3
+    a(href='#!').pagination__link 99
   li.pagination__item
-    a(href='#!').pagination__link.m-next
+    a(href='#!').pagination__link 101
+  li.pagination__item
+    a(href='#!').pagination__link
      +icon('icon-chevron-right')

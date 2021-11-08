@@ -119,8 +119,6 @@ class ReadMore {
 }
 
 class Tabs {
-    // https://codepen.io/steanull/pen/KKvorpy?editors=0010
-    // https://codepen.io/wangel13/pen/OXBrRp?editors=0010
     constructor(name) {
         this.container = document.querySelector(`.${name}-container`)
         this.btn = `${name}-btn`
@@ -208,7 +206,7 @@ new Swiper('.js-product-tile-slider', {
     breakpoints: {
         576: {
             slidesPerView: 3,
-            spaceBetween :10,
+            spaceBetween: 10,
         },
         1024: {
             slidesPerView: 4,

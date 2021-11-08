@@ -43,15 +43,9 @@
 }
 
 .header-account {
-    &__link {
-        display: inline-block;
-        font-size: rem(30);
-        color: color(primary);
-        line-height: 1;
-        text-decoration: none;
-
-        @include on-event {
-            color: color(primary2)
-        }
-    }
+    display: inline-block;
+    font-size: rem(30);
+    color: color(primary);
+    line-height: 1;
+    text-decoration: none;
 }
