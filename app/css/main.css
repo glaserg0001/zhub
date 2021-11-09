@@ -5539,7 +5539,17 @@ select.input__ {
   margin-left: -1px;
 }
 
-.pagination__link {
+.pagination__dots {
+  cursor: default;
+}
+
+@media (any-hover: hover) {
+  .pagination__link:hover {
+    background-color: #dceaf3;
+  }
+}
+
+.pagination__dots, .pagination__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5554,22 +5564,16 @@ select.input__ {
   border: 1px solid #537992;
 }
 
-@media (any-hover: hover) {
-  .pagination__link:hover {
-    background-color: #dceaf3;
-  }
-}
-
-.pagination__link .icon {
+.pagination__dots .icon, .pagination__link .icon {
   font-size: 0.8em;
 }
 
-.pagination__link.m-current {
+.pagination__dots.m-current, .pagination__link.m-current {
   color: #fff;
   background-color: #537992;
 }
 
-.pagination__link.m-disabled {
+.pagination__dots.m-disabled, .pagination__link.m-disabled {
   color: #d4d5d6;
   background-color: #f5f5f5;
   cursor: default;
